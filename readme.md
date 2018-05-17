@@ -1,6 +1,4 @@
 
-
-
  # Creditfly
 
  Creditfly is an application where users have the ability to check, improve and understand their credit scores. Creditfly provide the user the opportunity to utilize their daily expenses to get cheap vacations around the world by tracking users expenses and recommend specific credit cards based on their expenses categories
