@@ -1,9 +1,11 @@
 
+
+
 Creditfly
 
-Creditfly is an application where users have the ability to check, improve and understand their credit scores. Creditfly provide the user the opportunity to utilize their daily expenses to get cheap vacations around the world by tracking users expenses and recommend specific credit cards based on their expenses categories
+ Creditfly is an application where users have the ability to check, improve and understand their credit scores. Creditfly provide the user the opportunity to utilize their daily expenses to get cheap vacations around the world by tracking users expenses and recommend specific credit cards based on their expenses categories
 
-Database Schema
+#Database Schema
 
 . Users 
  -user have many credit cards, and expenses
@@ -16,7 +18,7 @@ Database Schema
  -expenses can have one users
  -expenses can have multiple credit cards
 
- Front-end
+# Front-end
 
 . /users
   -render all users from database
@@ -39,7 +41,7 @@ Database Schema
  -links to credit cards offers and the amount of points 
  -links to relate articles and blogs that will expand the users knowledge
 
-Back-end
+# Back-end
 
 ./users
  -get a list of user from database 
@@ -50,4 +52,4 @@ Back-end
 ./expenses
  -shows the list of expenses acquired from users 
 
-# Creditflty
+  #Creditfly
