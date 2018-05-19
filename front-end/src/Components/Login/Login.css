@@ -1,0 +1,144 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+/* LOGIN MAIN DIV */
+
+.login_div {
+    margin-top: 10vh;
+    background: url('./../../Images/vacations.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 10vw;
+    position: absolute;
+    width: 75vw;
+    height: 80vh;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgba(51, 50, 50, 0.459);
+}
+
+#signup_words {
+    width: 40vw;
+    position: relative;
+    margin-left: 5vw;
+    margin-top: 5vh;
+    height: 67vh;
+}
+
+#m {
+    font-size: 35px;
+    padding: 10px;
+    margin-top: -45px;
+    color: lightblue;
+    margin-left: 5px;
+    font-weight: bold;
+    color:white;
+    font-family: 'Roboto Slab', serif;
+}
+
+#p {
+    font-size: 35px;
+    padding: 10px;
+    margin-left: 10px;
+    font-weight: bold;
+    color: white;
+    font-family: 'Roboto Slab', serif;
+}
+
+
+
+/* LOGIN FORM AND ELEMENTS */
+
+#login_nav {
+    position: absolute;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    margin-top: -55vh;
+    width: 20vw;
+    height: 50vh;
+    border-radius: 10px;
+    margin-left: 50vw;
+}
+
+/* INPUT FIELD LOGO */
+
+.login_form label {
+    font-size: 6px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    color: rgba(75, 74, 74, 0.459);
+}
+
+
+input[type=email]{
+    border: none;
+    font-weight: bold;
+    font-size: 10px;
+    color: black;
+    border-bottom: 1px solid lightblue;
+    font-family: 'Roboto Slab', serif;
+}
+input[type=password] {
+    border: none;
+    font-weight: bold;
+    font-size: 10px;
+    color: black;
+    font-family: 'Roboto Slab', serif;
+}
+
+input[type=email]:focus,
+input[type=password]:focus {
+    outline: none;
+}
+
+.login_form button {
+    font-size: 10px;
+    font-family: 'Roboto Slab', serif;
+    width: 14vw;
+    height: 5vh;
+    margin-top: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    background-color: lightblue;
+    box-shadow: 2px 2px 20px rgba(51, 50, 50, 0.459);
+    outline: none;
+    border: none;
+}
+
+#login_nav #p {
+    font-size: 6px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    color:white;
+}
+
+#signup_link{
+    font-weight: bold;
+    color: white;
+    font-size: 10px;
+}
+
+p Link {
+    color: white;
+}
+
+
+/* LOGIN FORM LOGO */
+
+#login_logo {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 4px;
+    margin-left: -35px;
+}
+
+#circular_logo {
+    width: 38px;
+    margin-top: -20px;
+    height: 38px;
+    border-radius: 20px;
+    background-color: lightblue;
+}

@@ -4,6 +4,7 @@ import './Components/Home/Home.css'
 import Login from './Components/Login/Login';
 import Home from './Components/Home/Home';
 import Logo from './Images/Logo.png';
+import Signup from './Components/Signup/Signup';
 import Credit_app from './Components/CreditScore/Credit_app';
 import Rewards_Profile from './Components/Rewards/Rewards_Profile';
 
@@ -40,6 +41,7 @@ class App extends Component {
             <Route path='/login' component={Login} />
             <Route path='/creditscore' component={Credit_app} />
             <Route path='/rewards' component={Rewards_Profile} />
+            <Route path='/signup' component={Signup}/>
           </Switch>
         </div>
 
