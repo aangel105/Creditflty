@@ -1,0 +1,174 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    
+}
+
+/* LOGIN MAIN DIV */
+
+.signup_div {
+    margin-top: 10vh;
+    margin-left: 10vw;
+    position: absolute;
+    width: 75vw;
+    height: 75vh;
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px rgba(51, 50, 50, 0.459);
+}
+
+/* Signup Message*/
+
+#signup_message {
+    width: 35vw;
+    position: relative;
+    margin-left: 5vw;
+    margin-top: 5vh;
+    height: 67vh;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 2px 2px 20px lightblue;
+}
+
+#signup_message #spend {
+    position: fixed;
+    margin-top: 5vh;
+    padding: 10px;
+    font-family: 'Sorts Mill Goudy', serif;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: rgba(75, 74, 74, 0.459);
+}
+
+#hello {
+    font-size: 50px;
+    padding: 10px;
+    margin-top: -35px;
+    color: lightblue;
+    margin-left: 10px;
+    font-weight: bold;
+    color: rgba(75, 74, 74, 0.459);
+    font-family: 'Roboto Slab', serif;
+}
+
+#world {
+    font-size: 50px;
+    padding: 10px;
+    margin-left: 10px;
+    font-weight: bold;
+    color: rgba(75, 74, 74, 0.459);
+    font-family: 'Roboto Slab', serif;
+}
+
+#signup_message img {
+    color: red;
+    position: relative;
+    width: 30px;
+    margin-top: 6.5vh;
+    height: 29px;
+    margin-left: 8vw;
+}
+
+/* LOGIN FORM AND ELEMENTS */
+
+#signup_nav {
+    position: absolute;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    margin-top: -67vh;
+    width: 20vw;
+    height: 62vh;
+    border: 1px solid white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px lightblue;
+    margin-left: 45vw;
+}
+#signup_nav p {
+    margin-top: 15px;
+    font-size: 6px;
+    font-family: 'Roboto Slab', serif;
+    margin-left: 0vw;
+}
+
+
+
+/* INPUT FIELD LOGO */
+
+.signup_form label {
+    font-size: 6px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    color: rgba(75, 74, 74, 0.459);
+}
+
+.signup_form button {
+    font-size: 10px;
+    font-family: 'Roboto Slab', serif;
+    width: 14vw;
+    height: 5vh;
+    margin-top: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    background-color: lightblue;
+    box-shadow: 10px 10px 10px rgba(51, 50, 50, 0.459);
+    outline: none;
+    border: none;
+}
+
+input[type=password]{
+    background-repeat: no-repeat;
+    background-size: 8px;
+    border: none;
+    border-bottom: 1px solid lightblue;
+    font-weight: bold;
+    font-size: 10px;
+    color: black;
+    font-family: 'Roboto Slab', serif;
+    outline: none;
+}
+
+input[type=text]{
+    outline: none;
+    background-repeat: no-repeat;
+    background-size: 8px;
+    border: none;
+    border-bottom: 1px solid lightblue;
+    font-weight: bold;
+    font-size: 10px;
+    color: black;
+    font-family: 'Roboto Slab', serif;
+    outline: none;
+}
+input[type=email], {
+    outline: none;
+    padding: 0, 10px;
+    border: none;
+    border-bottom: 1px solid lightblue;
+    font-weight: bold;
+    font-size: 10px;
+    color: black;
+    font-family: 'Roboto Slab', serif;
+}
+
+
+
+/* LOGIN FORM LOGO */
+
+#signup_logo {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 4px;
+    margin-left: -35px;
+}
+
+#circular_logo {
+    width: 38px;
+    margin-top: -20px;
+    height: 38px;
+    border-radius: 20px;
+    background-color: lightblue;
+}
+
+
+
