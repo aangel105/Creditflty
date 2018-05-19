@@ -28,7 +28,7 @@ class Home extends Component {
                 </Link>
                 </div>
                 <div id="s"> 
-                </div>    
+                </div>   
                 <div className ='footer'>
                     <div className='company_info'>
                      <h5>COMPANY INFO</h5> 

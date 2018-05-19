@@ -1,0 +1,160 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+/* LOGIN MAIN DIV */
+
+.login_div{
+    margin-top: 10vh;
+    margin-left: 10vw;
+    position: absolute;
+    width: 75vw;
+    height: 75vh;
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px rgba(51, 50, 50, 0.459);
+}
+
+/* VERTICAL LINE */
+#login_message{
+    width: 35vw;
+    position: relative;
+    margin-left: 5vw;
+    margin-top: 5vh;
+    height: 67vh;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 2px 2px 20px lightblue;
+}
+
+#hello{
+    font-size: 50px;
+    padding: 10px;
+    margin-top: -35px;
+    color: lightblue;
+    margin-left: 10px;
+    font-weight: bold;    
+    color:rgba(75, 74, 74, 0.459);
+    font-family: 'Roboto Slab', serif;
+}
+
+#world{
+    font-size: 50px;
+    padding: 10px;
+    margin-left: 10px;
+    font-weight: bold;    
+    color:rgba(75, 74, 74, 0.459);
+    font-family: 'Roboto Slab', serif;
+}
+
+
+/* LOGIN FORM AND ELEMENTS */
+
+#login_nav{
+    position: absolute;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    margin-top:-67vh;
+    width: 20vw;
+    height: 62vh;
+    border: 1px solid white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px lightblue;
+    margin-left: 45vw;
+}
+
+/* INPUT FIELD LOGO */
+
+.login_form label {
+    font-size: 6px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;    
+    color:rgba(75, 74, 74, 0.459);
+}
+input[type=text]{
+    border: none;
+    border-bottom: 1px solid lightblue;
+    font-weight: bold;
+    font-size: 10px;  
+    color:black; 
+    font-family: 'Roboto Slab', serif;
+}
+input[type=text]:focus{
+    outline: none;
+}
+
+input[type=password]{
+    border: none;
+    border-bottom: 1px solid lightblue;
+    font-weight: bold;  
+    color:black; 
+}
+input[type=password]:focus{
+    outline: none;
+}
+
+
+
+
+.login_form button {
+    font-size: 10px;
+    font-family: 'Roboto Slab', serif;
+    width: 14vw;
+    height: 5vh;
+    margin-top: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    background-color: lightblue;
+    box-shadow: 2px 2px 20px rgba(51, 50, 50, 0.459);
+    outline: none;
+    border:none; 
+}
+
+#login_nav span{
+    font-size: 6px;
+    font-family: 'Roboto Slab', serif;
+    margin-left: 3vw;
+}
+
+#login_nav p{
+    font-size: 6px;
+    font-family: 'Roboto Slab', serif;
+    margin-left: 1vw;
+}
+
+/* LOGIN FORM LOGO */
+#login_logo{
+    width: 32px;
+    height: 32px;
+    margin-bottom: 4px;
+    margin-left: -35px;
+}
+
+#circular_logo{
+    width: 38px;
+    margin-top: -20px;
+    height: 38px;  
+    border-radius: 20px;
+    background-color: lightblue; 
+}
+
+#login_message img {
+    color: red;
+    position: relative;
+    width: 30px;
+    margin-top: 6.5vh;
+    height: 29px;
+    margin-left: 8vw;
+}
+
+#login_message #spend{
+    position: fixed;
+    margin-top:5vh;
+    padding: 10px;
+    font-family: 'Sorts Mill Goudy', serif;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: rgba(75, 74, 74, 0.459);
+}
+
