@@ -61,6 +61,7 @@
   /* HOMEPAGE NAVBAR */
 
   .topbar{
+    position: fixed;
     height: 25px;
     box-shadow: 2px 2px 8px silver;
     position: -webkit-sticky;
@@ -69,6 +70,7 @@
 }
 
   .nav_bar{
+    position: fixed;
       float: right;
       margin-right: 12px;
       position: -webkit-sticky;
@@ -142,6 +144,7 @@
     font-size: 8px;
  }
 
+
  /* FOOTER_LIST */
 
  #footer_aboutUs{
@@ -158,6 +161,7 @@
      text-decoration: none;
      color:rgb(110, 109, 109);
  }
+
 
 
 

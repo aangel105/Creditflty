@@ -45,11 +45,8 @@ class Home extends Component {
                     <div className='credit_resources'>
                     <h5>CREDIT RESOURCES</h5>
                     <h5 id ='notable_links'>NOTABLE LINKS</h5>
-                    </div>   
-                    <div>
-                    
-                    </div>    
-                </div>
+                    </div>     
+                </div>     
             </div>
         )
     }

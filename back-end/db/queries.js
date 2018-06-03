@@ -15,6 +15,11 @@ function getAllUsers(req, res, next){
     })
 }
 
+function getSingleUser(req, res, next){
+    db
+    .any('SELECT')
+}
+
 module.exports = {
     getAllUsers: getAllUsers,
 }
