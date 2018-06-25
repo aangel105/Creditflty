@@ -6,7 +6,10 @@ class Signup extends Component {
     constructor() {
         super()
         this.state = {
-            isSignup: ''
+            FullName: '',
+            username: '',
+            password: '',
+            isSignup: false,
         }
     }
 

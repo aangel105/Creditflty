@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { Link, Route, Switch } from 'react-router-dom';
-import './Components/Home/Home.css'
+
+//Components
 import Login from './Components/Login/Login';
 import Home from './Components/Home/Home';
-import Logo from './Images/Logo.png';
+import AboutUs from './Components/AboutUs/AboutUs';
 import Signup from './Components/Signup/Signup';
 import Credit_app from './Components/CreditScore/Credit_app';
 import Rewards_Profile from './Components/Rewards/Rewards_Profile';
@@ -35,6 +36,7 @@ class App extends Component {
             {/* <img id="logo" src={Logo}></img> */}
           </Link>
         </div>
+        
         <div>
           <Switch>
             <Route exact path="/" component={Home} />
@@ -42,6 +44,7 @@ class App extends Component {
             <Route path='/creditscore' component={Credit_app} />
             <Route path='/rewards' component={Rewards_Profile} />
             <Route path='/signup' component={Signup}/>
+            <Route exact path='/aboutUs' component={AboutUs}/>
           </Switch>
         </div>
 

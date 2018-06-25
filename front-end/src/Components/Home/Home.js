@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import './Home.css'
 
 class Home extends Component {
     constructor() {
@@ -45,11 +46,8 @@ class Home extends Component {
                     <div className='credit_resources'>
                     <h5>CREDIT RESOURCES</h5>
                     <h5 id ='notable_links'>NOTABLE LINKS</h5>
-                    </div>   
-                    <div>
-                    
-                    </div>    
-                </div>
+                    </div>     
+                </div>     
             </div>
         )
     }

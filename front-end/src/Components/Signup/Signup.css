@@ -1,7 +1,6 @@
 * {
     padding: 0px;
-    margin: 0px;
-    
+    margin: 0px;  
 }
 
 /* LOGIN MAIN DIV */
@@ -11,6 +10,7 @@
     margin-left: 10vw;
     position: absolute;
     width: 75vw;
+    background-color: rgb(89, 245, 232);
     height: 75vh;
     border-radius: 10px;
     box-shadow: 2px 2px 20px rgba(51, 50, 50, 0.459);
@@ -32,11 +32,12 @@
 #signup_message #spend {
     position: fixed;
     margin-top: 5vh;
+    margin-left: 12px;
     padding: 10px;
     font-family: 'Sorts Mill Goudy', serif;
     margin-bottom: 30px;
     font-weight: bold;
-    color: rgba(75, 74, 74, 0.459);
+    color: rgb(89, 245, 232);
 }
 
 #hello {
@@ -78,15 +79,15 @@
     margin-top: -67vh;
     width: 20vw;
     height: 62vh;
-    border: 1px solid white;
-    border-radius: 10px;
-    box-shadow: 2px 2px 20px lightblue;
+    border-radius: 15px;
+    box-shadow: 4px 4px 30px lightblue;
     margin-left: 45vw;
 }
+
 #signup_nav p {
     margin-top: 15px;
-    font-size: 6px;
-    font-family: 'Roboto Slab', serif;
+    font-size: 10px;
+    font-family: 'Sorts Mill Goudy', serif;
     margin-left: 0vw;
 }
 
@@ -95,25 +96,31 @@
 /* INPUT FIELD LOGO */
 
 .signup_form label {
-    font-size: 6px;
-    font-family: 'Roboto Slab', serif;
+    font-size: 8px;
+    font-family: 'Sorts Mill Goudy', serif;
     font-weight: bold;
-    color: rgba(75, 74, 74, 0.459);
+    color: rgba(0, 0, 0, 0.979);
+    
 }
 
 .signup_form button {
     font-size: 10px;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Sorts Mill Goudy', serif;
     width: 14vw;
     height: 5vh;
     margin-top: 15px;
     border-radius: 10px;
     cursor: pointer;
-    color: white;
-    background-color: lightblue;
+    color:rgb(89, 245, 232);
+    background-color: white;
     box-shadow: 10px 10px 10px rgba(51, 50, 50, 0.459);
     outline: none;
     border: none;
+}
+
+.signup_form button:hover{
+    background-color: rgb(128, 166, 247);
+    color:white;
 }
 
 input[type=password]{
@@ -123,6 +130,7 @@ input[type=password]{
     border-bottom: 1px solid lightblue;
     font-weight: bold;
     font-size: 10px;
+    border-radius: 5px;
     color: black;
     font-family: 'Roboto Slab', serif;
     outline: none;
@@ -137,13 +145,15 @@ input[type=text]{
     font-weight: bold;
     font-size: 10px;
     color: black;
+    border-radius: 5px;
     font-family: 'Roboto Slab', serif;
     outline: none;
 }
-input[type=email], {
+input[type=email] {
     outline: none;
     padding: 0, 10px;
     border: none;
+    border-radius: 5px;
     border-bottom: 1px solid lightblue;
     font-weight: bold;
     font-size: 10px;
