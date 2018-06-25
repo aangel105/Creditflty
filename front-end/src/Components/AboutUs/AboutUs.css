@@ -1,0 +1,27 @@
+.ruleOne{
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    padding: 8px;
+    background: pink;
+    border: 2px solid #666;
+    color: red;
+    text-align: center;
+    font: 32px Arial, sans-serif;
+}
+
+.ruleTwo{
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    padding: 8px;
+    background: pink;
+    border: 2px solid #666;
+    color: red;
+    text-align: center;
+    font: 32px Arial, sans-serif;
+}
+
+div{
+    background-color: red;
+}
