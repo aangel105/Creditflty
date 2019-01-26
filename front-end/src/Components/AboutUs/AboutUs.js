@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
-import './AboutUs';
+import './AboutUs.css';
 
 class AboutUs extends Component {
     state = {
         hello: '',
     }
 
-    render(){
+    render() {
         return (
             <div>
-                <h1>Hellooooo</h1>
-              <div className='ruleOne'>1</div>
-              <div className='ruleTwo'>2</div>  
-            </div>    
+                <div>
+                    <h3 className='rule'>Rules</h3>
+                    <span className='ruleOne'>1</span><span className='message1'>Always pay your bill on time</span>
+                    <span className='ruleTwo'>2</span><span className='message2'>Pay your balance in full every month</span>
+                </div>
+            </div>
         )
     }
 }

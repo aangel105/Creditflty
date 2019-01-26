@@ -1,189 +1,215 @@
-* {
-    margin:0px;
-    padding: 0px;
-  }
-  
-  #logo{
-    width: 15vw;
-    height: 20vh;
-    margin-left: -20px;
-  }
-
-  .buttons {
-    width: 80vw;
-    height:150px;
-    margin-left: 10vw;
-    margin-top: 10vh;
-    position: absolute;
-  
-  }
-  
-  #credit-button {
-    font-family: 'Cinzel', serif;
-    font-size: 25px;
-    border-style: none;
-    width: 30vw;
-    margin-top: 35px;
-    height:15vh;
-    position: relative;
-    border-radius: 10px;
-    margin-left:40px;
-    box-shadow: 2px 2px 10px lightblue;
-    outline: none;
-    border:none; 
-  }
-  
-  #rewards-button {
-    font-family: 'Cinzel', serif;
-    padding: 15px;
-    position: relative;
-    padding: 10px;
-    margin-top: 35px;
-    margin-right:40px;
-    float: right;
-    font-size: 25px;
-    width: 30vw;
-    height:15vh;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px lightblue;
-    outline: none;
-    border:none; 
-  }
-
-  #rewards-button:hover{
-   cursor: pointer;
-  }
-
-  #credit-button:hover{
-   cursor: pointer;
-  }
-
-  /* HOMEPAGE NAVBAR */
-
-  .topbar{
-    position: fixed;
-    height: 25px;
-    box-shadow: 2px 2px 8px silver;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
+body{
+  min-height: 100% 
+}
+html{
+  height: 100% 
 }
 
-  .nav_bar{
-    position: fixed;
-      float: right;
-      margin-right: 12px;
-      position: -webkit-sticky;
-      position: sticky;
-      top: 0;
+/* IMAGE ONE */
+
+.image_one {
+  /* The image used */
+  background-image: url("./../../Images/travel.jpg");
+
+  /* Set a specific height */
+  min-height: 250px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* HOME CONTENT ONE */
+.home_content {
+  height: 140px;
+  background-color: rgb(136, 135, 135);
+}
+
+.content_header{
+  text-align: center;
+  font-family: 'Roboto Slab', serif;
+  font-size: 13px;
+  padding: 15px;
+}
+
+.content_paragraph{
+  font-size: 10px;
+  margin: 10px;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: black;
+  font-style: italic;
+}
+
+/* HOME CONTENT TWO -QUOTE */
+
+.home_content2{
+  height: 80px;
+  background-color: rgb(37, 37, 37);
+}
+
+.content_paragraph2{
+  position: relative;
+  font-size: 10px;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: whitesmoke;
+  font-style: italic;
+  padding: 30px;
+}
+
+
+/* IMAGE TWO */
+
+.image_two {
+  /* The image used */
+  background-image: url("./../../Images/travel_journey.jpg");
+
+  /* Set a specific height */
+  min-height: 150px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* HOME CONTENT Three*/
+
+.home_content3 {
+  height: 140px;
+  background-color: rgb(136, 135, 135);
+}
+
+.content_header3{
+  text-align: center;
+  padding: 15px;
+  font-family: 'Roboto Slab', serif;
+  font-size: 13px;
+}
+
+.content_paragraph3{
+  font-size: 10px;
+  margin: 10px;
+  padding: 5px;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: black;
+  font-style: italic;
+}
+
+/* IMAGE THREE */
+
+.image_three {
+  /* The image used */
+  background-image: url("./../../Images/airplane.jpg");
+
+  /* Set a specific height */
+  min-height: 200px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.last_image {
+  /* The image used */
+  background-image: url("./../../Images/travel.jpg");
+
+  /* Set a specific height */
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+#logo {
+  width: 15vw;
+  height: 20vh;
+  margin-left: -20px;
+}
+
+.buttons {
+  width: 80vw;
+  height: 150px;
+  margin-left: 10vw;
+  margin-top: 10vh;
+  position: absolute;
+
+}
+
+/* HOMEPAGE NAVBAR */
+
+.topbar {
+  position: fixed;
+  height: 25px;
+  box-shadow: 2px 2px 4px rgb(160, 159, 159);
+  background-color: gray;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.nav_bar {
+  position: fixed;
+  float: right;
+  margin-right: 12px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+#logo_name {
+  font-size: 10px;
+  font-family: 'Roboto Slab', serif;
+  padding: 3px;
+  text-decoration: none;
+  color: lightblue
+}
+
+#aboutUs {
+  font-size: 10px;
+  font-family: 'Roboto Slab', serif;
+  margin-right: 3px;
+  text-decoration: none;
+  color: lightblue
+}
+
+#credit_score {
+  font-size: 10px;
+  font-family: 'Roboto Slab', serif;
+  margin-right: 3px;
+  text-decoration: none;
+  color: lightblue
+}
+
+#rewards {
+  font-size: 10px;
+  font-family: 'Roboto Slab', serif;
+  text-decoration: none;
+  color: lightblue
+}
+
+/* OTHERS */
+
+.App-logo {
+  animation: App-logo-spin infinite 5s linear;
+  height: 80px;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
   }
-  
-  #logo_name{
-    font-size: 10px;
-    font-family: 'Roboto Slab', serif;
-    padding: 3px;
-    text-decoration: none;
-    color:lightblue
+
+  to {
+    transform: rotate(360deg);
   }
-  #aboutUs {
-      font-size: 10px;
-      font-family: 'Roboto Slab', serif;
-      margin-right: 3px;
-      text-decoration: none;
-      color:rgb(110, 109, 109);
-  }
-
-  #login{
-    font-size: 10px;  
-    font-family: 'Roboto Slab', serif;
-    margin-right: 3px;
-    text-decoration: none;
-    color:rgb(110, 109, 109);
-  }
-
-  #signup{
-    font-size: 10px;
-    font-family: 'Roboto Slab', serif;
-    text-decoration: none;
-    color:rgb(110, 109, 109);
-  }
-
-  /* FOOTER */
-
-
-  .footer{
-    margin-top: 80vh;
-    width: 100vw;
-    height: 30vh;
-    background-color: lightblue;
-    position: absolute;
- }
- 
- .company_info{
-     position: relative;
-     text-align: center;
-     width: 25vw;
-     height: 15vh;
-     margin-left: -30px;
-     margin-top:5px;
-     font-family: 'Roboto Slab', serif;
-     font-size: 10px;
- }
- 
- .credit_resources{
-     margin-left: 70vh;
-     font-family: 'Roboto Slab', serif;
-     font-size: 10px;
-     margin-top:-15vh;
- }
- 
- .credit_resources #notable_links{
-    font-family: 'Roboto Slab', serif;
-    margin-left: 80vh;
-    margin-top:-10px;
-    font-size: 8px;
- }
-
-
- /* FOOTER_LIST */
-
- #footer_aboutUs{
-     text-decoration: none;
-     color:rgb(110, 109, 109);
- }
-
- #footer_termOfService{
-    text-decoration: none;
-    color:rgb(110, 109, 109); 
- }
-
- #footer_Privacy{
-     text-decoration: none;
-     color:rgb(110, 109, 109);
- }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- /* OTHERS */
-
-  .App-logo {
-    animation: App-logo-spin infinite 5s linear;
-    height: 80px;
-  }
-  
-  @keyframes App-logo-spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-  }
-  
+}

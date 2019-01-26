@@ -10,7 +10,7 @@ class Login extends Component {
             usernname: '',
             password: '',
             userData: [],
-            isLogin: false,
+            isLoggedIn: false,
         }
     }
 
@@ -30,21 +30,22 @@ class Login extends Component {
 
     SubmitLoginForm = (e) => {
         e.preventDefault();
-        const {username, password,userData, isLogin} = this.state
+        const { username, password, userData, isLoggedIn } = this.state
         axios
-        .post("/login",{
-            username: username,
-            password:password,
-            userData: userData
-        })
-        .then(res => {
-            console.log("data : ", res.data);
-            console.log("logged in: ", res);
-            this.setState({
-                
-            }) 
-             
-        })
+            .post("/login", {
+                username: username,
+                password: password,
+                userData: userData,
+                isLoggedIn: true,
+            })
+            .then(res => {
+                console.log("data : ", res.data);
+                console.log("logged in: ", res);
+                this.setState({
+
+                })
+
+            })
     }
     render() {
         return (
@@ -58,7 +59,7 @@ class Login extends Component {
                         <img id='circular_logo' src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Circle_%28transparent%29.png/480px-Circle_%28transparent%29.png' />
                         <img id='login_logo' src='https://www.tlv-sh.de/wp-content/uploads/2016/09/avatar.png' />
 
-                        <form className='login_form'>
+                        <form className='login_form' onSubmit={this.SubmitLoginForm}>
 
                             <label for="email"><b>Email</b></label><br />
                             <input type='email' name="psw" required /><br />
@@ -67,7 +68,7 @@ class Login extends Component {
                             <label for="psw"><b>Password</b></label><br />
                             <input type='password' name="psw" required /><br />
 
-                            <button onClick={this.handleLogin}>Login</button> <br />
+                            <button onClick={this.SubmitLoginForm}>Login</button> <br />
                         </form>
                         <p id='p' >Don't have an account <Link id='signup_link' to='/signup'>Signup</Link></p>
                     </nav>

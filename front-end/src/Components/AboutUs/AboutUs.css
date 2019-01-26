@@ -1,27 +1,42 @@
+.rule h3{
+    margin-top: 20px;
+    color:red;
+    margin: 10px;
+    text-align: center;
+}
+
+.message1{
+    font-family: 'Sorts Mill Goudy', serif; 
+}
+
+.message2{
+    font-family: 'Sorts Mill Goudy', serif;  
+}
+
 .ruleOne{
     border-radius: 50%;
-    width: 36px;
-    height: 36px;
-    padding: 8px;
-    background: pink;
-    border: 2px solid #666;
-    color: red;
+    width: 15px;
+    height: 16px;
+    padding: 10px;
+    margin:5px;
+    margin-left: 10vw;
+    background: lightblue;
+    color: white;
+    border:white solid 1px;
     text-align: center;
-    font: 32px Arial, sans-serif;
+    font: 15px 'Paytone One', sans-serif;
 }
 
 .ruleTwo{
     border-radius: 50%;
-    width: 36px;
-    height: 36px;
-    padding: 8px;
-    background: pink;
-    border: 2px solid #666;
-    color: red;
+    margin: 5px;
+    margin-left: 20vw;
+    width: 16px;
+    height: 16px;
+    padding: 10px;
+    background: lightblue;
+    color: white;
+    border:white solid 1px;
     text-align: center;
-    font: 32px Arial, sans-serif;
-}
-
-div{
-    background-color: red;
+    font: 15px 'Paytone One', sans-serif;
 }

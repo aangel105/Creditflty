@@ -1,0 +1,89 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    display: none;
+    margin: 0;
+}
+
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+/* Rewards_header */
+
+.rewards_header{
+    font-family: 'Roboto Slab', serif;
+    padding: 15px;
+    margin: 5px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+}
+/* Instructions on Rewards */
+
+.rewards_Instructions {
+    font-size: 10px;
+    text-align: center;
+    font-style: italic;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* ExpensesForm */
+
+
+.rewardsExpensesDiv {
+    width: 35%;
+    margin: 2px;
+    padding: 40px;
+    background-color: lightblue;
+    border-radius: 10px;
+    display: block;
+    text-align: center;
+}
+
+.expensesForm #button {
+    width: 10vw;
+    outline: none; 
+    margin-top: 5px;
+    height: 5vh;
+    color: white;
+    background-color: rgb(251, 209, 209);
+    border-radius: 10px;
+    box-shadow: 5px 5px silver;
+    font-family: 'Roboto Slab', serif;
+    font-size: 10px;
+}
+
+.expensesForm #button:hover {
+    color: rgb(251, 209, 209);
+    background-color: white
+}
+
+.expensesForm label {
+    font-family: 'Roboto Slab', serif;
+    font-size: 10px;
+    font-style: italic;
+}
+
+.expensesForm input {
+    border-radius: 2px;
+}
+
+input[type=number] {
+    margin:2px;
+    padding:2px;
+    width: 15vw;
+    text-align: center;
+    outline: none; 
+    font-family: 'Orbitron', sans-serif;
+}
+
+
+/* RadioButtonForm */
+
+.radioButtonForm{
+    float:right;
+    margin-top: -60vh;
+}

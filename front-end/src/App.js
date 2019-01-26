@@ -27,13 +27,12 @@ class App extends Component {
       <div>
         <div className='topbar'>
           <nav className="nav_bar">
-            <Link id='aboutUs' to='/abouUs'> How it Work | </Link>
-            <Link id='login' to='/login'>Login | </Link>
-            <Link id='signup' to='/signup'>Signup</Link>
+            <Link id='aboutUs' to='/about'> How it Work | </Link>
+            <Link id='credit_score' to='/creditscore'>Credit Score | </Link>
+            <Link id='rewards' to='/rewards'>Rewards</Link>
           </nav>
           <Link id='logo_name' to='/'>
             Creditfly
-            {/* <img id="logo" src={Logo}></img> */}
           </Link>
         </div>
         
@@ -44,7 +43,7 @@ class App extends Component {
             <Route path='/creditscore' component={Credit_app} />
             <Route path='/rewards' component={Rewards_Profile} />
             <Route path='/signup' component={Signup}/>
-            <Route exact path='/aboutUs' component={AboutUs}/>
+            <Route exact path='/about' component={AboutUs}/>
           </Switch>
         </div>
 

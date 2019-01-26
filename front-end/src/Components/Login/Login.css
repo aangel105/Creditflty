@@ -7,7 +7,7 @@
 
 .login_div {
     margin-top: 10vh;
-    background: url('./../../Images/surfing.jpeg');
+    background: url('./../../Images/lakeImage.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     margin-left: 10vw;
@@ -15,7 +15,7 @@
     width: 75vw;
     height: 80vh;
     border-radius: 20px;
-    box-shadow: 10px 10px 10px rgba(51, 50, 50, 0.459);
+    box-shadow: 7px 7px 10px rgba(51, 50, 50, 0.459);
 }
 
 #signup_words {
@@ -75,6 +75,9 @@
 input[type=email]{
     border: none;
     font-weight: bold;
+    width: 15vw;
+    height: 3vh;
+    text-align: center;
     font-size: 10px;
     color: black;
     border-bottom: 1px solid lightblue;
@@ -84,6 +87,10 @@ input[type=password] {
     border: none;
     font-weight: bold;
     font-size: 10px;
+    width: 15vw;
+    height: 3vh;
+    text-align: center;
+    border-bottom: 1px solid lightblue;
     color: black;
     font-family: 'Roboto Slab', serif;
 }
@@ -96,9 +103,9 @@ input[type=password]:focus {
 .login_form button {
     font-size: 10px;
     font-family: 'Roboto Slab', serif;
-    width: 14vw;
-    height: 5vh;
-    margin-top: 10px;
+    width: 15vw;
+    height: 4vh;
+    margin-top: 15px;
     border-radius: 10px;
     cursor: pointer;
     color: white;
@@ -142,3 +149,4 @@ p Link {
     border-radius: 20px;
     background-color: lightblue;
 }
+
