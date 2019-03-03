@@ -57,7 +57,7 @@ VALUES (200,500,13000,1000,5500, 3),
 (0,5000,10000,4500,3000,4);
 
 INSERT INTO creditcards (card_name, card_ratings, card_review_text, card_image_url, expenditure_id)
-VALUES ('Chase Sapphire Reserve', 5, 'Execellent for travel and dining 3 pts per dollars', 'https://skift.com/wp-content/uploads/2016/09/chase-sapphire.jpg', 5),
+VALUES ('Chase Sapphire Reserve', 5, 'Execellent for travel and dining 3 pts per dollars', 'https://www.smartmoneyandtravel.com/wp-content/uploads/2018/10/Ink_Card_Background_2.png', 5),
 ('Platinum Delta SkyMiles', 5, 'Great for couple because it offer a companion pass every year', 'https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/category/cardarts/platinum-delta-skymiles.png',1),
 ('Citi Prestige', 4, 'Execellent for travel 4 night free for all hotel booking', 'https://mms.businesswire.com/media/20170717005286/en/600154/5/Citi_Prestige.jpg', 10),
 ('Chase Freedom', 5, 'Awesome for Grocery and Gas with Rotating Categories 5% back', 'http://moorewithmiles.com/wp-content/uploads/2017/09/IMG_1906.jpg', 2),

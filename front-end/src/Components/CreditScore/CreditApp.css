@@ -37,9 +37,11 @@
     border-radius: 15px;
     box-shadow: 2px 2px 10px lightgrey;
     cursor: pointer;
-    background-color:lightblue;  
+    background-color:rgb(1, 248, 236);;  
     font-weight: bold;
 }
+
+
 
 #check_liks{
     font-family: 'Cinzel', serif;

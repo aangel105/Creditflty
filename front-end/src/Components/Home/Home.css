@@ -1,5 +1,5 @@
 body{
-  min-height: 100% 
+  min-height: 100%; 
 }
 html{
   height: 100% 
@@ -7,100 +7,103 @@ html{
 
 /* IMAGE ONE */
 
-.image_one {
-  /* The image used */
+.imageOne {
   background-image: url("./../../Images/travel.jpg");
-
-  /* Set a specific height */
-  min-height: 250px;
-
+  min-height:90vh;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  opacity: 0.9;
+  position: relative;
 }
 
-/* HOME CONTENT ONE */
-.home_content {
+.imageOneLogo {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  
+}
+
+.imageOneLogo .imageOneHeader{
+  background-color: rgb(151, 151, 151);
+  color:#fff;
+  padding: 20px;
+  font-weight: 800;
+  font-size: 27px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  /* border:1px solid rgb(250, 223, 105); */
+  border:1px solid rgb(250, 211, 37);
+
+}
+
+/* HOME CONTENT ONE AND Three*/
+.containerOne, .containerThree   {
   height: 140px;
-  background-color: rgb(136, 135, 135);
-}
+  background-color: #f4f4f4;
+  display:flex;
+  flex-direction: column;
+  }
 
-.content_header{
+.contentHeaderOne, .contentHeaderThree{
   text-align: center;
   font-family: 'Roboto Slab', serif;
   font-size: 13px;
-  padding: 15px;
+  color:#666;
+  letter-spacing: 1px;
+  font-weight: 800;
+  padding: 12px;
+  flex:2;
 }
 
-.content_paragraph{
+.contentParagraphOne, .contentParagraphThree{
   font-size: 10px;
-  margin: 10px;
+  letter-spacing: 0.4px;
+  height:60%;
   font-family: 'Source Sans Pro', sans-serif;
-  color: black;
+  color:#666;
   font-style: italic;
+  flex:8;
+  /* border: 5px dashed blue; */
 }
 
 /* HOME CONTENT TWO -QUOTE */
 
-.home_content2{
+.homeContentTwo{
   height: 80px;
   background-color: rgb(37, 37, 37);
 }
 
-.content_paragraph2{
+.contentParagraphTwo{
   position: relative;
   font-size: 10px;
   font-family: 'Source Sans Pro', sans-serif;
-  color: whitesmoke;
+  color: rgb(252, 252, 252);
   font-style: italic;
   padding: 30px;
+ 
 }
 
 
 /* IMAGE TWO */
 
-.image_two {
-  /* The image used */
+.imageTwo {
   background-image: url("./../../Images/travel_journey.jpg");
-
-  /* Set a specific height */
   min-height: 150px;
-
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-/* HOME CONTENT Three*/
-
-.home_content3 {
-  height: 140px;
-  background-color: rgb(136, 135, 135);
-}
-
-.content_header3{
-  text-align: center;
-  padding: 15px;
-  font-family: 'Roboto Slab', serif;
-  font-size: 13px;
-}
-
-.content_paragraph3{
-  font-size: 10px;
-  margin: 10px;
-  padding: 5px;
-  font-family: 'Source Sans Pro', sans-serif;
-  color: black;
-  font-style: italic;
+  opacity: 0.9;
 }
 
 /* IMAGE THREE */
 
-.image_three {
+.imageThree {
   /* The image used */
   background-image: url("./../../Images/airplane.jpg");
 
@@ -112,20 +115,24 @@ html{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  opacity: 0.9;
 }
 
-.last_image {
+/* LAST IMAGE */
+
+.lastImage {
   /* The image used */
   background-image: url("./../../Images/travel.jpg");
 
   /* Set a specific height */
-  min-height: 500px;
+  min-height: 90vh;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  opacity: 0.9;
 }
 
 
@@ -150,11 +157,12 @@ html{
 .topbar {
   position: fixed;
   height: 25px;
-  box-shadow: 2px 2px 4px rgb(160, 159, 159);
-  background-color: gray;
-  position: -webkit-sticky;
+  box-shadow: 2px 2px 2px rgb(199, 199, 199);
+  background-color: rgb(151, 151, 151);
   position: sticky;
+  width: 100%;
   top: 0;
+  z-index: 1;
 }
 
 .nav_bar {
@@ -166,12 +174,14 @@ html{
   top: 0;
 }
 
+
 #logo_name {
   font-size: 10px;
   font-family: 'Roboto Slab', serif;
   padding: 3px;
   text-decoration: none;
-  color: lightblue
+  color: rgb(1, 248, 236);
+  transition: all 0.5s ease-in-out;
 }
 
 #aboutUs {
@@ -179,7 +189,8 @@ html{
   font-family: 'Roboto Slab', serif;
   margin-right: 3px;
   text-decoration: none;
-  color: lightblue
+  color: rgb(1, 248, 236);
+  transition: all 0.5s ease-in-out;
 }
 
 #credit_score {
@@ -187,29 +198,32 @@ html{
   font-family: 'Roboto Slab', serif;
   margin-right: 3px;
   text-decoration: none;
-  color: lightblue
+  color: rgb(1, 248, 236);
+  transition: all 0.5s ease-in-out;
 }
 
 #rewards {
   font-size: 10px;
   font-family: 'Roboto Slab', serif;
   text-decoration: none;
-  color: lightblue
+  color: rgb(1, 248, 236);
+  transition: all 0.5s ease-in-out;
 }
 
-/* OTHERS */
 
-.App-logo {
-  animation: App-logo-spin infinite 5s linear;
-  height: 80px;
+#aboutUs:hover {
+  color:rgb(250, 211, 37);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
+#credit_score:hover{
+  color:rgb(250, 211, 37);
 }
+
+#rewards:hover {
+  color:rgb(250, 211, 37);
+}
+
+#logo_name:hover {
+  color:rgb(250, 211, 37);
+}
+

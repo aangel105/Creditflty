@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import {Link} from 'react-router-dom';
-import './Credit_app.css'
+import './CreditApp.css'
 
 class Credit_Profile extends Component {
     constructor(){
