@@ -1,269 +1,258 @@
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-    display:none;
+  display: none;
 }
 
-
 * {
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
-} 
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
 
 /* Rewards_header */
 
-.rewards_header{
-    font-family: 'Roboto Slab', serif;
-    padding: 15px;
-    margin: 5px;
-    text-align: center;
-    font-size: 13px;
-    font-weight: bold;
+.rewards_header {
+  font-family: "Roboto Slab", serif;
+  padding: 15px;
+  margin: 5px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
 }
 /* Instructions on Rewards */
 
 .rewards_Instructions {
-    font-size: 10px;
-    text-align: center;
-    font-style: italic;
-    font-family: 'Source Sans Pro', sans-serif;
+  font-size: 10px;
+  text-align: center;
+  font-style: italic;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 .container {
-    background-image: url("./../../Images/travel1.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 40vh;
-    min-width: 100%;
-    display:inline-block;
-    opacity: 0.8;
+  background-image: url("./../../Images/travel1.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 40vh;
+  min-width: 100%;
+  display: inline-block;
+  opacity: 0.8;
 }
 
-  .header .header_paragraph{
-    padding:30px;
-    margin:20px;
-    text-align: center;
-    background-color: transparent;
-    position: relative;
-    font-size: 2.2rem;
-    font-family: 'Roboto Slab', serif;
+.header .header_paragraph {
+  padding: 30px;
+  margin: 20px;
+  text-align: center;
+  background-color: transparent;
+  position: relative;
+  font-size: 2.2rem;
+  font-family: "Roboto Slab", serif;
+  color: rgb(1, 248, 236);
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-style: italic;
+}
+.earn{
+    color:rgb(250, 211, 37);
+}
+
+.header_paragraph .arrow1 {
+  background: transparent;
+  font-size: 2.2rem;
+  position: relative;
+  animation-name: arrow;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes arrow {
+  0% {
+    color: rgb(250, 211, 37);
+    top: 0px;
+  }
+  25% {
+    color: rgb(245, 229, 6);
+    top: 2px;
+  }
+  50% {
+    color: rgb(151, 151, 151);
+    top: 7px;
+  }
+  75% {
+    color: rgb(255, 255, 255);
+    top: 5px;
+  }
+  100% {
     color: rgb(1, 248, 236);
-    font-weight: 400;
-    letter-spacing: 2px;
-    font-style: italic;
+    top: 0px;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+/* design  right container */
+.container_right {
+    margin: auto;
+    margin-top: 15px;
+    flex: 4;
+    padding: 0;
+    margin:0;
   }
 
-  .header_paragraph .arrow1 {
-      background: transparent;
-      font-size: 2.2rem;
-      position: relative;
-      animation-name: arrow;
-      animation-duration: 2s;
-      animation-iteration-count: infinite; 
-  }
+/* design form's container */
+.container_right .form {
+  text-align: center;
+  padding: 50px 20px;
+  background-color:rgb(163, 162, 162);
+  border-left: 1px solid rgb(250, 211, 37);
+  height: 100%;
+}
 
-  @keyframes arrow {
-      0% {color:rgb(250, 211, 37); margin-right: 20px;}
-      25% {color:rgb(190, 190, 190); margin-right: 15px;}
-      50% {color:rgb(151, 151, 151); margin-right: 17px;}
-      75%{color: rgb(255, 255, 255); margin-right: 5px;}
-      100%{color: rgb(1, 248, 236); margin-left: 10px;}
-  }
+/* design the form labels  */
+.container_right .form label {
+  font-size: 0.6rem;
+  font-family: "Roboto Slab", serif;
+  font-weight: 200;
+  color: rgb(245, 239, 239);
+  font-weight: bold;
+  letter-spacing: 1.1px;
+}
 
-  .wrapper {
-       padding:15px;
-       /* border: 10px solid red; */
-       background:rgb(151, 151, 151);
-       display:flex;
-       flex-direction: row;
+/* design the form input  */
+.container_right .form input[type="number"] {
+  border-radius: 15px;
+  text-align: center;
+  color: #000;
+  border: none;
+}
 
-  }
+/* design the form input on focus  */
+.container_right .form input[type="number"]:focus {
+  outline: none;
+}
 
-  /* design  right container */
-  .container_right{
-      margin:auto;
-      margin-top: 15px;
-      /* border: 5px dashed blue; */
-      flex:4;
-      /* background-color:rgb(155, 45, 45) */
-  }
+/* design the submit button */
+.container_right .form input[type="submit"] {
+  width: 60%;
+  font-family: "Roboto Slab", serif;
+  letter-spacing: 1.4px;
+  margin-bottom: 10px;
+  padding: 3px;
+  border-radius: 50px;
+  color: rgb(245, 239, 239);  
+  background-color: rgb(1, 248, 236);
+  transition: all 0.5s ease-in-out;
+}
 
-  /* design form's container */
-  .container_right .form {
-      text-align: center;
-      padding: 3px 3px;
-      background-color:rgb(190, 190, 190);
-      border-bottom: 1px solid rgb(250, 211, 37);
-      margin: 2px 2px;
-      border-radius: 10px;
-      height: 100%;
-  }
+/* design the submit button on hover*/
+.container_right .form input[type="submit"]:hover {
+  color: rgb(235, 233, 233);
+  background-color: rgb(7, 228, 217);
+  border: 1px solid rgb(250, 211, 37);
+}
+/* design the submit button on focus */
+.container_right .form input[type="submit"]:focus {
+  outline: none;
+  border-top: none;
+  border: none;
+}
 
-  /* design the form labels  */
-  .container_right .form label {
-    font-size: 0.6rem;
-    font-family: 'Roboto Slab', serif;
-    font-weight:200;
-    color:rgb(114, 114, 114);
-    letter-spacing: 1.1px;
-  }
-
-
-  /* design the form input  */
-  .container_right .form input[type=number] {
-      border-radius: 15px;
-      text-align: center;
-      color:rgb(114, 114, 114);
-      border:none; 
-  }
-
-    /* design the form input on focus  */
-  .container_right .form input[type=number]:focus{
-    outline: none;
-  }
-
-  /* design the submit button */
-  .container_right .form input[type=submit]{
-     width: 60%;
-     font-family: 'Roboto Slab', serif;
-     letter-spacing: 1.4px;
-     margin-bottom: 10px;
-     padding: 3px;
-     border-radius: 50px;
-     color:#fff;
-     background-color:rgb(1, 248, 236);
-     transition: all 0.5s ease-in-out;
-  }
-
-  /* design the submit button on hover*/
-  .container_right .form input[type=submit]:hover{
-    color:rgb(235, 233, 233);
-    background-color: rgb(7, 228, 217);
-    border:1px solid rgb(250, 211, 37);
-  }
-  /* design the submit button on focus */
-  .container_right .form input[type=submit]:focus{
-      outline: none;
-      border-top:none;
-      border:none;
-  }
-
-  /* design the form span */
-  .container_right .form span {
-    font-family: 'Roboto Slab', serif; 
-    font-size: 0.6rem; 
-    color:rgb(114, 114, 114);
-  }
-
-  /* credit cards container */
-  .container_left{
-      flex:6;
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-column-gap: 1em;
-      grid-row-gap: 1em;
-      margin-top:3.6rem;;
-      
-  }
-
-  /* credit cards container  - sheader */
-  .container_left .containerLeftHeader {
-      margin-bottom: 0px;
-      display: inline-block;
-      color:red;
-  }
-
-    /* credit cards container - cards */
-  .container_left .cards {
-      height: 160px;
-      width: 140px;
-      background-color:rgb(190, 190, 190);
-      border-bottom: 1px solid rgb(250, 211, 37);
-  }
-
-    /* cards images*/
-
-    .container_left .cards 
-    .cardOne,
-    .cardTwo,
-    .cardThree,
-    .cardFour,
-    .cardFive,
-    .cardSix {
-        background-repeat: no-repeat;
-        background-color: rgb(254, 254, 254) !important;
-        background-size: cover;
-        min-height: 20vh;
-        min-width: 100%;
-        display:inline-block;
-        opacity: 0.9;
-        border-bottom: 1px solid rgb(206, 205, 205);
-    }
-
-    /* images background */
-    .cardOne {
-        background-image: url("./../../Images/saphire.png");
-    }
-    .cardTwo {
-        background-image: url("./../../Images/preferred.png");     
-    }
-    .cardThree {
-        background-image: url("./../../Images/southwest.png");    
-    }
-    .cardFour {
-        background-image: url("./../../Images/united.png");    
-    }
-    .cardFive {
-        background-image: url("./../../Images/gold.jpg");   
-    }
-    .cardSix {
-        background-image: url("./../../Images/platinum.jpeg");   
-    }
+/* design the form span */
+.container_right .form span {
+  font-family: "Roboto Slab", serif;
+  font-size: 0.5rem;
+  color: rgb(245, 239, 239);
+  letter-spacing: 0.2px;
+  font-weight: bold;
+}
 
 
-  /* Smartphones */
-  @media screen and (min-width: 300px) and (max-width:550px)  {
-    .wrapper {
-       display: flex;
-       flex-direction: column; 
-    }
+/* credit cards container */
+.container_left {
+  flex: 6;
+  background-color:rgb(175, 175, 175);
+  height: 100%;
+  display: grid;
+  grid-column-gap: 0.2em;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(100px, auto); 
+}
 
-    .container_right {
-        flex: 5;
-    }
+/* credit cards container  - sheader */
+.container_left .containerLeftHeader {
+  text-align: center;
+  font-size: 25px;
+}
 
-    .container_left {
-        flex: 5;
-    }
+/* credit cards container - cards */
+.container_left .cards {
+  height: 160px;
+  width: 160px;
+  margin-top:1rem;
+  padding: 2px;
+  margin-bottom: -25px;
+  background-color:rgb(172, 170, 170);
+  border-bottom: 1px solid rgb(250, 211, 37);
+}
 
-    .header_paragraph .arrow1{
-        display: none;
-    }
-  }
+/* cards images*/
 
-  /* Tables and Small Laptops */
+.container_left .cards .cardOne,
+.cardTwo,
+.cardThree,
+.cardFour,
+.cardFive,
+.cardSix {
+  background-repeat: no-repeat;
+  background-color:rgb(175, 175, 175);
+  background-size: cover;
+  min-height: 20vh;
+  border-radius: 5px;
+  min-width: 100%;
+  display: inline-block;
+  opacity: 0.9;
+  border:none;
+}
 
-  @media screen and (max-width: 768px){
-    .wrapper {
-        display:flex;
-        flex-direction: column;
-    }
-    .container_right {
-        flex: 5;
-    }
+/* images background */
+.cardOne {
+  background-image: url("./../../Images/saphire.png");
+}
+.cardTwo {
+  background-image: url("./../../Images/preferred.png");
+}
+.cardThree {
+  background-image: url("./../../Images/southwest.png");
+}
+.cardFour {
+  background-image: url("./../../Images/united.png");
+}
+.cardFive {
+  background-image: url("./../../Images/citi.jpg");
+}
+.cardSix {
+  background-image: url("./../../Images/freedom\ .png");
+  height: 62%;
+}
 
-    .container_left {
-        flex: 5;
-    }
+/*  cards text*/
+.container_left .cards .cardText {
+  font-size: 8px;
+  padding: 2px;
+  color: rgb(245, 239, 239);
+  margin: 1px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 200;
+  letter-spacing: 0.4px;
+}
+.container_left .cards .name {
+  font-size: 8px;
+  font-weight: bold;
+  color: #000;
+  margin: 2px;
+  line-height: 1.2rem;
+}
 
-    .container_right{
-        margin:auto;
-        margin-top: 15px;
-        /* border: 5px dashed blue; */
-        flex:4;
-        /* background-color:rgb(155, 45, 45) */
-    }
-
-  }
-
-  

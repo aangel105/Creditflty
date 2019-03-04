@@ -7,43 +7,27 @@ class Rewards_Profile extends Component {
   constructor() {
     super();
     this.state = {
-      travel_expenses: [],
-      dinning_expenses: [],
-      gas_expenses: [],
-      grocery_expenses: [],
-      others_expenses: [],
-      credit_Cards: [],
-      credit_Card_Index: null,
+      travelExpenses: [],
+      dinningExpenses: [],
+      gasExpenses: [],
+      groceryExpenses: [],
+      otherExpenses: [],
+      creditCards: [],
+      creditCardIndex: null,
       message: "",
       isFormSubmited: false
     };
   }
 
-  handleTravelSpend = e => {
-    this.setState({ travel_expenses: e.target.value });
-  };
-
-  hanldeDinningSpend = e => {
-    this.setState({ dinning_expenses: e.target.value });
-  };
-
-  hanldeGasSpend = e => {
-    this.setState({ gas_expenses: e.target.value });
-  };
-
-  hanldeGrocerySpend = e => {
-    this.setState({ grocery_expenses: e.target.value });
-  };
-
-  handleOtherSpend = e => {
-    this.setState({ others_expenses: e.target.value });
+  handleOnChange = e => {
+    this.setState({ [e.target.name]: e.target.value });
   };
 
   componentDidMount = () => {
     axios
       .get("/creditcards")
       .then(res => {
-        this.setState({ credit_Cards: res.data.data });
+        this.setState({ creditCards: res.data.data });
       })
       .catch(err => {
         this.setState({ message: "Error retrieving creditcards" });
@@ -55,26 +39,26 @@ class Rewards_Profile extends Component {
     e.stopPropagation();
     e.preventDefault();
     const {
-      travel_expenses,
-      dinning_expenses,
-      gas_expenses,
-      grocery_expenses,
-      others_expenses,
+      travelExpenses,
+      dinningExpenses,
+      gasExpenses,
+      groceryExpenses,
+      otherExpenses,
       message
     } = this.state;
-    if (travel_expenses >= 2800 || dinning_expenses >= 2800) {
-      this.setState({ credit_Card_Index: 0 });
+    if (travelExpenses >= 2800 || dinningExpenses >= 2800) {
+      this.setState({ creditCardIndex: 0 });
     } else {
       this.setState({
         message: message
       });
     }
-    if (grocery_expenses > 5000 || gas_expenses > 5000) {
-      this.setState({ credit_Card_Index: 3 });
+    if (groceryExpenses > 5000 || gasExpenses > 5000) {
+      this.setState({ creditCardIndex: 3 });
     }
 
-    if (travel_expenses < 1000 && others_expenses > 3000) {
-      this.setState({ credit_Card_Index: 5 });
+    if (travelExpenses < 1000 && otherExpenses > 3000) {
+      this.setState({ creditCardIndex: 5 });
     }
     this.setState({
       isFormSubmited: true
@@ -82,11 +66,11 @@ class Rewards_Profile extends Component {
   };
 
   render() {
-    const { credit_Card_Index, credit_Cards, isFormSubmited } = this.state;
+    const { creditCardIndex, creditCards, isFormSubmited } = this.state;
     if (isFormSubmited) {
       console.log("submitted");
-      if (credit_Card_Index !== null && credit_Cards.length) {
-        let oneCard = credit_Cards[credit_Card_Index];
+      if (creditCardIndex !== null && creditCards.length) {
+        let oneCard = creditCards[creditCardIndex];
         console.log("allcards", oneCard);
         return (
           <div>
@@ -108,85 +92,152 @@ class Rewards_Profile extends Component {
           <div className="container">
             <div className="header">
               <p className="header_paragraph">
-                Spend <span className="arrow1"> > </span> Earn{" "}
+                Spend <span className="arrow1"> > </span>{" "}
+                <span className="earn">Earn</span>{" "}
                 <span className="arrow1"> > </span> Travel
               </p>
             </div>
           </div>
           <div className="wrapper">
             <div className="container_left">
-            {/* <span className="containerLeftHeader">Popular Credit Cards</span> */}
-            <div className='cards'>
-            <img className="cardOne" alt=""/>
+              <div className="cards">
+                <img className="cardOne" alt="" />
+                <div className="cardText">
+                  <span className="name"> Name:</span>
+                  <span id="span1"> Chase Saphire Reserve</span>
+                  <br />
+                  <span className="name"> Good:</span>
+                  <span id="span2"> Travel and Dinning</span>
+                  <br />
+                  <span className="name">Credit Score:</span>
+                  <span id="span3"> Excellent </span>
+                </div>
+              </div>
+              <div className="cards">
+                <img className="cardTwo" alt="" />
+                <div className="cardText">
+                  <span className="name"> Name:</span>
+                  <span id="span1"> Chase Saphire Preferred</span>
+                  <br />
+                  <span className="name"> Good:</span>
+                  <span id="span2"> Dining and Travel</span>
+                  <br />
+                  <span className="name">Credit Score:</span>
+                  <span id="span3"> Good </span>
+                </div>
+              </div>
+              <div className="cards">
+                <img className="cardThree" alt="" />
+                <div className="cardText">
+                  <span className="name"> Name:</span>
+                  <span id="span1"> SouthWest Rapid Rewards</span>
+                  <br />
+                  <span className="name"> Good:</span>
+                  <span id="span2"> Travel and Companion Pass</span>
+                  <br />
+                  <span className="name">Credit Score:</span>
+                  <span id="span3"> Excellent </span>
+                </div>
+              </div>
+              <div className="cards">
+                <img className="cardFour" alt="" />
+                <div className="cardText">
+                  <span className="name"> Name:</span>
+                  <span id="span1"> United Explorer</span>
+                  <br />
+                  <span className="name"> Good:</span>
+                  <span id="span2"> Travel and United Flyer</span>
+                  <br />
+                  <span className="name">Credit Score:</span>
+                  <span id="span3"> Excellent </span>
+                </div>
+              </div>
+              <div className="cards">
+                <img className="cardFive" alt="" />
+                <div className="cardText">
+                  <span className="name"> Name:</span>
+                  <span id="span1"> Citi Double Cash</span>
+                  <br />
+                  <span className="name"> Good:</span>
+                  <span id="span2"> Unlimited 2% Cashback</span>
+                  <br />
+                  <span className="name">Credit Score:</span>
+                  <span id="span3"> Good </span>
+                </div>
+              </div>
+              <div className="cards">
+                <img className="cardSix" alt="" />
+                <div className="cardText">
+                  <span className="name"> Name:</span>
+                  <span id="span1"> Chase Freedom</span>
+                  <br />
+                  <span className="name"> Good:</span>
+                  <span id="span2"> Rotaring Category</span>
+                  <br />
+                  <span className="name">Credit Score:</span>
+                  <span id="span3"> Good </span>
+                </div>
+              </div>
             </div>
-            <div className='cards'>
-            <img className="cardTwo" alt="" />
-            </div>
-            <div className='cards'>
-            <img className="cardThree" alt="" />
-            </div>
-            <div className='cards'>
-            <img className="cardFour" alt="" />
-            </div>
-            <div className='cards'>
-            <img className="cardFive" alt="" />
-            </div>
-            <div className='cards'>
-            <img className="cardSix" alt="" />
 
-            </div>
-            </div>
             <div className="container_right">
               <form className="form">
                 <label>Travel Expenses</label>
                 <br />
                 <input
+                  name="travelExpenses"
                   type="number"
                   num="0"
-                  onChange={this.handleTravelSpend}
+                  onChange={this.handleOnChange}
                   required
                 />
                 <br />
                 <label>Dinning Expenses</label>
                 <br />
                 <input
+                  name="dinningExpenses"
                   type="number"
                   num="0"
-                  onChange={this.hanldeDinningSpend}
+                  onChange={this.handleOnChange}
                   required
                 />
                 <br />
                 <label>Gas Expenses</label>
                 <br />
                 <input
+                  name="gasExpenses"
                   type="number"
                   num="0"
-                  onChange={this.hanldeGasSpend}
+                  onChange={this.handleOnChange}
                   required
                 />
                 <br />
                 <label>Grocery Expenses</label>
                 <br />
                 <input
+                  name="groceryExpenses"
                   type="number"
                   num="0"
-                  onChange={this.hanldeGrocerySpend}
+                  onChange={this.handleOnChange}
                   required
                 />
                 <br />
-                <label>Other Expenseses</label>
+                <label>Other Expenses</label>
                 <br />
                 <input
+                  name="otherExpenses"
                   type="number"
                   num="0"
-                  onChange={this.handleOtherSpend}
+                  onChange={this.handleOnChange}
                   required
                 />
                 <br />
                 <br />
                 <input type="submit" onClick={e => this.submitForm(e)} />
-                <br/>
-                <span>* Enter your estimated yearly expenses for each category.</span>
+                <br />
+                <span>
+                  * Enter your estimated yearly expenses for each category.
+                </span>
               </form>
             </div>
           </div>
