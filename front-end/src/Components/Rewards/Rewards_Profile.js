@@ -92,9 +92,11 @@ class Rewards_Profile extends Component {
           <div className="container">
             <div className="header">
               <p className="header_paragraph">
-                Spend <span className="arrow1"> > </span>{" "}
+                <span className="arrow2"> Spend </span>
+                <span className="arrow1"> > </span>{" "}
                 <span className="earn">Earn</span>{" "}
-                <span className="arrow1"> > </span> Travel
+                <span className="arrow1"> > </span>
+                <span className="arrow3"> Travel </span>
               </p>
             </div>
           </div>
