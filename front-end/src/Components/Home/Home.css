@@ -1,15 +1,16 @@
-body{
-  min-height: 100%; 
+body {
+  min-height: 100%;
 }
-html{
-  height: 100% 
+
+html {
+  height: 100%
 }
 
 /* IMAGE ONE */
 
 .imageOne {
   background-image: url("./../../Images/travel.jpg");
-  min-height:90vh;
+  min-height: 90vh;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
@@ -24,66 +25,69 @@ html{
   top: 50%;
   width: 100%;
   text-align: center;
-  
+
 }
 
-.imageOneLogo .imageOneHeader{
+.imageOneLogo .imageOneHeader {
   background-color: rgb(151, 151, 151);
-  color:#fff;
+  color: #fff;
   padding: 20px;
   font-weight: 800;
-  font-size: 27px;
+  font-size: 20px;
   letter-spacing: 8px;
   text-transform: uppercase;
-  border:1px solid rgb(250, 211, 37);
+  border: 1px solid rgb(250, 211, 37);
 
 }
 
 /* HOME CONTENT ONE AND Three*/
-.containerOne, .containerThree   {
+.containerOne,
+.containerThree {
   height: 140px;
   background-color: #f4f4f4;
-  display:flex;
+  display: flex;
   flex-direction: column;
-  }
+}
 
-.contentHeaderOne, .contentHeaderThree{
+.contentHeaderOne,
+.contentHeaderThree {
   text-align: center;
   font-family: 'Roboto Slab', serif;
   font-size: 13px;
-  color:#666;
+  color: #666;
   letter-spacing: 1px;
   font-weight: 800;
   padding: 12px;
-  flex:2;
+  flex: 2;
 }
 
-.contentParagraphOne, .contentParagraphThree{
+.contentParagraphOne,
+.contentParagraphThree {
   font-size: 10px;
   letter-spacing: 0.4px;
-  height:60%;
+  height: 60%;
   font-family: 'Source Sans Pro', sans-serif;
-  color:#666;
+  color: #666;
   font-style: italic;
-  flex:8;
+  flex: 8;
   /* border: 5px dashed blue; */
 }
 
 /* HOME CONTENT TWO -QUOTE */
 
-.homeContentTwo{
+.homeContentTwo {
   height: 80px;
   background-color: rgb(37, 37, 37);
 }
 
-.contentParagraphTwo{
+.contentParagraphTwo {
   position: relative;
   font-size: 10px;
   font-family: 'Source Sans Pro', sans-serif;
   color: rgb(252, 252, 252);
   font-style: italic;
   padding: 30px;
- 
+
 }
 
 
@@ -133,8 +137,6 @@ html{
   background-size: cover;
   opacity: 0.9;
 }
-
-
 
 #logo {
   width: 15vw;
@@ -211,18 +213,75 @@ html{
 
 
 #aboutUs:hover {
-  color:rgb(250, 211, 37);
+  color: rgb(250, 211, 37);
 }
 
-#credit_score:hover{
-  color:rgb(250, 211, 37);
+#credit_score:hover {
+  color: rgb(250, 211, 37);
 }
 
 #rewards:hover {
-  color:rgb(250, 211, 37);
+  color: rgb(250, 211, 37);
 }
 
 #logo_name:hover {
-  color:rgb(250, 211, 37);
+  color: rgb(250, 211, 37);
 }
 
+@media(max-width: 568px) {
+
+  .imageOne {
+    min-height: 30vh;
+  }
+
+  .imageOneLogo .imageOneHeader {
+    background-color: rgb(151, 151, 151);
+    color: #fff;
+    padding: 5px;
+    font-weight: 800;
+    font-size: 15px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    border: 1px solid rgb(250, 211, 37);
+
+  }
+
+  .containerOne,
+  .containerThree {
+    height: 200px;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: row;
+  }
+  .contentHeaderOne{
+    text-align: center;
+    margin-top: 2.5rem;
+  }
+
+  .contentParagraphOne{
+    padding: 1px;
+    margin-top: 0.2rem;
+  }
+
+  .imageTwo {
+    min-height: 15vh;
+  }
+
+  .imageThree {
+    min-height: 15vh;
+  }
+
+  .contentHeaderThree {
+    text-align: center;
+    margin-top: 2.5rem;
+  }
+
+  .contentParagraphThree{
+    padding: 5px;
+    margin-top: 0.2rem;
+  }
+
+  .lastImage{
+    min-height: 35vh;
+  }
+}
