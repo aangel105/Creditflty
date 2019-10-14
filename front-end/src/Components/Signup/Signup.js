@@ -1,59 +1,156 @@
-import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
-import './Signup.css'
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import axios from "axios";
+import "./Signup.css";
 
 class Signup extends Component {
-    constructor() {
-        super()
-        this.state = {
-            fullName: '',
-            username: '',
-            password: '',
-            isSignup: false,
-        }
+  constructor(props) {
+    super(props);
+    this.state = {
+      first_name: "",
+      last_name: "",
+      email: "",
+      password_digest: "",
+      confirm_password: "",
+      userData: [],
+      message: "",
+      isSignup: false
+    };
+  }
+
+  handleFormFields = e => {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  };
+
+  signupForm = e => {
+    const {
+      first_name,
+      last_name,
+      email,
+      password_digest,
+      confirm_password
+    } = this.state;
+    e.stopPropagation();
+    e.preventDefault();
+    if (email === "" || password_digest === "" || confirm_password === "") {
+      alert("Please enter a valid email address and password");
+    } else {
+      if (password_digest === confirm_password) {
+        axios
+          .post("/addUser", {
+            method: "POST",
+            headers: {
+              Accept: "application/json, text/plain, */* ",
+              "Content-type": "application/json"
+            },
+            first_name: JSON.stringify(first_name),
+            last_name: JSON.stringify(last_name),
+            email: JSON.stringify(email),
+            password_digest: JSON.stringify(password_digest)
+          })
+          .then(res => {
+            console.log(res);
+            console.log(res.data);
+            this.setState({
+              userData: res.data,
+              first_name: first_name,
+              last_name: last_name,
+              email: email,
+              password_digest: password_digest,
+              message: "Already Register",
+              isSignup: true
+            });
+            console.log(this.state);
+          });
+      } else if (password_digest !== confirm_password) {
+        alert(`Your Password don't match , Please try Against`);
+      } else {
+        this.setState({
+          userData: [],
+          first_name: "",
+          last_name: "",
+          email: "",
+          password_digest: "",
+          message: alert("Something wrong with email / password"),
+          isSignup: false
+        });
+      }
     }
+  };
 
-    
-
-    render() {
-        return (
-            <div>
-                <div className='signup_div'>
-                    <div id='signup_message'>
-                        <span id='hello'> Hello</span><br />
-                        <span id='world'>World.</span><br />
-                        <span id='spend'>Swipe</span>
-                        <img src='http://backgroundcheckall.com/wp-content/uploads/2017/12/arrow-icon-transparent-background-8.png' />
-                        <span id='spend'>Earn</span>
-                        <img src='http://backgroundcheckall.com/wp-content/uploads/2017/12/arrow-icon-transparent-background-8.png' />
-                        <span id='spend'>Travel</span>
-                    </div>
-                    <nav id='signup_nav'>
-                        <img id='circular_logo' src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Circle_%28transparent%29.png/480px-Circle_%28transparent%29.png' />
-                        <img id='signup_logo' src='https://www.tlv-sh.de/wp-content/uploads/2016/09/avatar.png' />
-
-                        <form className='signup_form'>
-                            <label for="fullname"><b>Full Name</b></label><br />
-                            <input type='text' name='Fullname' required /><br />
-
-                            <label for="email"><b>Email</b></label><br />
-                            <input type='email' name="psw" required /><br />
-
-                            <label for="uname"><b>Password</b></label><br />
-                            <input type='password' required /><br />
-
-                            <label for="psw"><b>Confirm Password</b></label><br />
-                            <input type='password' name="psw" required /><br />
-
-                            <button onClick={this.handleLogin}>Sign Up</button> <br />
-                        </form>
-                        <p id='myP'>Already have an account <Link to='/login'>Login </Link></p>
-                    </nav>
-                </div>
-            </div>
-
-        )
+  render() {
+    const { isSignup } = this.state;
+    if (isSignup) {
+      console.log("Registered!!!!", isSignup);
     }
+    return (
+      <React.Fragment>
+        <div className="signUp-container">
+          {/* <h1 className= 'signup-form '>Hello world!!!</h1> */}
+          <form className="signUp-form">
+            <img
+              className="form-logo"
+              src="https://img.icons8.com/cotton/50/000000/add.png"
+              alt="icon"
+            />
+            <label>First Name</label>
+            <input
+              type="text"
+              name="first_name"
+              onChange={this.handleFormFields}
+              autoComplete="off"
+              required
+            />
+            <label>Last Name</label>
+            <input
+              type="text"
+              name="last_name"
+              onChange={this.handleFormFields}
+              autoComplete="off"
+              required
+            />
+            <label>Email</label>
+            <input
+              type="email"
+              name="email"
+              onChange={this.handleFormFields}
+              autoComplete="off"
+              required
+            />
+            <label>Password</label>
+            <input
+              type="password"
+              name="password_digest"
+              onChange={this.handleFormFields}
+              required
+            />
+            <label>Confirm Password</label>
+            <input
+              type="password"
+              name="confirm_password"
+              onChange={this.handleFormFields}
+              required
+            />
+            <button
+              className="btn-submit"
+              type="submit"
+              onClick={e => this.signupForm(e)}
+            >
+              Sign Up
+            </button>
+            <span>
+              Already have an account{" "}
+              <Link id="link" to="/login">
+                Login{" "}
+              </Link>
+            </span>
+          </form>
+        </div>
+      </React.Fragment>
+    );
+  }
 }
 
 export default Signup;

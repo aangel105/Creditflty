@@ -1,81 +1,94 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import axios from 'axios';
-import './Login.css';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import axios from "axios";
+import "./Login.css";
 
 class Login extends Component {
-    constructor() {
-        super()
-        this.state = {
-            usernname: '',
-            password: '',
-            userData: [],
-            isLoggedIn: false,
-        }
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: "",
+      password: "",
+      userData: [],
+      isLoggedIn: false,
+      message: ""
+    };
+  }
 
-    handleUsername = (e) => {
-        const { username } = this.state;
-        this.setState({
-            username: e.target.value
+  handleLogin = e => {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  };
+
+  SubmitLoginForm = e => {
+    e.stopPropagation();
+    e.preventDefault();
+    const { email, password } = this.state;
+    if (email === "" || password === "") {
+      alert("Please enter a valid email address and password");
+    } else {
+      axios
+        .get("/login")
+        .then(res => {
+          console.log("User LoggedIn!!!");
+          console.log("data : ", res.data);
+
+          this.setState({
+            userData: res.data,
+            isLoggedIn: true,
+            email,
+            password,
+            message: "User Logged In"
+          });
+          console.log(this.state);
         })
+        .catch(err => {
+          console.log(err);
+        });
     }
+  };
 
-    handlePassword = (e) => {
-        const { password } = this.state;
-        this.setState({
-            password: e.target.value
-        })
-    }
-
-    SubmitLoginForm = (e) => {
-        e.preventDefault();
-        const { username, password, userData, isLoggedIn } = this.state
-        axios
-            .post("/login", {
-                username: username,
-                password: password,
-                userData: userData,
-                isLoggedIn: true,
-            })
-            .then(res => {
-                console.log("data : ", res.data);
-                console.log("logged in: ", res);
-                this.setState({
-
-                })
-
-            })
-    }
-    render() {
-        return (
-            <div>
-                <div className='login_div'>
-                    <div id='signup_words'>
-                        <span id='m'> We'll Take You </span><br />
-                        <span id='p'>to the Edge.</span><br />
-                    </div>
-                    <nav id='login_nav'>
-                        <img id='circular_logo' src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Circle_%28transparent%29.png/480px-Circle_%28transparent%29.png' />
-                        <img id='login_logo' src='https://www.tlv-sh.de/wp-content/uploads/2016/09/avatar.png' />
-
-                        <form className='login_form' onSubmit={this.SubmitLoginForm}>
-
-                            <label for="email"><b>Email</b></label><br />
-                            <input type='email' name="psw" required /><br />
-
-
-                            <label for="psw"><b>Password</b></label><br />
-                            <input type='password' name="psw" required /><br />
-
-                            <button onClick={this.SubmitLoginForm}>Login</button> <br />
-                        </form>
-                        <p id='p' >Don't have an account <Link id='signup_link' to='/signup'>Signup</Link></p>
-                    </nav>
-                </div>
-            </div>
-        )
-    }
+  render() {
+    return (
+      <React.Fragment>
+        <main className="login-section">
+          <form className="login">
+            <span className="login-header">Login</span>
+            <label>Email</label>
+            <input
+              type="email"
+              name="email"
+              onChange={this.handleLogin}
+              autoComplete="off"
+              required
+            />
+            <label>Password</label>
+            <input
+              type="password"
+              name="password"
+              onChange={this.handleLogin}
+              autoComplete="off"
+              required
+            />
+            <button
+              type="submit"
+              className="btn-login"
+              onClick={e => this.SubmitLoginForm(e)}
+            >
+              Login
+            </button>
+            <span className="login-link">
+              Don 't have an account
+              <Link id="login" to="/signup">
+                Signup
+              </Link>
+            </span>
+          </form>
+        </main>
+      </React.Fragment>
+    );
+  }
 }
 
 export default Login;

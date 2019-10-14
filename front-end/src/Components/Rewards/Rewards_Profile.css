@@ -1,208 +1,279 @@
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-    display: none;
+  display: none;
 }
 
 * {
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
 }
 
-/* Rewards_header */
+/* creditcards after submitting form */
 
-.rewards_header {
-    font-family: "Roboto Slab", serif;
-    padding: 15px;
-    margin: 5px;
-    text-align: center;
-    font-size: 13px;
-    font-weight: bold;
+.creditCards {
+  padding: 20px;
+  margin: 5px;
+  background-color: var(--secondary-color);
+  height: 60vh;
+  width: 50vw;
+  margin-top: 10vh;
+  margin-bottom: 5vh;
+  border-radius: 2%;
+  border-bottom: 1px solid var(--hover-color);
+}
+.creditCardsName {
+  font-size: 13px;
+  font-family: 'Crimson Pro', serif;  
+  margin: 4px;
+  padding:4px;
+  color: var(--secondary-color);
+  background-color:var(--hover-color) ;
+  line-height: 1rem;
+  letter-spacing: 0.7px;
+  border-radius: 2%;
 }
 
+.cardsReviews{
+  font-size: 13px;
+  margin: 4px;
+  padding:4px;
+  font-family: 'Crimson Pro', serif; 
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  line-height: 1rem;
+  letter-spacing: 0.7px;
+  border-radius: 2%;
+}
+
+.linkBackHome{
+  font-size: 13px;
+  margin: 4px;
+  padding:4px;
+  font-family: 'Crimson Pro', serif; 
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  line-height: 1rem;
+  letter-spacing: 0.7px;
+}
+
+#link{
+  color: var(--hover-color);
+}
+
+#link:hover{
+  color: var(--primary-color);
+  text-decoration: none;
+  cursor: pointer;
+}
 /* Instructions on Rewards */
 
 .rewards_Instructions {
-    font-size: 10px;
-    text-align: center;
-    font-style: italic;
-    font-family: "Source Sans Pro", sans-serif;
+  font-size: 10px;
+  text-align: center;
+  font-style: italic;
+  font-family: "Crimson Pro", serif;
 }
 
 .container {
-    background-image: url("./../../Images/travel1.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 40vh;
-    min-width: 100%;
-    display: inline-block;
-    opacity: 0.8;
+  background-image: url("./../../Images/travel.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 40vh;
+  min-width: 100%;
+  display: inline-block;
+  opacity: 0.8;
 }
 
 .header .header_paragraph {
-    padding: 30px;
-    margin: 20px;
-    text-align: center;
-    background-color: transparent;
-    position: relative;
-    font-size: 2.2rem;
-    font-family: "Roboto Slab", serif;
-    color: rgb(1, 248, 236);
-    font-weight: 400;
-    letter-spacing: 2px;
-    font-style: italic;
+  padding: 30px;
+  margin: 20px;
+  text-align: center;
+  background-color: transparent;
+  position: relative;
+  font-size: 1rem;
+  font-family: "Crimson Pro", serif;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 0.5rem;
+  font-style: italic;
 }
 
 .earn {
-    color: rgb(250, 211, 37);
+  color: var(--primary-color);
+  font-family: "Crimson Pro", serif;
 }
 
 .header_paragraph .arrow1 {
-    background: transparent;
-    font-size: 2.2rem;
-    position: relative;
-    animation-name: arrow;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
+  background: transparent;
+  font-size: 1.8rem;
+  position: relative;
+  animation-name: arrow;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 }
 
 @keyframes arrow {
-    0% {
-        color: rgb(250, 211, 37);
-        top: 0px;
-    }
+  0% {
+    color: var(--hover-color);
+    top: 0px;
+  }
 
-    25% {
-        color: rgb(245, 229, 6);
-        top: 2px;
-    }
+  50% {
+    color: var(--primary-color);
+    top: 7px;
+  }
 
-    50% {
-        color: rgb(151, 151, 151);
-        top: 7px;
-    }
+  75% {
+    color: var(--secondary-color);
+    top: 5px;
+  }
 
-    75% {
-        color: rgb(255, 255, 255);
-        top: 5px;
-    }
-
-    100% {
-        color: rgb(1, 248, 236);
-        top: 0px;
-    }
+  100% {
+    color: var(--hover-color);
+    top: 2px;
+  }
 }
 
 .wrapper {
-    display: flex;
-    flex-direction: row;
-    height: 100vh;
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  background-color: var(--secondary-color);
 }
 
 /* design  right container */
+
 .container_right {
-    margin: auto;
-    margin-top: 15px;
-    flex: 4;
-    padding: 0;
-    margin: 0;
+  border-left: 1px solid var(--hover-color);
+  flex: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* design form's container */
 .container_right .form {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: rgb(163, 162, 162);
-    border-left: 1px solid rgb(250, 211, 37);
-    height: 100%;
+  text-align: center;
+  height: 85%;
+  opacity: 0.9;
+}
+
+.container_right .form:hover {
+  opacity: 1;
+  transition-duration: 1000ms;
+  transition: ease-in-out;
 }
 
 /* design the form labels  */
 .container_right .form label {
-    font-size: 0.6rem;
-    font-family: "Roboto Slab", serif;
-    font-weight: 200;
-    color: rgb(245, 239, 239);
-    font-weight: bold;
-    letter-spacing: 1.1px;
+  font-size: 10px;
+  text-align: center;
+  font-family: "Crimson Pro", serif;
+  color: var(--primary-color);
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  margin: auto, 0, 0;
 }
 
 /* design the form input  */
 .container_right .form input[type="number"] {
-    border-radius: 15px;
-    text-align: center;
-    color: #000;
-    border: none;
+  width: 22vw;
+  height: 5vh;
+  font-size: 10px;
+  font-weight: 300;
+  border-radius: 15px;
+  text-align: center;
+  font-family: "Crimson Pro", serif;
+  color: var(--secondary-color);
+  border: none;
 }
 
 /* design the form input on focus  */
 .container_right .form input[type="number"]:focus {
-    outline: none;
+  outline: none;
+  opacity: 0.9;
+  color: var(--secondary-color);
+  text-decoration: none;
+  border-bottom: 1.5px solid var(--hover-color);
 }
 
 /* design the submit button */
 .container_right .form input[type="submit"] {
-    width: 60%;
-    font-family: "Roboto Slab", serif;
-    letter-spacing: 1.4px;
-    margin-bottom: 10px;
-    padding: 3px;
-    border-radius: 50px;
-    color: rgb(245, 239, 239);
-    background-color: rgb(1, 248, 236);
-    transition: all 0.5s ease-in-out;
+  width: 22vw;
+  height: 5vh;
+  font-size: 10px;
+  text-align: center;
+  font-family: "Crimson Pro", serif;
+  letter-spacing: 1.2px;
+  margin-bottom: 20px;
+  margin-top: 1.5rem;
+  padding: 2px;
+  border-radius: 50px;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  border: none;
+  box-shadow: 2px 0px 5px #444;
 }
 
 /* design the submit button on hover*/
 .container_right .form input[type="submit"]:hover {
-    color: rgb(235, 233, 233);
-    background-color: rgb(7, 228, 217);
-    border: 1px solid rgb(250, 211, 37);
+  opacity: 0.9;
+  transition: ease-in;
+  transition-duration: 1000ms;
+  border: 1px solid rgb(251, 225, 75);
 }
 
 /* design the submit button on focus */
 .container_right .form input[type="submit"]:focus {
-    outline: none;
-    border-top: none;
-    border: none;
+  outline: none;
+  opacity: 0.9;
+  text-decoration: none;
+  border-bottom: 1.5px solid var(--hover-color);
 }
 
 /* design the form span */
 .container_right .form span {
-    font-family: "Roboto Slab", serif;
-    font-size: 0.5rem;
-    color: rgb(245, 239, 239);
-    letter-spacing: 0.2px;
-    font-weight: bold;
+  font-family: "Crimson Pro", serif;
+  font-size: 10px;
+  color: var(--hover-color);
+  letter-spacing: 0.9px;
+  font-weight: bold;
 }
 
+.container_right .form #start {
+  color: var(--hover-color);
+  font-size: 10px;
+  font-weight: bold;
+}
 
 /* credit cards container */
 .container_left {
-    flex: 6;
-    background-color: rgb(175, 175, 175);
-    height: 100%;
-    display: grid;
-    grid-column-gap: 0.2em;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: minmax(100px, auto);
+  flex: 5;
+  justify-content: center;
+  justify-items: center;
+  height: 100%;
+  display: grid;
+  grid-column-gap: 0.2em;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(100px, auto);
 }
 
-/* credit cards container  - sheader */
+/* credit cards container  - header */
 .container_left .containerLeftHeader {
-    text-align: center;
-    font-size: 25px;
+  text-align: center;
+  font-size: 25px;
 }
 
 /* credit cards container - cards */
 .container_left .cards {
-    height: 160px;
-    width: 160px;
-    margin-top: 1rem;
-    padding: 2px;
-    margin-bottom: -25px;
-    background-color: rgb(172, 170, 170);
-    border-bottom: 1px solid rgb(250, 211, 37);
+  height: 160px;
+  width: 160px;
+  margin-top: 2rem;
+  padding: 2px;
+  margin-bottom: -25px;
+  text-transform: none;
 }
 
 /* cards images*/
@@ -213,103 +284,199 @@ input::-webkit-inner-spin-button {
 .cardFour,
 .cardFive,
 .cardSix {
-    background-repeat: no-repeat;
-    background-color: rgb(175, 175, 175);
-    background-size: cover;
-    min-height: 20vh;
-    border-radius: 5px;
-    min-width: 100%;
-    display: inline-block;
-    opacity: 0.9;
-    border: none;
+  background-repeat: no-repeat;
+  background-color: rgb(139, 139, 139);
+  background-size: cover;
+  min-height: 20vh;
+  border-radius: 5px;
+  min-width: 100%;
+  display: inline-block;
+  opacity: 0.9;
+  border: none;
 }
 
 /* images background */
 .cardOne {
-    background-image: url("./../../Images/saphire.png");
+  background-image: url("./../../Images/sapphire.png");
 }
 
 .cardTwo {
-    background-image: url("./../../Images/preferred.png");
+  background-image: url("./../../Images/preferred.png");
 }
 
 .cardThree {
-    background-image: url("./../../Images/southwest.png");
-}
-
-.cardFour {
-    background-image: url("./../../Images/united.png");
+  background-image: url("./../../Images/southwest.png");
 }
 
 .cardFive {
-    background-image: url("./../../Images/citi.jpg");
-}
-
-.cardSix {
-    background-image: url("./../../Images/freedom\ .png");
-    height: 62%;
+  background-image: url("./../../Images/citi.jpg");
 }
 
 /*  cards text*/
 .container_left .cards .cardText {
-    font-size: 8px;
-    padding: 2px;
-    color: rgb(245, 239, 239);
-    margin: 1px;
-    font-family: "Roboto Slab", serif;
-    font-weight: 200;
-    letter-spacing: 0.4px;
+  font-size: 10px;
+  padding: 2px;
+  color: var(--primary-color);
+  margin: 1px;
+  font-family: "Crimson Pro", serif;
+  font-weight: 200;
+  letter-spacing: 0.3px;
 }
 
 .container_left .cards .name {
-    font-size: 8px;
-    font-weight: bold;
-    color: #000;
-    margin: 2px;
-    line-height: 1.2rem;
+  font-size: 10px;
+  font-family: "Crimson Pro", serif;
+  color: var(--hover-color);
+  margin: 2px;
+  line-height: 1.2rem;
+  letter-spacing: 0.3px;
 }
 
 /* smartphones */
-@media(max-width:568px) {
+@media (max-width: 568px) {
+  .container {
+    min-height: 15vh;
+  }
 
-    .container {
-        min-height: 15vh;
-    }
+  .header_paragraph .arrow1,
+  .arrow2,
+  .earn {
+    display: none;
+  }
 
-    .header_paragraph .arrow1,
-    .arrow2,
-    .earn {
-        display: none;
-    }
+  .arrow3 {
+    background-color: transparent;
+    color: var(--primary-color);
+    font-family: "Crimson Pro", serif;
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    /* border: 2px red solid; */
+  }
 
-    .arrow3 {
-        background-color: rgb(151, 151, 151);
-        color: #fff;
-        padding: 10px;
-        font-weight: 800;
-        font-size: 10px;
-        letter-spacing: 8px;
-        text-transform: uppercase;
-        border: 1px solid rgb(250, 211, 37);
-    }
+/* creditcards after submitting form */  
 
-    .wrapper {
-        flex-direction: column;
-    }
+  .creditCards {
+    padding: 20px;
+    margin: 20px;
+    background-color: var(--secondary-color);
+    height: 60vh;
+    width: 95vw;
+    margin-top: 10vh;
+    margin-left: 2vw;
+    border-radius: 2%;
+    border-bottom: 1px solid var(--hover-color);
+  }
 
-    .container_right {
-        margin-top: 0;
-        margin: 0;
-        padding: 0;
+  .cardsReviews{
+    font-size: 13px;
+    margin: 4px;
+    padding:4px;
+    margin-left: 2vw;
+    font-family: 'Crimson Pro', serif; 
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    line-height: 1rem;
+    letter-spacing: 0.7px;
+    border-radius: 2%;
+  }
+  
+  .linkBackHome{
+    font-size: 13px;
+    margin: 4px;
+    padding:4px;
+    font-family: 'Crimson Pro', serif; 
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    line-height: 1rem;
+    letter-spacing: 0.7px;
+  }
+  
+  #link{
+    color: var(--hover-color);
+  }
+  
+  #link:hover{
+    color: var(--primary-color);
+    text-decoration: none;
+    cursor: pointer;
+  }
 
-    }
+  .wrapper {
+    flex-direction: column;
+    width: 100vw;
+    height: 90vh;
+    background-color: var(--secondary-color);
+    border-left: none;
+  }
 
-    .container_right .form {
-        padding: 50px 25px;
-    }
+  .container_right {
+    width: 100vw;
+    margin: 0;
+    /* padding: 10px;  */
+    border-left: none;
+    margin-top: -60px;
+  }
 
-    .container_left {
-        display: none;
+  .container_right .form {
+    margin-top: 8px;
+    background-color: var(--secondary-color);
+    width: 100vw;
+    height: 75vh;
+  }
 
-    }
+  .container_right .form label {
+    margin-top: 20px;
+    font-size: 13px;
+    font-family: "Crimson Pro", serif;
+    font-weight: 200;
+    color: var(--primary-color);
+    font-weight: bold;
+    letter-spacing: 1.2px;
+  }
+  .container_right .form input[type="number"] {
+    border-radius: 15px;
+    width: 90%;
+    height: 5vh;
+    font-family: "Crimson Pro", serif;
+    font-size: 13px;
+    font-weight: 300;
+    text-align: center;
+    color: var(--secondary-color);
+    border: none;
+  }
+
+  .container_right .form input[type="submit"] {
+    border-radius: 15px;
+    margin-top: 35px;
+    width: 90%;
+    height: 5vh;
+    font-family: "Crimson Pro", serif;
+    font-size: 13px;
+    font-weight: 300;
+    text-align: center;
+    color: var(--secondary-color);
+    border: none;
+    margin-bottom: 25px;
+  }
+
+  .container_right .form span {
+    font-family: "Crimson Pro", serif;
+    font-size: 13px;
+    color: var(--hover-color);
+    letter-spacing: 0.9px;
+    font-weight: bold;
+  }
+
+  .container_right .form #start {
+    color: var(--hover-color);
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  .container_left {
+    display: none;
+  }
 }

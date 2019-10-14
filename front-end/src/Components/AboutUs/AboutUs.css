@@ -1,42 +1,107 @@
-.rule h3{
-    margin-top: 20px;
-    color:red;
-    margin: 10px;
-    text-align: center;
+* {
+  margin: 0;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
-.message1{
-    font-family: 'Sorts Mill Goudy', serif; 
+.about_container {
+  width: 100vw;
+  height: 100vh;
+  margin-top: 5vh;
 }
 
-.message2{
-    font-family: 'Sorts Mill Goudy', serif;  
+.about_header {
+  grid-area: box1;
+  background-image: url("../../Images/jeep.jpeg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: 25vw;
+  opacity: 0.7;
+}
+.one-content h1 {
+  position: absolute;
+  left: 51%;
+  top:26%;
+  transform: translate(-50%, -50%);
+  color: rgb(247, 242, 242);
+  font-size: 3.5rem;
+  font-family: "Crimson Pro", serif;
+  letter-spacing: 0.5rem;
 }
 
-.ruleOne{
-    border-radius: 50%;
-    width: 15px;
-    height: 16px;
-    padding: 10px;
-    margin:5px;
-    margin-left: 10vw;
-    background: lightblue;
-    color: white;
-    border:white solid 1px;
-    text-align: center;
-    font: 15px 'Paytone One', sans-serif;
+.one-content p {
+  margin-top: 2%;
+  color: rgb(247, 242, 242);
+  font-size: 16px;
+  font-family: "Crimson Pro", serif;
 }
 
-.ruleTwo{
-    border-radius: 50%;
-    margin: 5px;
-    margin-left: 20vw;
-    width: 16px;
-    height: 16px;
-    padding: 10px;
-    background: lightblue;
-    color: white;
-    border:white solid 1px;
-    text-align: center;
-    font: 15px 'Paytone One', sans-serif;
+.about_main {
+  background-color: #fff;
+  height: 50vh;
+  width: 100vw;
+  display: grid;
+  grid-template-areas: "main_cardImage" "main_desertImage";
+}
+
+.main_cardImage {
+  grid-area: box2;
+  display: flex;
+  color: #fff;
+  width: 50%;
+  height: 35%;
+}
+
+/* .main_cardImage img{
+   
+} */
+
+.three {
+  grid-area: box3;
+  display: flex;
+  color: #fff;
+}
+
+.three img {
+  width: 100%;
+}
+.about_footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: red;
+  color: #fff;
+  height: 70vh;
+  width: 100vw;
+}
+
+.about_footer .square-one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  height: 60%;
+  background-color: yellow;
+}
+.about_footer .square-two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  height: 60%;
+  background-color: green;
+}
+.about_footer .square-three {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  height: 60%;
+  background-color: pink;
 }

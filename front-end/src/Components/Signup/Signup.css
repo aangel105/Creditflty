@@ -1,191 +1,330 @@
 * {
-    padding: 0px;
-    margin: 0px;  
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
 }
 
-/* LOGIN MAIN DIV */
+.signUp-container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35vw;
+  height: 95vh;
+  margin-top: 8vh;
+  border-bottom: 1.5px solid rgb(250, 211, 37);
+  border-radius: 2%;
+  background-color: var(--secondary-color);
+}
 
-.signup_div {
+.signUp-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  height: 100%;
+}
+.form-logo{
+  margin-top: -15%;
+}
+
+.signUp-form label {
+  font-size: 10px;
+  font-family: 'Crimson Pro', serif;
+  font-weight: 200;
+  color: var(--primary-color);
+  font-weight: bold;
+  letter-spacing: 1.2px;
+}
+
+.signUp-form input[type="text"] {
+  border-radius: 15px;
+  width: 22vw;
+  height: 5vh;
+  font-family: 'Crimson Pro', serif;  
+  font-size: 10px;
+  font-weight: 300;
+  text-align: center;
+  color: var(--secondary-color);
+  border: none;
+}
+
+.signUp-form input[type="email"] {
+  border-radius: 15px;
+  width: 22vw;
+  height: 5vh;
+  font-size: 10px;
+  font-family: 'Crimson Pro', serif;  
+  font-weight: 300;
+  text-align: center;
+  color: var(--secondary-color);
+  border: none;
+}
+
+.signUp-form input[type="password"] {
+  border-radius: 15px;
+  width: 22vw;
+  height: 5vh;
+  font-family: 'Crimson Pro', serif;
+  font-size: 10px;
+  font-weight: 300;
+  text-align: center;
+  color: var(--secondary-color);
+  border: none;
+}
+
+.signUp-form input[type="text"]:focus{
+  outline: none;
+  opacity: 0.9;
+  color: var(--secondary-color);
+  border-bottom: 1.5px solid var(--hover-color);
+}
+
+.signUp-form input[type="email"]:focus {
+  outline: none;
+  opacity: 0.9;
+  color: var(--secondary-color);
+  text-decoration: none;
+  border-bottom: 1.5px solid var(--hover-color);
+}
+
+
+.signUp-form input[type="password"]:focus {
+  outline: none;
+  opacity: 0.9;
+  color: var(--secondary-color);
+  text-decoration: none;
+  border-bottom: 1.5px solid var(--hover-color);
+}
+
+
+.btn-submit {
+  width: 22vw;
+  height: 5vh;
+  font-family: 'Crimson Pro', serif;  
+  font-size: 10px;
+  letter-spacing: 1.2px;
+  margin-bottom: 20px;
+  margin-top: 25px;
+  padding: 2px;
+  border-radius: 50px;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  box-shadow: 2px 0px 5px #444;
+}
+.signUp-form .btn-submit:hover {
+  opacity: 0.9;
+  transition: ease-in;
+  transition-duration: 1000ms;
+  border: 1px solid var(--hover-color);
+}
+
+.signUp-form .btn-submit:focus {
+  outline: none;
+  opacity: 0.9;
+  text-decoration: none;
+  border-bottom: 1.5px solid var(--hover-color);
+  cursor: pointer;
+}
+
+/* design the form span */
+
+.signUp-form span {
+  font-family: 'Crimson Pro', serif; 
+  font-size: 10px;
+  color: var(--primary-color);
+  letter-spacing: 0.3px;
+  font-weight: bold;
+}
+
+.signUp-form span #link {
+  color: var(--hover-color);
+  letter-spacing: 0.3px;
+  margin-left: 2px;
+}
+
+.signUp-form span #link:hover {
+  color: var(--primary-color);
+  cursor: pointer;
+  text-decoration-line: none;
+}
+
+/* smartphones */
+
+@media (max-width: 568px) {
+  /* main container */
+
+  .signUp-container{
+    width: 95vw;
+    height: 79vh;
     margin-top: 10vh;
-    margin-left: 10vw;
-    position: absolute;
-    width: 75vw;
-    background-color: lightblue;
-    height: 75vh;
-    border-radius: 10px;
-    box-shadow: 2px 2px 20px rgba(51, 50, 50, 0.459);
-}
+  }
 
-/* Signup Message*/
+  /* form container */
+  .signUp-form {
+    width: 95%;
+    height: 100%;
+    margin-top:5vh;
 
-#signup_message {
-    width: 35vw;
-    position: relative;
-    margin-left: 5vw;
-    margin-top: 5vh;
-    height: 67vh;
-    border-radius: 10px;
-    background-color: white;
-    box-shadow: 2px 2px 20px lightblue;
-}
+  }
 
-#signup_message #spend {
-    position: fixed;
-    margin-top: 5vh;
-    margin-left: 12px;
-    padding: 10px;
-    font-family: 'Sorts Mill Goudy', serif;
-    margin-bottom: 30px;
+  /* signUp form label */
+
+  .signUp-form label {
+    margin-top: 10px;
+    font-size: 14px;
+    font-family: 'Crimson Pro', serif;
+    font-weight: 200;
+    color: var(--primary-color);
     font-weight: bold;
-    color: lightblue;
-}
+    letter-spacing: 1.2px;
+  }
 
-#hello {
-    font-size: 50px;
-    padding: 10px;
-    margin-top: -35px;
-    color: lightblue;
-    margin-left: 10px;
-    font-weight: bold;
-    color: rgba(75, 74, 74, 0.459);
-    font-family: 'Roboto Slab', serif;
-}
-
-#world {
-    font-size: 50px;
-    padding: 10px;
-    margin-left: 10px;
-    font-weight: bold;
-    color: rgba(75, 74, 74, 0.459);
-    font-family: 'Roboto Slab', serif;
-}
-
-#signup_message img {
-    color: red;
-    position: relative;
-    width: 30px;
-    margin-top: 6.5vh;
-    height: 29px;
-    margin-left: 8vw;
-}
-
-/* LOGIN FORM AND ELEMENTS */
-
-#signup_nav {
-    position: absolute;
-    padding: 10px;
-    margin: 10px;
-    text-align: center;
-    margin-top: -67vh;
-    width: 20vw;
-    height: 62vh;
+  /* input fields */
+  
+  .signUp-form input[type="text"] {
     border-radius: 15px;
-    box-shadow: 4px 4px 30px lightblue;
-    margin-left: 45vw;
-}
-
-#signup_nav p {
-    margin-top: 15px;
-    font-size: 10px;
-    font-family: 'Sorts Mill Goudy', serif;
-    margin-left: 0vw;
-}
-
-
-
-/* INPUT FIELD LOGO */
-
-.signup_form label {
-    font-size: 8px;
-    font-family: 'Sorts Mill Goudy', serif;
-    font-weight: bold;
-    color: rgba(0, 0, 0, 0.979);
-    
-}
-
-.signup_form button {
-    font-size: 10px;
-    font-family: 'Sorts Mill Goudy', serif;
-    width: 14vw;
+    width: 90%;
     height: 5vh;
-    margin-top: 15px;
-    border-radius: 10px;
-    cursor: pointer;
-    color:lightblue;
-    background-color: white;
-    box-shadow: 4px 10px 10px rgba(51, 50, 50, 0.459);
-    outline: none;
-    border: none;
-}
-
-input[type=password]{
-    width: 15vw;
-    height: 3vh;
+    font-family: 'Crimson Pro', serif;  
+    font-size: 14px;
+    font-weight: 300;
     text-align: center;
-    background-repeat: no-repeat;
-    background-size: 8px;
+    color: var(--secondary-color);
     border: none;
-    border-bottom: 1px solid lightblue;
-    font-weight: bold;
-    font-size: 10px;
-    border-radius: 5px;
-    color: black;
-    font-family: 'Roboto Slab', serif;
-    outline: none;
-    box-shadow: 4px 10px 10px rgba(51, 50, 50, 0.459);
-}
+  }
 
-input[type=text]{
-    width: 15vw;
-    height: 3vh;
+  .signUp-form input[type="email"]{
+    border-radius: 15px;
+    width: 90%;
+    height: 5vh;
+    font-family: 'Crimson Pro', serif;  
+    font-size: 14px;
+    font-weight: 300;
     text-align: center;
-    outline: none;
-    background-repeat: no-repeat;
-    background-size: 8px;
+    color: var(--secondary-color);
     border: none;
-    border-bottom: 1px solid lightblue;
-    font-weight: bold;
-    font-size: 10px;
-    color: black;
-    border-radius: 5px;
-    font-family: 'Roboto Slab', serif;
-    outline: none;
-    box-shadow: 4px 10px 10px rgba(51, 50, 50, 0.459);
-}
-input[type=email] {
-    width: 15vw;
-    height: 3vh;
+  }
+
+  .signUp-form input[type="password"]{
+    border-radius: 15px;
+    width: 90%;
+    height: 5vh;
+    font-family: 'Crimson Pro', serif;  
+    font-size: 14px;
+    font-weight: 300;
     text-align: center;
-    outline: none;
-    padding: 0, 10px;
+    color: var(--secondary-color);
     border: none;
-    border-radius: 5px;
-    border-bottom: 1px solid lightblue;
+  }
+
+  .signUp-form .btn-submit{
+    border-radius: 15px;
+    width: 90%;
+    height: 5vh;
+    font-family: 'Crimson Pro', serif;  
+    font-size: 14px;
+    font-weight: 300;
+    text-align: center;
+    color: var(--secondary-color);
+    border: none;
+  }
+
+  .signUp-form span {
+    font-size: 14px;
+
+  }
+
+  /* Tables and Small Laptop */
+
+  @media (max-width:768) {
+    /* main container */
+
+  .signUp-container{
+    width: 95vw;
+    height: 79vh;
+    margin-top: 10vh;
+  }
+
+  /* form container */
+  .signUp-form {
+    width: 95%;
+    height: 100%;
+    margin-top:5vh;
+
+  }
+
+  /* signUp form label */
+
+  .signUp-form label {
+    margin-top: 10px;
+    font-size: 14px;
+    font-family: 'Crimson Pro', serif;
+    font-weight: 200;
+    /* color: var(--primary-color); */
+    color:red;
     font-weight: bold;
-    font-size: 10px;
-    color: black;
-    font-family: 'Roboto Slab', serif;
-    box-shadow: 4px 10px 10px rgba(51, 50, 50, 0.459);
+    letter-spacing: 1.2px;
+  }
+
+  /* input fields */
+  
+  .signUp-form input[type="text"] {
+    border-radius: 15px;
+    width: 90%;
+    height: 5vh;
+    font-family: 'Crimson Pro', serif;  
+    font-size: 14px;
+    font-weight: 300;
+    text-align: center;
+    color: var(--secondary-color);
+    border: none;
+  }
+
+  .signUp-form input[type="email"]{
+    border-radius: 15px;
+    width: 90%;
+    height: 5vh;
+    font-family: 'Crimson Pro', serif;  
+    font-size: 14px;
+    font-weight: 300;
+    text-align: center;
+    color: var(--secondary-color);
+    border: none;
+  }
+
+  .signUp-form input[type="password"]{
+    border-radius: 15px;
+    width: 90%;
+    height: 5vh;
+    font-family: 'Crimson Pro', serif;  
+    font-size: 14px;
+    font-weight: 300;
+    text-align: center;
+    color: var(--secondary-color);
+    border: none;
+  }
+
+  .signUp-form .btn-submit{
+    border-radius: 15px;
+    width: 90%;
+    height: 5vh;
+    font-family: 'Crimson Pro', serif;  
+    font-size: 14px;
+    font-weight: 300;
+    text-align: center;
+    color: var(--secondary-color);
+    border: none;
+  }
+
+  .signUp-form span {
+    font-size: 14px;
+
+  }
+  }
+
+
+
+
 }
-
-
-
-/* SIGNUP FORM LOGO */
-
-#signup_logo {
-    width: 32px;
-    height: 32px;
-    margin-bottom: 4px;
-    margin-left: -35px;
-}
-
-#circular_logo {
-    width: 38px;
-    margin-top: -20px;
-    height: 38px;
-    border-radius: 20px;
-    background-color: lightblue;
-}
-
-
-

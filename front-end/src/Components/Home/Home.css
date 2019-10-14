@@ -1,95 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   min-height: 100%;
+  --primary-color: rgb(255, 255, 255);
+  --secondary-color: rgb(31, 141, 175);
+  --hover-color: rgb(250, 211, 37);
 }
 
-html {
-  height: 100%
-}
+/* Header*/
 
-/* IMAGE ONE */
+/* ImageOne */
 
 .imageOne {
-  background-image: url("./../../Images/travel.jpg");
+  background-image: url("./../../Images/travel1.jpeg");
   min-height: 90vh;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.9;
+  /* opacity: ; */
   position: relative;
 }
 
+/* HeaderLogo */
+
 .imageOneLogo {
   position: absolute;
-  top: 50%;
+  top: 55%;
+  margin-left: 3%;
   width: 100%;
   text-align: center;
-
-}
-
-.imageOneLogo .imageOneHeader {
-  background-color: rgb(151, 151, 151);
-  color: #fff;
-  padding: 20px;
-  font-weight: 800;
-  font-size: 20px;
-  letter-spacing: 8px;
+  background-color: transparent;
+  color: var(--primary-color);
+  padding: 10px;
+  font-weight: bold;
+  font-size: 35px;
+  font-family: "Crimson Pro", serif;
+  letter-spacing: 1rem;
   text-transform: uppercase;
-  border: 1px solid rgb(250, 211, 37);
-
+  border: 1px transparent solid;
+  border-radius: 0.6rem;
 }
 
-/* HOME CONTENT ONE AND Three*/
-.containerOne,
-.containerThree {
-  height: 140px;
-  background-color: #f4f4f4;
+/* MAIN CONTENT */
+
+/* Container One */
+
+.containerOne {
+  height: 120px;
+  background-color: var(--primary-color);
   display: flex;
   flex-direction: column;
 }
 
-.contentHeaderOne,
-.contentHeaderThree {
-  text-align: center;
-  font-family: 'Roboto Slab', serif;
-  font-size: 13px;
-  color: #666;
+.contentHeaderOne {
+  justify-content: center;
+  align-self: center;
+  font-family: "Crimson Pro", serif;
+  font-size: 16px;
+  color: var(--secondary-color);
   letter-spacing: 1px;
   font-weight: 800;
   padding: 12px;
-  flex: 2;
+  font-style: italic;
 }
 
-.contentParagraphOne,
-.contentParagraphThree {
+.contentParagraphOne {
   font-size: 10px;
-  letter-spacing: 0.4px;
+  line-height: 1rem;
   height: 60%;
-  font-family: 'Source Sans Pro', sans-serif;
-  color: #666;
+  font-family: "Crimson Pro", serif;
+  letter-spacing: 0.3px;
+  color: var(--secondary-color);
   font-style: italic;
-  flex: 8;
-  /* border: 5px dashed blue; */
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: 5%;
 }
 
-/* HOME CONTENT TWO -QUOTE */
-
-.homeContentTwo {
-  height: 80px;
-  background-color: rgb(37, 37, 37);
-}
-
-.contentParagraphTwo {
-  position: relative;
-  font-size: 10px;
-  font-family: 'Source Sans Pro', sans-serif;
-  color: rgb(252, 252, 252);
-  font-style: italic;
-  padding: 30px;
-
-}
-
+/* Container Two */
 
 /* IMAGE TWO */
 
@@ -104,7 +103,66 @@ html {
   opacity: 0.9;
 }
 
-/* IMAGE THREE */
+.homeContentTwo {
+  height: 80px;
+  background-image: linear-gradient(
+    160deg,
+    var(--primary-color) 40%,
+    var(--secondary-color) 99%
+  );
+  display: flex;
+}
+
+.contentParagraphTwo {
+  justify-content: flex-start;
+  align-self: center;
+  position: relative;
+  font-size: 10px;
+  font-family: "Crimson Pro", serif;
+  letter-spacing: 0.3px;
+  color: var(--secondary-color);
+  font-style: italic;
+  margin-left: 5%;
+}
+
+/* Container Three */
+
+.containerThree {
+  height: 120px;
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.contentHeaderThree {
+  justify-content: center;
+  align-self: center;
+  text-align: center;
+  font-style: italic;
+  font-family: "Crimson Pro", serif;
+  letter-spacing: 0.3px;
+  font-size: 14px;
+  color: var(--secondary-color);
+  letter-spacing: 1px;
+  font-weight: 800;
+  padding: 12px;
+  font-style: italic;
+}
+
+.contentParagraphThree {
+  justify-content: flex-start;
+  align-self: flex-start;
+  font-size: 10px;
+  line-height: 1rem;
+  height: 60%;
+  font-family: "Crimson Pro", serif;
+  letter-spacing: 0.3px;
+  color: var(--secondary-color);
+  font-style: italic;
+  margin-left: 5%;
+}
+
+/* Container Three Image */
 
 .imageThree {
   /* The image used */
@@ -121,15 +179,15 @@ html {
   opacity: 0.9;
 }
 
+/* FOOTER */
+
 /* LAST IMAGE */
 
 .lastImage {
   /* The image used */
-  background-image: url("./../../Images/travel.jpg");
-
+  background-image: url("./../../Images/travel1.jpeg");
   /* Set a specific height */
   min-height: 90vh;
-
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
@@ -138,150 +196,122 @@ html {
   opacity: 0.9;
 }
 
-#logo {
-  width: 15vw;
-  height: 20vh;
-  margin-left: -20px;
-}
+/* smartphones */
 
-.buttons {
-  width: 80vw;
-  height: 150px;
-  margin-left: 10vw;
-  margin-top: 10vh;
-  position: absolute;
-
-}
-
-/* HOMEPAGE NAVBAR */
-
-.topbar {
-  position: fixed;
-  height: 25px;
-  box-shadow: 2px 2px 2px rgb(199, 199, 199);
-  background-color: rgb(151, 151, 151);
-  position: sticky;
-  width: 100%;
-  top: 0;
-  z-index: 1;
-}
-
-.nav_bar {
-  position: fixed;
-  float: right;
-  margin-right: 12px;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-}
-
-
-#logo_name {
-  font-size: 10px;
-  font-family: 'Roboto Slab', serif;
-  padding: 3px;
-  text-decoration: none;
-  color: rgb(1, 248, 236);
-  transition: all 0.5s ease-in-out;
-}
-
-#aboutUs {
-  font-size: 10px;
-  font-family: 'Roboto Slab', serif;
-  margin-right: 3px;
-  text-decoration: none;
-  color: rgb(1, 248, 236);
-  transition: all 0.5s ease-in-out;
-}
-
-#credit_score {
-  font-size: 10px;
-  font-family: 'Roboto Slab', serif;
-  margin-right: 3px;
-  text-decoration: none;
-  color: rgb(1, 248, 236);
-  transition: all 0.5s ease-in-out;
-}
-
-#rewards {
-  font-size: 10px;
-  font-family: 'Roboto Slab', serif;
-  text-decoration: none;
-  color: rgb(1, 248, 236);
-  transition: all 0.5s ease-in-out;
-}
-
-
-#aboutUs:hover {
-  color: rgb(250, 211, 37);
-}
-
-#credit_score:hover {
-  color: rgb(250, 211, 37);
-}
-
-#rewards:hover {
-  color: rgb(250, 211, 37);
-}
-
-#logo_name:hover {
-  color: rgb(250, 211, 37);
-}
-
-@media(max-width: 568px) {
+@media (max-width: 568px) {
 
   .imageOne {
     min-height: 30vh;
   }
 
-  .imageOneLogo .imageOneHeader {
-    background-color: rgb(151, 151, 151);
-    color: #fff;
-    padding: 5px;
-    font-weight: 800;
-    font-size: 15px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    border: 1px solid rgb(250, 211, 37);
+  .imageOneLogo {
+  position: absolute;
+  top: 35%;
+  margin-left: 3%;
+  width: 100%;
+  text-align: center;
+  background-color: transparent;
+  color: var(--primary-color);
+  padding: 10px;
+  font-weight: bold;
+  font-size: 30px;
+  font-family: "Crimson Pro", serif;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  border: 1px transparent solid;
+  border-radius: 0.6rem;
+  } 
 
-  }
-
-  .containerOne,
-  .containerThree {
-    height: 200px;
-    background-color: #f4f4f4;
+  .containerOne {
+    height: 180px;
+    background-color: var(--primary-color);
     display: flex;
-    flex-direction: row;
+    flex-direction:column;
   }
-  .contentHeaderOne{
+  
+  .contentHeaderOne {
+    font-family: "Crimson Pro", serif;
+    font-size: 16px;
+    color: var(--secondary-color);
+    letter-spacing: 1px;
+    font-weight: 800;
+    font-style: italic;
     text-align: center;
-    margin-top: 2.5rem;
+    margin-top: 1rem;
   }
 
-  .contentParagraphOne{
+  .contentParagraphOne {
+    font-size: 12px;
+    line-height: 1rem;
+    height: 60%;
+    font-family: "Crimson Pro", serif;
+    letter-spacing: 0.3px;
+    color: var(--secondary-color);
+    font-style: italic;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 5%;
     padding: 1px;
-    margin-top: 0.2rem;
+    margin-top: 0.5rem;
   }
+
 
   .imageTwo {
     min-height: 15vh;
   }
 
+  .contentParagraphTwo {
+    justify-content: flex-start;
+    align-self: center;
+    position: relative;
+    font-size: 12px;
+    font-family: "Crimson Pro", serif;
+    letter-spacing: 0.3px;
+    color: var(--secondary-color);
+    font-style: italic;
+    margin-left: 5%;
+  }
+
+
   .imageThree {
     min-height: 15vh;
   }
 
+
+  .containerThree {
+    height: 180px;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction:column;
+  }
+
   .contentHeaderThree {
+    font-family: "Crimson Pro", serif;
+    font-size: 16px;
+    color: var(--secondary-color);
+    letter-spacing: 1px;
+    font-weight: 800;
+    font-style: italic;
     text-align: center;
-    margin-top: 2.5rem;
+    margin-top: 1rem;
   }
 
-  .contentParagraphThree{
-    padding: 5px;
-    margin-top: 0.2rem;
+  .contentParagraphThree {
+    font-size: 12px;
+    line-height: 1rem;
+    height: 60%;
+    font-family: "Crimson Pro", serif;
+    letter-spacing: 0.3px;
+    color: var(--secondary-color);
+    font-style: italic;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 5%;
+    padding: 1px;
+    margin-top: 0.5rem;
   }
 
-  .lastImage{
+  .lastImage {
     min-height: 35vh;
   }
 }
