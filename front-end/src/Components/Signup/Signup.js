@@ -34,8 +34,14 @@ class Signup extends Component {
     } = this.state;
     e.stopPropagation();
     e.preventDefault();
-    if (email === "" || password_digest === "" || confirm_password === "") {
-      alert("Please enter a valid email address and password");
+    if (
+      first_name === "" ||
+      last_name === "" ||
+      email === "" ||
+      password_digest === "" ||
+      confirm_password === ""
+    ) {
+      alert("Need to fill out all the input fields");
     } else {
       if (password_digest === confirm_password) {
         axios
