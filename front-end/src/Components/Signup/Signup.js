@@ -61,17 +61,34 @@ class Signup extends Component {
             console.log(res.data);
             this.setState({
               userData: res.data,
-              first_name: first_name,
-              last_name: last_name,
-              email: email,
-              password_digest: password_digest,
+              first_name,
+              last_name,
+              email,
+              password_digest,
               message: "Already Register",
               isSignup: true
             });
+
+            console.log(this.state);
+
+            this.setState({
+              userData: [],
+              first_name: "",
+              last_name: "",
+              email: "",
+              password_digest: "",
+              confirm_password: "",
+              message: "",
+              isSignup: false
+            });
+
             console.log(this.state);
           });
       } else if (password_digest !== confirm_password) {
-        alert(`Your Password don't match , Please try Against`);
+        alert(
+          `${first_name.charAt(0).toUpperCase() +
+            first_name.slice(1)} your password don't match `
+        );
       } else {
         this.setState({
           userData: [],

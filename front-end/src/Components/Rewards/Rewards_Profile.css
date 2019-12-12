@@ -157,15 +157,18 @@ input::-webkit-inner-spin-button {
 .container_right .form {
   text-align: center;
   height: 85%;
-  opacity: 0.9;
 }
-
-.container_right .form:hover {
-  opacity: 1;
-  transition-duration: 1000ms;
-  transition: ease-in-out;
+ 
+.container_right .form h5{
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-size: 12px;
+  font-family: "Crimson Pro", serif;
+  font-weight: 200;
+  color: var(--primary-color);
+  font-weight: bold;
+  letter-spacing: 1.2px;
 }
-
 /* design the form labels  */
 .container_right .form label {
   font-size: 10px;
@@ -362,19 +365,32 @@ input::-webkit-inner-spin-button {
     padding: 20px;
     margin: 20px;
     background-color: var(--secondary-color);
-    height: 60vh;
-    width: 95vw;
+    height: 50vh;
+    width: 85vw;
     margin-top: 10vh;
-    margin-left: 2vw;
+    margin-left: 8vw;
     border-radius: 2%;
     border-bottom: 1px solid var(--hover-color);
+  }
+
+  .creditCardsName {
+    font-size: 13px;
+    font-family: 'Crimson Pro', serif;  
+    margin: 4px;
+    padding:4px;
+    margin-left: 8vw;
+    color: var(--secondary-color);
+    background-color:var(--hover-color) ;
+    line-height: 1rem;
+    letter-spacing: 0.7px;
+    border-radius: 2%;
   }
 
   .cardsReviews{
     font-size: 13px;
     margin: 4px;
     padding:4px;
-    margin-left: 2vw;
+    margin-left: 0vw;
     font-family: 'Crimson Pro', serif; 
     color: var(--primary-color);
     background-color: var(--secondary-color);
@@ -387,6 +403,7 @@ input::-webkit-inner-spin-button {
     font-size: 13px;
     margin: 4px;
     padding:4px;
+    margin-left: 8vw;
     font-family: 'Crimson Pro', serif; 
     color: var(--primary-color);
     background-color: var(--secondary-color);
@@ -427,8 +444,10 @@ input::-webkit-inner-spin-button {
     height: 75vh;
   }
 
-  .container_right .form label {
-    margin-top: 20px;
+  .container_right .form label, 
+  .container_right .form h5{
+    margin-top: 10px;
+    margin-bottom: 15px;
     font-size: 13px;
     font-family: "Crimson Pro", serif;
     font-weight: 200;

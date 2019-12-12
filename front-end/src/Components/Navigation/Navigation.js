@@ -5,11 +5,14 @@ import "./Navigation.css";
 const Navigation = () => {
   return (
     <React.Fragment>
-      <nav className="navBar">
+      <div className="nav-container">
+      <div className="logo-container">
         <Link className="logoName" to="/">
           Creditfly
         </Link>
-        <ul className="main-nav">
+      </div>
+      <nav className="main-nav">
+        <ul className="links-list">
           <li>
             <Link className="nav-links" to="/about">
               About Us
@@ -32,6 +35,7 @@ const Navigation = () => {
           </li>
         </ul>
       </nav>
+      </div>
     </React.Fragment>
   );
 };

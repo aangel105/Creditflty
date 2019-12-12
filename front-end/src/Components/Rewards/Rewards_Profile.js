@@ -26,6 +26,12 @@ class Rewards_Profile extends Component {
   };
 
   componentDidMount = () => {
+    const {
+      travelExpenses,
+      dinningExpenses,
+      gasExpenses,
+      groceryExpenses
+    } = this.state;
     axios
       .get("/creditcards")
       .then(res => {
@@ -39,6 +45,22 @@ class Rewards_Profile extends Component {
         });
         throw err;
       });
+
+    axios
+      .post("/addedExpenses", {
+        method: "POST",
+        headers: {
+          Accept: "application/json, text/plain, */* ",
+          "Content-type": "application/json"
+        },
+        travelExpenses: JSON.stringify(travelExpenses),
+        dinningExpenses: JSON.stringify(dinningExpenses),
+        gasExpenses: JSON.stringify(gasExpenses),
+        groceryExpenses: JSON.stringify(groceryExpenses)
+      })
+      .then(res => {
+        console.log(res);
+      });
   };
 
   submitForm = e => {
@@ -50,30 +72,39 @@ class Rewards_Profile extends Component {
       gasExpenses,
       groceryExpenses
     } = this.state;
-
-    travelExpenses >= 2800 || dinningExpenses >= 2800
-      ? this.setState({
-          creditCardIndex: 0
-        })
-      : groceryExpenses >= 2500 || gasExpenses > 1500
-      ? this.setState({
-          creditCardIndex: 3
-        })
-      : travelExpenses < 2800 || gasExpenses < 1500
-      ? this.setState({
-          creditCardIndex: 6
-        })
-      : groceryExpenses < 2500 || dinningExpenses < 2800
-      ? this.setState({
-          creditCardIndex: 8
-        })
-      : this.setState({
-          creditCardIndex: 9
-        });
-
-    this.setState({
-      isFormSubmitted: true
-    });
+    if (
+      travelExpenses.length === 0 ||
+      dinningExpenses.length === 0 ||
+      gasExpenses.length === 0 ||
+      groceryExpenses.length === 0
+    ) {
+      alert(
+        "Please enter a value for all input field, if not applicable enter 0"
+      );
+    } else {
+      travelExpenses >= 2800 || dinningExpenses >= 2800
+        ? this.setState({
+            creditCardIndex: 0
+          })
+        : groceryExpenses >= 2500 || gasExpenses > 1500
+        ? this.setState({
+            creditCardIndex: 3
+          })
+        : travelExpenses < 2800 || gasExpenses < 1500
+        ? this.setState({
+            creditCardIndex: 6
+          })
+        : groceryExpenses < 2500 || dinningExpenses < 2800
+        ? this.setState({
+            creditCardIndex: 8
+          })
+        : this.setState({
+            creditCardIndex: 9
+          });
+      this.setState({
+        isFormSubmitted: true
+      });
+    }
   };
 
   render() {
@@ -95,8 +126,14 @@ class Rewards_Profile extends Component {
             <span className="creditCardsName"> Card name: </span>{" "}
             <span className="cardsReviews"> {cards.card_name} </span> <br />{" "}
             <span className="creditCardsName"> Card Reviews: </span>{" "}
-            <span className="cardsReviews"> {cards.card_review_text} </span> <br />
-            <span className="linkBackHome">Thank you for submitting the form --> <Link to="/" id='link'>Home</Link></span>
+            <span className="cardsReviews"> {cards.card_review_text} </span>{" "}
+            <br />
+            <span className="linkBackHome">
+              Thank you for submitting the form -->{" "}
+              <Link to="/" id="link">
+                Home
+              </Link>
+            </span>
           </React.Fragment>
         );
       }
@@ -163,6 +200,7 @@ class Rewards_Profile extends Component {
             </div>{" "}
             <div className="container_right">
               <form className="form">
+                <h5>- Which credit card is best for you ? </h5>
                 <label> Travel Expenses </label> <br />
                 <input
                   name="travelExpenses"

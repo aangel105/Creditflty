@@ -42,8 +42,7 @@ function getAllCreditCards(req, res, next) {
     });
 }
 
-function getCreditCardsbyExpenditureId(req, res, next) {
-  const expenditureId = req.params.id;
+function getCreditCardsByExpenditureId(req, res, next) {
   db.any(
     "SELECT creditcards.id, card_name, card_ratings, card_review_text, card_image_url FROM creditcards INNER JOIN expenditure ON creditcards.expenditure_id = expenditure.id WHERE expenditure.id = ${id}",
     {
@@ -63,7 +62,6 @@ function getCreditCardsbyExpenditureId(req, res, next) {
 }
 
 function getUserExpensesByUserId(req, res, next) {
-  const usersId = req.params.id;
   db.any(
     "SELECT * FROM users JOIN expenditure ON users.id = expenditure.users_id WHERE users.id=${id}",
     {
@@ -89,7 +87,7 @@ function userSignUp(req, res, next) {
   db.none(
     "INSERT INTO users (first_name, last_name, email, password_digest) VALUES (${first_name}, ${last_name}, ${email}, ${password_digest})",
     {
-      first_name: req.body.first_name,
+      firs_name: req.body.first_name,
       last_name: req.body.last_name,
       email: req.body.email,
       password_digest: req.body.password_digest
@@ -126,12 +124,40 @@ function userLogin(req, res, next) {
     });
 }
 
+function addExpenses(req, res, next) {
+  console.log('ROUTE WORKING!!!')
+  console.log("req:", req.body);
+  db.none(
+    "INSERT INTO expenditure (travel_expenses, dinning_expenses, gas_expenses, grocery_expenses) VALUES(${0}, ${0}, ${0}, ${0})",
+    {
+      travel_expenses: req.body.travel_expenses,
+      dinning_expenses: req.body.dinning_expenses,
+      gas_expenses: req.body.dinning_expenses,
+      grocery_expenses: req.body.grocery_expenses
+    }
+  )
+    .then(data => {
+      console.log("expense added!");
+      console.log(data);
+      res.status(200).json({
+        Method: "POST",
+        status: "Success",
+        data: data,
+        message: "New Expense added"
+      });
+    })
+    .catch(err => {
+      return next(err);
+    });
+}
+
 module.exports = {
   getAllUsers: getAllUsers,
   getExpenditure: getExpenditure,
   getAllCreditCards: getAllCreditCards,
-  getCreditCardsbyExpenditureId: getCreditCardsbyExpenditureId,
+  getCreditCardsByExpenditureId: getCreditCardsByExpenditureId,
   getUserExpensesByUserId: getUserExpensesByUserId,
   userSignUp: userSignUp,
-  userLogin: userLogin
+  userLogin: userLogin,
+  addExpenses: addExpenses
 };

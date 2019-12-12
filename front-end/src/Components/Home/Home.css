@@ -11,9 +11,10 @@ html, body {
 
 body {
   min-height: 100%;
-  --primary-color: rgb(255, 255, 255);
-  --secondary-color: rgb(31, 141, 175);
-  --hover-color: rgb(250, 211, 37);
+  --primary-color: #EDF5FC;
+  --secondary-color: #247BA0;
+  --hover-color: #F5D547;
+  --special-color:rgb(190, 189, 189);
 }
 
 /* Header*/

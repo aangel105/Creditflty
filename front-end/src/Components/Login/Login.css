@@ -9,14 +9,50 @@
 }
 /* LOGIN MAIN DIV */
 
-.login-section {
+.login-container {
+  position: absolute;
+  top: 10%;
+  left: 15%;
+  width: 70vw;
+  height: calc(100vh - 15vh);
+  display: flex;
+  align-self: center;
+  background-color: red;
+  border-radius: 5%;
+  z-index: 1;
+
+}
+
+.login-image {
+  flex: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url("../../Images/pexels-photo-1576937.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.9;
+  border-top-left-radius: 5%;
+  border-bottom-left-radius: 5%;
+}
+
+.login-image span{
+  color: var(--hover-color);
+  font-family: "Crimson Pro", serif;
+  font-weight: bold;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+.login-form {
   display: flex;
   flex-direction: row;
-  height: 80vh;
-  width: 50vw;
-  margin: 14vh auto;
+  flex: 5;
   background-color: var(--secondary-color);
-  border-radius: 15px;
+  border-top-right-radius: 5%;
+  border-bottom-right-radius: 5%;
 }
 
 .login {
@@ -30,8 +66,7 @@
 }
 
 .login-header {
-  margin-top: 2%;
-  margin-bottom: 2%;
+  margin-bottom: 8%;
   text-align: center;
   margin-left: 2%;
   font-family: "Crimson Pro", serif;
@@ -42,14 +77,11 @@
 }
 
 .login label {
-  display: flex;
-  justify-content: center;
-  align-self: center;
-  margin-bottom: 1%;
-  margin-top: 1%;
+  margin-bottom: 2%;
+  margin-top: 2%;
   margin-left: 2%;
-  font-size: 10px;
-  letter-spacing: 0.3px;
+  font-size: 12px;
+  letter-spacing: 1.2px;
   font-family: "Crimson Pro", serif;
   color: var(--primary-color);
   font-weight: bold;
@@ -57,99 +89,100 @@
 
 .login input[type="email"] {
   width: 24vw;
-  height: 5vh;
+  height: 6vh;
   border: none;
   border-radius: 15px;
   font-family: "Crimson Pro", serif;
   letter-spacing: 0.3px;
-  font-size: 10px;
+  font-size: 15px;
   text-align: center;
   color: var(--secondary-color);
 }
 
-.login input[type="email"]:focus{
+.login input[type="email"]:focus {
   outline: none;
   opacity: 0.9;
   text-decoration: none;
-  border-bottom: 1.5px solid var(--hover-color);
-  cursor: pointer;
+  border: 1px solid var(--hover-color);
 }
 
 .login input[type="password"] {
   border-radius: 15px;
   width: 24vw;
-  height: 5vh;
+  height: 6vh;
   letter-spacing: 0.3px;
   font-family: "Crimson Pro", serif;
-  font-size: 10px;
+  font-size: 15px;
   font-weight: 800;
   text-align: center;
   color: var(--secondary-color);
   border: none;
 }
 
-.login input[type="password"]:focus{
+.login input[type="password"]:focus {
   outline: none;
   opacity: 0.9;
   text-decoration: none;
-  border-bottom: 1.5px solid var(--hover-color);
-  cursor: pointer;
+  border: 1px solid var(--hover-color);
 }
 
 .btn-login {
-  margin-top: 5%;
+  margin-top: 8%;
   width: 24vw;
-  height: 5vh;
+  height: 6vh;
   font-family: "Crimson Pro", serif;
-  font-size: 10px;
-  letter-spacing: 0.3px;
-  padding: 2px;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  padding: 5px; 
+  text-align: center;
   border-radius: 15px;
   color: var(--secondary-color);
   background-color: var(--primary-color);
+  transition: 100ms;
+  transform: scale(1);
 }
 
-.login .btn-login:hover{
+.login .btn-login:hover,.login .btn-login:focus   {
   outline: none;
-  opacity: 0.9;
+  background-color: var(--hover-color);
+  color: var(--primary-color);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
   text-decoration: none;
-  border-bottom: 1.5px solid var(--hover-color);
+  border: 1px solid var(--primary-color);
   cursor: pointer;
-}
-.login .btn-login:focus {
-  outline: none;
-  opacity: 0.9;
-  text-decoration: none;
-  border-bottom: 1.5px solid var(--hover-color);
-  cursor: pointer;
+  transform: scale(1.1);
 }
 
 .login-link {
-  margin-top: 3%;
+  margin-top: 8%;
   width: 100%;
   color: var(--primary-color);
-  letter-spacing: 0.3px;
-  font-size: 10px;
+  letter-spacing: 0.5px;
+  font-size: 12px;
   text-align: center;
   font-family: "Crimson Pro", serif;
 }
 
 .login span #login {
+  font-size: 12px;
   color: var(--hover-color);
-  letter-spacing: 0.3px;
+  letter-spacing: 0.5px;
   margin-left: 1%;
   font-family: "Crimson Pro", serif;
 }
 
-.login span #login:hover {
+.login span #login:hover,.login span #login:focus {
   text-decoration-line: none;
   color: var(--primary-color);
+  text-transform: uppercase;
 }
 
 /* smartphones  */
 
 @media (max-width: 568px) {
-
   .login-section {
     display: flex;
     flex-direction: row;
@@ -187,7 +220,7 @@
     justify-content: center;
     align-self: center;
     margin-bottom: 2%;
-    margin-top:10px;
+    margin-top: 10px;
     margin-left: 2%;
     font-size: 14px;
     letter-spacing: 0.3px;

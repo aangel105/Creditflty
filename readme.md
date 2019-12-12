@@ -36,7 +36,7 @@
 
 ./signup
 
-  -give the ability to signup to creditfly and revice special services
+  -give the ability to signup to creditfly and receive special services
 
 ./creditscore
 

@@ -1,26 +1,28 @@
-let express = require('express');
+let express = require("express");
 
 let router = express.Router();
 
-const db = require('../db/queries');
+const db = require("../db/queries");
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Instructions' });
+router.get("/", function(req, res) {
+  res.render("index", { title: "Instructions" });
 });
 
-router.get('/users', db.getAllUsers);
+router.get("/users", db.getAllUsers);
 
-router.get('/expenditure',db.getExpenditure);
+router.get("/expenditure", db.getExpenditure);
 
-router.get('/creditcards', db.getAllCreditCards);
+router.get("/creditcards", db.getAllCreditCards);
 
-router.get('/cards/:id',db.getCreditCardsbyExpenditureId);
+router.get("/cards/:id", db.getCreditCardsByExpenditureId);
 
-router.get('/userexpenses/:id',db.getUserExpensesByUserId);
+router.get("/userExpenses/:id", db.getUserExpensesByUserId);
 
-router.post('/addUser', db.userSignUp);
+router.get("/login", db.userLogin);
 
-router.get('/login', db.userLogin);
+router.post("/addUser", db.userSignUp);
+
+router.post("/addedExpenses", db.addExpenses);
 
 module.exports = router;

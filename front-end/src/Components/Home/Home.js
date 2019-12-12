@@ -40,7 +40,10 @@ const Home = () => {
           <ul className="contentParagraphThree">
             <li>After expending certain amount you earn a signing bonus. </li>
             <li>Lounge Access when going to the airport including 2 guess.</li>
-            <li>Free Checked bags for the cardholder and others travelers on the same reservation.</li>
+            <li>
+              Free Checked bags for the cardholder and others travelers on the
+              same reservation.
+            </li>
           </ul>
         </div>
       </main>

@@ -4,104 +4,150 @@
   box-sizing: border-box;
 }
 
-.about_container {
-  width: 100vw;
-  height: 100vh;
-  margin-top: 5vh;
-}
-
 .about_header {
-  grid-area: box1;
-  background-image: url("../../Images/jeep.jpeg");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
+  width: 100%;
+  height: 45vh;
+  background-image: url("../../Images/travel3.jpeg");
   background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  width: 100%;
-  height: 25vw;
-  opacity: 0.7;
+  justify-content: center;
+  align-items: center;
 }
-.one-content h1 {
-  position: absolute;
-  left: 51%;
-  top:26%;
-  transform: translate(-50%, -50%);
-  color: rgb(247, 242, 242);
-  font-size: 3.5rem;
+
+.header_title {
+  font-size: 4rem;
   font-family: "Crimson Pro", serif;
-  letter-spacing: 0.5rem;
+  color: var(--secondary-color);
+  letter-spacing: 0.2rem;
 }
 
-.one-content p {
-  margin-top: 2%;
-  color: rgb(247, 242, 242);
-  font-size: 16px;
+.about_main{
+  height: 100%;
+  display:flex;
+  flex-direction: column;  
+}
+
+.tittle h1 {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  margin:10px;
+  padding:10px;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
   font-family: "Crimson Pro", serif;
 }
 
-.about_main {
-  background-color: #fff;
-  height: 50vh;
-  width: 100vw;
-  display: grid;
-  grid-template-areas: "main_cardImage" "main_desertImage";
+.tittle hr{
+  border: 0.5px solid var(--hover-color);
 }
 
-.main_cardImage {
-  grid-area: box2;
+.main_desc{
   display: flex;
-  color: #fff;
-  width: 50%;
-  height: 35%;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  letter-spacing: 0.5px;
 }
 
-/* .main_cardImage img{
-   
-} */
-
-.three {
-  grid-area: box3;
+.main_text{
   display: flex;
-  color: #fff;
+  flex-direction: column;
+  flex:4;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Crimson Pro", serif;
+  text-indent: 20px;
+  font-size:12px; 
+  color: var(--secondary-color);
 }
 
-.three img {
+.main_img{
+  width:150px;
+  height: 18.6rem;
+  display: flex;
+  flex:5;
+}
+
+/* ABOUT PAGE FOOTER */
+
+.about_footer{
   width: 100%;
+  height: 70vh;
 }
+
 .about_footer {
+  width: 100%;
+  height: 70vh;
   display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-family: "Crimson Pro", serif;
+}
+
+.about_footer h1 {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  margin:10px;
+  padding:10px;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  font-family: "Crimson Pro", serif;
+}
+hr {
+  border: 0.5px solid var(--hover-color);
+}
+.footer_boxes {
+  display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  background-color: red;
-  color: #fff;
-  height: 70vh;
-  width: 100vw;
+  height: 100%;
+  letter-spacing: 0.5px;
 }
 
-.about_footer .square-one {
+.box1,
+.box2,
+.box3,
+.box4 {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  width: 35%;
-  height: 60%;
-  background-color: yellow;
+  width: 20%;
+  height: 90%;
+  background-color: var(--secondary-color);
+  font-family: "Crimson Pro", serif;
+  font-size: 20px;
+  border-bottom: 1px solid var(--hover-color);
+  border-radius: 3%;
 }
-.about_footer .square-two {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 35%;
-  height: 60%;
-  background-color: green;
+
+
+.box1 h6,
+.box2 h6,
+.box3 h6{
+  align-self: center;
+  font-size: 0.8em;
+  font-family: "Crimson Pro", serif;
+  margin: 10px;
+  padding: 5px;
+  letter-spacing: 1px;
+  font-weight: bolder;
+  font-style: italic;
+  margin-top: -1rem;
 }
-.about_footer .square-three {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 35%;
-  height: 60%;
-  background-color: pink;
+
+.spend_tips li,
+.earn_tips li,
+.travel_tips li {
+  list-style: none;
+  font-size:0.5em ;
+  font-weight: 200;
+  margin: 4px;
+  padding: 4px;
+  color: var(--primary-color);
 }

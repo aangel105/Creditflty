@@ -49,44 +49,114 @@ class Login extends Component {
     }
   };
 
+  handleLogout = e => {
+    e.preventDefault();
+    this.setState({
+      email: "",
+      password: "",
+      userData: [],
+      isLoggedIn: false,
+      message: ""
+    });
+  };
+
   render() {
+    const { isLoggedIn } = this.state;
+    if (!isLoggedIn) {
+      return (
+        <React.Fragment>
+          <div className="login-container">
+            <div className="login-image">
+              <div>
+                <span>Welcome, Back!</span>
+              </div>
+            </div>
+
+            <div className="login-form">
+              <form className="login">
+                <span className="login-header">Member Login</span>
+                <label>Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  onChange={this.handleLogin}
+                  autoComplete="off"
+                  required
+                />
+                <label>Password</label>
+                <input
+                  type="password"
+                  name="password"
+                  onChange={this.handleLogin}
+                  autoComplete="off"
+                  required
+                />
+                <button
+                  type="submit"
+                  className="btn-login"
+                  onClick={e => this.SubmitLoginForm(e)}
+                >
+                  Login
+                </button>
+                <span className="login-link">
+                  Don 't have an account
+                  <Link id="login" to="/signup">
+                    Signup
+                  </Link>
+                </span>
+              </form>
+            </div>
+          </div>
+        </React.Fragment>
+      );
+    }
     return (
-      <React.Fragment>
-        <main className="login-section">
-          <form className="login">
-            <span className="login-header">Login</span>
-            <label>Email</label>
-            <input
-              type="email"
-              name="email"
-              onChange={this.handleLogin}
-              autoComplete="off"
-              required
-            />
-            <label>Password</label>
-            <input
-              type="password"
-              name="password"
-              onChange={this.handleLogin}
-              autoComplete="off"
-              required
-            />
-            <button
-              type="submit"
-              className="btn-login"
-              onClick={e => this.SubmitLoginForm(e)}
-            >
-              Login
-            </button>
-            <span className="login-link">
-              Don 't have an account
-              <Link id="login" to="/signup">
-                Signup
-              </Link>
-            </span>
-          </form>
-        </main>
-      </React.Fragment>
+      <div>
+        <React.Fragment>
+          <div className="login-container">
+            <div className="login-image">
+              <div>
+                <span>Welcome, Back!</span>
+              </div>
+            </div>
+
+            <div className="login-form">
+              <form className="login">
+                <span className="login-header">Member Login</span>
+                <label>Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  onChange={this.handleLogin}
+                  autoComplete="off"
+                  required
+                />
+                <label>Password</label>
+                <input
+                  type="password"
+                  name="password"
+                  onChange={this.handleLogin}
+                  autoComplete="off"
+                  required
+                />
+                <button
+                  type="submit"
+                  className="btn-login"
+                  onClick={e => this.handleLogout(e)}
+                >
+                  Log out
+                </button>
+                <span className="login-link">
+                  Don 't have an account
+                  <Link id="login" to="/signup">
+                    Signup
+                  </Link>
+                </span>
+              </form>
+            </div>
+          </div>
+        </React.Fragment>
+      </div>
     );
   }
 }
