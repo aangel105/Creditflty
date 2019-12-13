@@ -68,13 +68,13 @@ class Login extends Component {
           <div className="login-container">
             <div className="login-image">
               <div>
-                <span>Welcome, Back!</span>
+                <span>Member Login</span>
               </div>
             </div>
 
             <div className="login-form">
               <form className="login">
-                <span className="login-header">Member Login</span>
+                <span className="login-header"><i class="fas fa-user-lock"></i></span>
                 <label>Email</label>
                 <input
                   type="email"
@@ -101,7 +101,7 @@ class Login extends Component {
                 <span className="login-link">
                   Don 't have an account
                   <Link id="login" to="/signup">
-                    Signup
+                    Register
                   </Link>
                 </span>
               </form>

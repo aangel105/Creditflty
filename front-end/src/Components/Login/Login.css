@@ -7,6 +7,10 @@
 :focus {
   outline: none;
 }
+
+body{
+  background-color:#444;
+}
 /* LOGIN MAIN DIV */
 
 .login-container {
@@ -17,10 +21,8 @@
   height: calc(100vh - 15vh);
   display: flex;
   align-self: center;
-  background-color: red;
   border-radius: 5%;
   z-index: 1;
-
 }
 
 .login-image {
@@ -29,17 +31,17 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-image: url("../../Images/pexels-photo-1576937.jpeg");
+  background-image: url("../../Images/login-image.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.9;
+  opacity: 0.8;
   border-top-left-radius: 5%;
   border-bottom-left-radius: 5%;
 }
 
 .login-image span{
-  color: var(--hover-color);
+  color: var(--primary-color);
   font-family: "Crimson Pro", serif;
   font-weight: bold;
   font-size: 2rem;
