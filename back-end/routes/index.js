@@ -21,7 +21,7 @@ router.get("/userExpenses/:id", db.getUserExpensesByUserId);
 
 router.get("/login", db.userLogin);
 
-router.post("/addUser", db.userSignUp);
+router.post("/addUser", db.userRegister);
 
 router.post("/addedExpenses", db.addExpenses);
 

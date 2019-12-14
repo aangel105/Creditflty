@@ -80,14 +80,14 @@ function getUserExpensesByUserId(req, res, next) {
     });
 }
 
-function userSignUp(req, res, next) {
+function userRegister(req, res, next) {
   console.log("req:", req.body.first_name);
   console.log("POSTED!!!!");
 
   db.none(
     "INSERT INTO users (first_name, last_name, email, password_digest) VALUES (${first_name}, ${last_name}, ${email}, ${password_digest})",
     {
-      firs_name: req.body.first_name,
+      first_name: req.body.first_name,
       last_name: req.body.last_name,
       email: req.body.email,
       password_digest: req.body.password_digest
@@ -95,7 +95,6 @@ function userSignUp(req, res, next) {
   )
     .then(data => {
       console.log("user added!!");
-      console.log(data);
       res.status(200).json({
         Method: "POST",
         status: "Success",
@@ -127,28 +126,28 @@ function userLogin(req, res, next) {
 function addExpenses(req, res, next) {
   console.log('ROUTE WORKING!!!')
   console.log("req:", req.body);
-  db.none(
-    "INSERT INTO expenditure (travel_expenses, dinning_expenses, gas_expenses, grocery_expenses) VALUES(${0}, ${0}, ${0}, ${0})",
-    {
-      travel_expenses: req.body.travel_expenses,
-      dinning_expenses: req.body.dinning_expenses,
-      gas_expenses: req.body.dinning_expenses,
-      grocery_expenses: req.body.grocery_expenses
-    }
-  )
-    .then(data => {
-      console.log("expense added!");
-      console.log(data);
-      res.status(200).json({
-        Method: "POST",
-        status: "Success",
-        data: data,
-        message: "New Expense added"
-      });
-    })
-    .catch(err => {
-      return next(err);
-    });
+  // db.none(
+  //   "INSERT INTO expenditure (travel_expenses, dinning_expenses, gas_expenses, grocery_expenses) VALUES(${0}, ${0}, ${0}, ${0})",
+  //   {
+  //     travel_expenses: req.body.travel_expenses,
+  //     dinning_expenses: req.body.dinning_expenses,
+  //     gas_expenses: req.body.dinning_expenses,
+  //     grocery_expenses: req.body.grocery_expenses
+  //   }
+  // )
+  //   .then(data => {
+  //     console.log("expense added!");
+  //     console.log(data);
+  //     res.status(200).json({
+  //       Method: "POST",
+  //       status: "Success",
+  //       data: data,
+  //       message: "New Expense added"
+  //     });
+  //   })
+  //   .catch(err => {
+  //     return next(err);
+  //   });
 }
 
 module.exports = {
@@ -157,7 +156,7 @@ module.exports = {
   getAllCreditCards: getAllCreditCards,
   getCreditCardsByExpenditureId: getCreditCardsByExpenditureId,
   getUserExpensesByUserId: getUserExpensesByUserId,
-  userSignUp: userSignUp,
+  userRegister: userRegister,
   userLogin: userLogin,
-  addExpenses: addExpenses
+  addExpenses: addExpenses,
 };

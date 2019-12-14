@@ -74,13 +74,14 @@ class Login extends Component {
 
             <div className="login-form">
               <form className="login">
-                <span className="login-header"><i class="fas fa-user-lock"></i></span>
+                <span className="login-header"></span>
                 <label>Email</label>
                 <input
                   type="email"
                   name="email"
                   onChange={this.handleLogin}
                   autoComplete="off"
+                  autoFocus
                   required
                 />
                 <label>Password</label>
@@ -100,7 +101,7 @@ class Login extends Component {
                 </button>
                 <span className="login-link">
                   Don 't have an account
-                  <Link id="login" to="/signup">
+                  <Link id="login" to="/register">
                     Register
                   </Link>
                 </span>
@@ -122,36 +123,14 @@ class Login extends Component {
 
             <div className="login-form">
               <form className="login">
-                <span className="login-header">Member Login</span>
-                <label>Email</label>
-                <input
-                  type="email"
-                  name="email"
-                  onChange={this.handleLogin}
-                  autoComplete="off"
-                  required
-                />
-                <label>Password</label>
-                <input
-                  type="password"
-                  name="password"
-                  onChange={this.handleLogin}
-                  autoComplete="off"
-                  required
-                />
+                <span className="login-header">Member is Logged In</span>
                 <button
-                  type="submit"
+                  type="button"
                   className="btn-login"
                   onClick={e => this.handleLogout(e)}
                 >
                   Log out
                 </button>
-                <span className="login-link">
-                  Don 't have an account
-                  <Link id="login" to="/signup">
-                    Signup
-                  </Link>
-                </span>
               </form>
             </div>
           </div>

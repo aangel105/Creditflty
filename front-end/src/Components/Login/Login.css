@@ -6,10 +6,11 @@
 
 :focus {
   outline: none;
+  caret-color: var(--hover-color);
 }
 
 body{
-  background-color:#444;
+  background-color:rgb(170, 168, 168);
 }
 /* LOGIN MAIN DIV */
 

@@ -5,7 +5,7 @@ import { Switch, Route } from "react-router-dom";
 import Login from "../Login/Login";
 import Home from "../Home/Home";
 import AboutUs from "../AboutUs/AboutUs";
-import Signup from "../Signup/Signup";
+import Register from "../Register/Register";
 import Rewards_Profile from "../Rewards/Rewards_Profile";
 
 const Routing = () => {
@@ -16,7 +16,7 @@ const Routing = () => {
         <Route path="/about" component={AboutUs} />{" "}
         <Route path="/login" component={Login} />{" "}
         <Route path="/rewards" component={Rewards_Profile} />{" "}
-        <Route path="/signup" component={Signup} />{" "}
+        <Route path="/register" component={Register} />{" "}
       </Switch>{" "}
     </div>
   );
