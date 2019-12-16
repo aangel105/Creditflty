@@ -95,9 +95,23 @@ class Register extends Component {
     if (!isRegistered) {
       return (
         <React.Fragment>
-          <div className="signUp-container">
-            {/* <h1 className= 'signup-form '>Hello world!!!</h1> */}
-            <form className="signUp-form">
+          <div className="register-container">
+            <div className="register-form-image">
+            <button
+                className="btn-submit"
+                type="submit"
+                onClick={e => this.signupForm(e)}
+              >
+                Register
+              </button>
+              <span>
+                Already have an account{" "}
+                <Link id="link" to="/login">
+                Login{" "}
+                </Link>
+              </span>
+            </div>
+            <form className="register-form">
               <img
                 className="form-logo"
                 src="https://img.icons8.com/cotton/50/000000/add.png"
@@ -142,19 +156,6 @@ class Register extends Component {
                 onChange={this.handleFormInputFields}
                 required
               />
-              <button
-                className="btn-submit"
-                type="submit"
-                onClick={e => this.signupForm(e)}
-              >
-                Register
-              </button>
-              <span>
-                Already have an account{" "}
-                <Link id="link" to="/login">
-                  Login{" "}
-                </Link>
-              </span>
             </form>
           </div>
         </React.Fragment>

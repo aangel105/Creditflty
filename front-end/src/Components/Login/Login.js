@@ -74,7 +74,7 @@ class Login extends Component {
 
             <div className="login-form">
               <form className="login">
-                <span className="login-header"></span>
+                <span className="login-header">Member Login</span>
                 <label>Email</label>
                 <input
                   type="email"

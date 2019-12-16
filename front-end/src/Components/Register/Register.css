@@ -4,21 +4,98 @@
   box-sizing: border-box;
 }
 
-.signUp-container {
+.register-container {
   position: absolute;
-  left:35%;
-  top:10%;
+  top: 8%;
+  left: 15%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 32vw;
-  height: 88vh;
-  border-bottom: 1.5px solid var(--hover-color);
-  border-radius: 2%;
-  background-color: var(--secondary-color);
+  flex-direction: row;
+  width: 71vw;
+  height: 90vh;
+  border-radius: 5%;
 }
 
-.signUp-form {
+.register-form-image {
+  flex: 5;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: red;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url("../../Images/register-image.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-top-left-radius: 5%;
+  border-bottom-left-radius: 5%;
+}
+
+.btn-submit {
+  margin-top: 6%;
+  width: 24vw;
+  height: 6vh;
+  font-family: "Crimson Pro", serif;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 15px;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  transition: 100ms;
+  transform: scale(1);
+  box-shadow: 0px 1px 4px 2px var(--special-color);
+}
+.btn-submit:hover,
+.btn-submit:focus {
+  background-color: var(--hover-color);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  opacity: 0.9;
+  font-weight: bold;
+  transition: ease-in;
+  transition-duration: 1000ms;
+  outline: none;
+  text-decoration: none;
+  transform: scale(1.1);
+  transition: ease-in;
+  transition-duration: 500ms;
+}
+
+/* design the form span */
+
+.register-form-image span {
+  margin-top: 6%;
+  margin-right: 2px;
+  font-family: "Crimson Pro", serif;
+  font-size: 10px;
+  color: var(--primary-color);
+  letter-spacing: 0.3px;
+  font-weight: bold;
+}
+
+.register-form-image span #link {
+  font-size: 10px;
+  margin-left: 2px;
+  color: var(--hover-color);
+  letter-spacing: 0.5px;
+  font-family: "Crimson Pro", serif;
+}
+
+.register-form-image span #link:hover {
+  text-decoration-line: none;
+  color: var(--primary-color);
+}
+
+.register-form {
+  flex: 5;
+  height: 100%;
+  border-top-right-radius: 5%;
+  border-bottom-right-radius: 5%;
+  background-color: var(--secondary-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -26,24 +103,26 @@
   width: 75%;
   height: 100%;
 }
-.form-logo{
-  margin-top: -15%;
+
+.form-logo {
+  margin-top: -2%;
 }
 
-.signUp-form label {
+.register-form label {
+  margin-top: 2%;
   font-size: 10px;
-  font-family: 'Crimson Pro', serif;
+  font-family: "Crimson Pro", serif;
   font-weight: 200;
   color: var(--primary-color);
   font-weight: bold;
   letter-spacing: 1.2px;
 }
 
-.signUp-form input[type="text"] {
+.register-form input[type="text"] {
   border-radius: 15px;
-  width: 22vw;
-  height: 5vh;
-  font-family: 'Crimson Pro', serif;  
+  width: 24vw;
+  height: 6vh;
+  font-family: "Crimson Pro", serif;
   font-size: 10px;
   font-weight: 300;
   text-align: center;
@@ -51,23 +130,23 @@
   border: none;
 }
 
-.signUp-form input[type="email"] {
+.register-form input[type="email"] {
   border-radius: 15px;
-  width: 22vw;
-  height: 5vh;
+  width: 24vw;
+  height: 6vh;
   font-size: 10px;
-  font-family: 'Crimson Pro', serif;  
+  font-family: "Crimson Pro", serif;
   font-weight: 300;
   text-align: center;
   color: var(--secondary-color);
   border: none;
 }
 
-.signUp-form input[type="password"] {
+.register-form input[type="password"] {
   border-radius: 15px;
-  width: 22vw;
-  height: 5vh;
-  font-family: 'Crimson Pro', serif;
+  width: 24vw;
+  height: 6vh;
+  font-family: "Crimson Pro", serif;
   font-size: 10px;
   font-weight: 300;
   text-align: center;
@@ -75,80 +154,27 @@
   border: none;
 }
 
-.signUp-form input[type="text"]:focus{
+.register-form input[type="text"]:focus {
   outline: none;
   opacity: 0.9;
   color: var(--secondary-color);
-  border-bottom: 1.5px solid var(--hover-color);
-}
-
-.signUp-form input[type="email"]:focus {
-  outline: none;
-  opacity: 0.9;
-  color: var(--secondary-color);
-  text-decoration: none;
-  border-bottom: 1.5px solid var(--hover-color);
-}
-
-
-.signUp-form input[type="password"]:focus {
-  outline: none;
-  opacity: 0.9;
-  color: var(--secondary-color);
-  text-decoration: none;
-  border-bottom: 1.5px solid var(--hover-color);
-}
-
-
-.btn-submit {
-  width: 22vw;
-  height: 5vh;
-  font-family: 'Crimson Pro', serif;  
-  font-size: 10px;
-  letter-spacing: 1.2px;
-  margin-bottom: 20px;
-  margin-top: 25px;
-  padding: 2px;
-  border-radius: 50px;
-  color: var(--secondary-color);
-  background-color: var(--primary-color);
-  box-shadow: 2px 0px 5px #444;
-}
-.signUp-form .btn-submit:hover {
-  opacity: 0.9;
-  transition: ease-in;
-  transition-duration: 1000ms;
   border: 1px solid var(--hover-color);
 }
 
-.signUp-form .btn-submit:focus {
+.register-form input[type="email"]:focus {
   outline: none;
   opacity: 0.9;
+  color: var(--secondary-color);
   text-decoration: none;
-  border-bottom: 1.5px solid var(--hover-color);
-  cursor: pointer;
+  border: 1px solid var(--hover-color);
 }
 
-/* design the form span */
-
-.signUp-form span {
-  font-family: 'Crimson Pro', serif; 
-  font-size: 10px;
-  color: var(--primary-color);
-  letter-spacing: 0.3px;
-  font-weight: bold;
-}
-
-.signUp-form span #link {
-  color: var(--hover-color);
-  letter-spacing: 0.3px;
-  margin-left: 2px;
-}
-
-.signUp-form span #link:hover {
-  color: var(--primary-color);
-  cursor: pointer;
-  text-decoration-line: none;
+.register-form input[type="password"]:focus {
+  outline: none;
+  opacity: 0.9;
+  color: var(--secondary-color);
+  text-decoration: none;
+  border: 1px solid var(--hover-color);
 }
 
 /* smartphones */
@@ -156,7 +182,7 @@
 @media (max-width: 568px) {
   /* main container */
 
-  .signUp-container{
+  .signUp-container {
     width: 95vw;
     height: 88vh;
     margin-top: 10vh;
@@ -174,7 +200,7 @@
   .signUp-form label {
     margin-top: 10px;
     font-size: 14px;
-    font-family: 'Crimson Pro', serif;
+    font-family: "Crimson Pro", serif;
     font-weight: 200;
     color: var(--primary-color);
     font-weight: bold;
@@ -182,12 +208,12 @@
   }
 
   /* input fields */
-  
+
   .signUp-form input[type="text"] {
     border-radius: 15px;
     width: 90%;
     height: 5vh;
-    font-family: 'Crimson Pro', serif;  
+    font-family: "Crimson Pro", serif;
     font-size: 14px;
     font-weight: 300;
     text-align: center;
@@ -195,11 +221,11 @@
     border: none;
   }
 
-  .signUp-form input[type="email"]{
+  .signUp-form input[type="email"] {
     border-radius: 15px;
     width: 90%;
     height: 5vh;
-    font-family: 'Crimson Pro', serif;  
+    font-family: "Crimson Pro", serif;
     font-size: 14px;
     font-weight: 300;
     text-align: center;
@@ -207,11 +233,11 @@
     border: none;
   }
 
-  .signUp-form input[type="password"]{
+  .signUp-form input[type="password"] {
     border-radius: 15px;
     width: 90%;
     height: 5vh;
-    font-family: 'Crimson Pro', serif;  
+    font-family: "Crimson Pro", serif;
     font-size: 14px;
     font-weight: 300;
     text-align: center;
@@ -219,11 +245,11 @@
     border: none;
   }
 
-  .signUp-form .btn-submit{
+  .signUp-form .btn-submit {
     border-radius: 15px;
     width: 90%;
     height: 5vh;
-    font-family: 'Crimson Pro', serif;  
+    font-family: "Crimson Pro", serif;
     font-size: 14px;
     font-weight: 300;
     text-align: center;
@@ -233,98 +259,91 @@
 
   .signUp-form span {
     font-size: 14px;
-
   }
 
   /* Tables and Small Laptop */
 
-  @media (max-width:768) {
+  @media (max-width: 768) {
     /* main container */
 
-  .signUp-container{
-    width: 95vw;
-    height: 79vh;
-    margin-top: 10vh;
+    .signUp-container {
+      width: 95vw;
+      height: 79vh;
+      margin-top: 10vh;
+    }
+
+    /* form container */
+    .signUp-form {
+      width: 95%;
+      height: 100%;
+      margin-top: 5vh;
+    }
+
+    /* signUp form label */
+
+    .signUp-form label {
+      margin-top: 10px;
+      font-size: 14px;
+      font-family: "Crimson Pro", serif;
+      font-weight: 200;
+      /* color: var(--primary-color); */
+      color: red;
+      font-weight: bold;
+      letter-spacing: 1.2px;
+    }
+
+    /* input fields */
+
+    .signUp-form input[type="text"] {
+      border-radius: 15px;
+      width: 90%;
+      height: 5vh;
+      font-family: "Crimson Pro", serif;
+      font-size: 14px;
+      font-weight: 300;
+      text-align: center;
+      color: var(--secondary-color);
+      border: none;
+    }
+
+    .signUp-form input[type="email"] {
+      border-radius: 15px;
+      width: 90%;
+      height: 5vh;
+      font-family: "Crimson Pro", serif;
+      font-size: 14px;
+      font-weight: 300;
+      text-align: center;
+      color: var(--secondary-color);
+      border: none;
+    }
+
+    .signUp-form input[type="password"] {
+      border-radius: 15px;
+      width: 90%;
+      height: 5vh;
+      font-family: "Crimson Pro", serif;
+      font-size: 14px;
+      font-weight: 300;
+      text-align: center;
+      color: var(--secondary-color);
+      border: none;
+    }
+
+    .signUp-form .btn-submit {
+      border-radius: 15px;
+      width: 90%;
+      height: 5vh;
+      font-family: "Crimson Pro", serif;
+      font-size: 14px;
+      font-weight: 300;
+      text-align: center;
+      color: var(--secondary-color);
+      border: none;
+    }
+
+    .signUp-form span {
+      font-size: 14px;
+    }
   }
-
-  /* form container */
-  .signUp-form {
-    width: 95%;
-    height: 100%;
-    margin-top:5vh;
-
-  }
-
-  /* signUp form label */
-
-  .signUp-form label {
-    margin-top: 10px;
-    font-size: 14px;
-    font-family: 'Crimson Pro', serif;
-    font-weight: 200;
-    /* color: var(--primary-color); */
-    color:red;
-    font-weight: bold;
-    letter-spacing: 1.2px;
-  }
-
-  /* input fields */
-  
-  .signUp-form input[type="text"] {
-    border-radius: 15px;
-    width: 90%;
-    height: 5vh;
-    font-family: 'Crimson Pro', serif;  
-    font-size: 14px;
-    font-weight: 300;
-    text-align: center;
-    color: var(--secondary-color);
-    border: none;
-  }
-
-  .signUp-form input[type="email"]{
-    border-radius: 15px;
-    width: 90%;
-    height: 5vh;
-    font-family: 'Crimson Pro', serif;  
-    font-size: 14px;
-    font-weight: 300;
-    text-align: center;
-    color: var(--secondary-color);
-    border: none;
-  }
-
-  .signUp-form input[type="password"]{
-    border-radius: 15px;
-    width: 90%;
-    height: 5vh;
-    font-family: 'Crimson Pro', serif;  
-    font-size: 14px;
-    font-weight: 300;
-    text-align: center;
-    color: var(--secondary-color);
-    border: none;
-  }
-
-  .signUp-form .btn-submit{
-    border-radius: 15px;
-    width: 90%;
-    height: 5vh;
-    font-family: 'Crimson Pro', serif;  
-    font-size: 14px;
-    font-weight: 300;
-    text-align: center;
-    color: var(--secondary-color);
-    border: none;
-  }
-
-  .signUp-form span {
-    font-size: 14px;
-
-  }
-  }
-
-
-
-
 }

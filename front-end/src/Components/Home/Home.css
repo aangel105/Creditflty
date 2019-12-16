@@ -14,8 +14,8 @@ body {
   --primary-color: #EDF5FC;
   --secondary-color: #247BA0;
   /* --hover-color: #F5D547; */
-  --hover-color:#F28930;
-  --special-color:rgb(190, 189, 189);
+  --hover-color:rgb(250, 139, 75);
+  --special-color:#444;
 }
 
 /* Header*/

@@ -32,11 +32,10 @@ body{
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-image: url("../../Images/login-image.jpeg");
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("../../Images/login-image.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.8;
   border-top-left-radius: 5%;
   border-bottom-left-radius: 5%;
 }
@@ -45,8 +44,11 @@ body{
   color: var(--primary-color);
   font-family: "Crimson Pro", serif;
   font-weight: bold;
-  font-size: 2rem;
-  letter-spacing: 2px;
+  font-size: 1.7rem;
+  letter-spacing: 3px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: .2px solid var(--hover-color);
 }
 
 .login-form {
@@ -144,9 +146,10 @@ body{
   background-color: var(--primary-color);
   transition: 100ms;
   transform: scale(1);
+  box-shadow: 0px 1px 4px 2px var(--special-color);
 }
 
-.login .btn-login:hover,.login .btn-login:focus   {
+.btn-login:hover,.btn-login:focus   {
   outline: none;
   background-color: var(--hover-color);
   color: var(--primary-color);
@@ -157,6 +160,8 @@ body{
   border: 1px solid var(--primary-color);
   cursor: pointer;
   transform: scale(1.1);
+  transition: ease-in;
+  transition-duration: 500ms;
 }
 
 .login-link {
@@ -180,7 +185,6 @@ body{
 .login span #login:hover,.login span #login:focus {
   text-decoration-line: none;
   color: var(--primary-color);
-  text-transform: uppercase;
 }
 
 /* smartphones  */
