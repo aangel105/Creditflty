@@ -161,20 +161,12 @@ class Register extends Component {
         </React.Fragment>
       );
     } else {
-      console.log("Not Hit");
       return (
         <React.Fragment>
           <div className="form-submitted-container">
-            <h1 className="form-submitted-header">Already Register</h1>
-            <br />
-            <img
-              className="form-submitted-image"
-              src="https://i.pinimg.com/originals/70/a5/52/70a552e8e955049c8587b2d7606cd6a6.gif"
-              alt="done"
-            />
-            <br />
-            <Link className="form-submitted-login-link" id="link" to="/login">
-              Login{" "}
+            <h1 className="form-submitted-header">Thank you for register!!</h1>
+            <Link className="form-submitted-login-link" to="/login">
+              Login
             </Link>
           </div>
         </React.Fragment>

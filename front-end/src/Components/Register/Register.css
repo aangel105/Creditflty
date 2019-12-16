@@ -71,14 +71,14 @@
   margin-top: 6%;
   margin-right: 2px;
   font-family: "Crimson Pro", serif;
-  font-size: 10px;
+  font-size: 12px;
   color: var(--primary-color);
   letter-spacing: 0.3px;
   font-weight: bold;
 }
 
 .register-form-image span #link {
-  font-size: 10px;
+  font-size: 12px;
   margin-left: 2px;
   color: var(--hover-color);
   letter-spacing: 0.5px;
@@ -175,6 +175,74 @@
   color: var(--secondary-color);
   text-decoration: none;
   border: 1px solid var(--hover-color);
+}
+
+/* STYLES FOR CONTAINER AFTER FORM IS SUBMITTED */
+
+.form-submitted-container {
+  overflow: hidden;
+  position: absolute;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url("https://i.pinimg.com/originals/70/a5/52/70a552e8e955049c8587b2d7606cd6a6.gif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+
+.form-submitted-container h1 {
+  margin-top: 10vh;
+  text-align: center;
+  justify-content: center;
+  align-self: center;
+  color: var(--primary-color);
+  font-family: "Crimson Pro", serif;
+  font-weight: bold;
+  font-size: 1.7rem;
+  letter-spacing: 3px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 0.2px solid var(--hover-color);
+}
+
+.form-submitted-login-link {
+  text-align: center;
+  justify-content: center;
+  align-self: center;
+  margin-top: 40%;
+  width: 24vw;
+  height: 6vh;
+  font-family: "Crimson Pro", serif;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  padding: 5px;
+  border-radius: 15px;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  transition: 100ms;
+  transform: scale(1);
+  box-shadow: 0px 1px 4px 2px var(--special-color);
+}
+
+.form-submitted-login-link:hover {
+  background-color: var(--hover-color);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  opacity: 0.9;
+  font-weight: bold;
+  transition: ease-in;
+  transition-duration: 1000ms;
+  outline: none;
+  text-decoration: none;
+  transform: scale(1.1);
+  transition: ease-in;
+  transition-duration: 500ms;
 }
 
 /* smartphones */
