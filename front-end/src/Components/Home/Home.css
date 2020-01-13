@@ -13,9 +13,10 @@ body {
   min-height: 100%;
   --primary-color: #EDF5FC;
   --secondary-color: #247BA0;
-  --hover-color: #63D9B2;
-  /* --hover-color:rgb(250, 139, 75); */
-  --special-color:#444;
+  --hover-color:rgb(250, 139, 75);
+  --special-color: rgb(170, 168, 168);
+  --content-font: "Crimson Pro", serif;
+  --nav-font: 'Lato', 'sans-serif';
 }
 
 /* Header*/

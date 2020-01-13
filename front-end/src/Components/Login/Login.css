@@ -4,13 +4,19 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 :focus {
   outline: none;
   caret-color: var(--hover-color);
 }
 
-body{
-  background-color:rgb(170, 168, 168);
+body {
+  background-color: var(--special-color);
 }
 /* LOGIN MAIN DIV */
 
@@ -32,7 +38,8 @@ body{
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("../../Images/login-image.jpeg");
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
+    url("../../Images/login-image.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -40,15 +47,15 @@ body{
   border-bottom-left-radius: 5%;
 }
 
-.login-image span{
+.login-image span {
   color: var(--primary-color);
-  font-family: "Crimson Pro", serif;
+  font-family: var(--content-font);
   font-weight: bold;
   font-size: 1.7rem;
   letter-spacing: 3px;
   font-weight: bold;
-  text-transform: uppercase;
-  border-bottom: .2px solid var(--hover-color);
+  border-bottom: 0.2px solid var(--hover-color);
+  filter: blur(0.5px);
 }
 
 .login-form {
@@ -84,9 +91,8 @@ body{
 .login label {
   margin-bottom: 2%;
   margin-top: 2%;
-  margin-left: 2%;
-  font-size: 12px;
-  letter-spacing: 1.2px;
+  font-size: 11px;
+  letter-spacing: 1px;
   font-family: "Crimson Pro", serif;
   color: var(--primary-color);
   font-weight: bold;
@@ -99,7 +105,7 @@ body{
   border-radius: 15px;
   font-family: "Crimson Pro", serif;
   letter-spacing: 0.3px;
-  font-size: 15px;
+  font-size: 13px;
   text-align: center;
   color: var(--secondary-color);
 }
@@ -117,7 +123,7 @@ body{
   height: 6vh;
   letter-spacing: 0.3px;
   font-family: "Crimson Pro", serif;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 800;
   text-align: center;
   color: var(--secondary-color);
@@ -139,27 +145,29 @@ body{
   font-size: 12px;
   font-weight: bold;
   letter-spacing: 2px;
-  padding: 5px; 
+  padding: 5px;
   text-align: center;
   border-radius: 15px;
-  color: var(--secondary-color);
-  background-color: var(--primary-color);
+  color: var(--primary-color);
+  background-color: var(--hover-color);
   transition: 100ms;
   transform: scale(1);
-  box-shadow: 0px 1px 4px 2px var(--special-color);
+  box-shadow: 0px 0px 4px 2px var(--special-color);
+  border: 1px solid transparent;
 }
 
-.btn-login:hover,.btn-login:focus   {
+.btn-login:hover,
+.btn-login:focus {
   outline: none;
-  background-color: var(--hover-color);
-  color: var(--primary-color);
+  background-color: var(--primary-color);
+  color: var(--hover-color);
+  border: 1px solid var(--hover-color);
   font-weight: bold;
-  text-transform: uppercase;
   letter-spacing: 2px;
   text-decoration: none;
-  border: 1px solid var(--primary-color);
   cursor: pointer;
   transform: scale(1.1);
+  transition-duration: 100ms;
   transition: ease-in;
   transition-duration: 500ms;
 }
@@ -168,10 +176,11 @@ body{
   margin-top: 8%;
   width: 100%;
   color: var(--primary-color);
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
   font-size: 12px;
   text-align: center;
   font-family: "Crimson Pro", serif;
+  font-weight: bolder;
 }
 
 .login span #login {
@@ -182,15 +191,44 @@ body{
   font-family: "Crimson Pro", serif;
 }
 
-.login span #login:hover,.login span #login:focus {
+.login span #login:hover,
+.login span #login:focus {
   text-decoration-line: none;
   color: var(--primary-color);
 }
 
 /* smartphones  */
 
-@media (max-width: 568px) {
-  .login-section {
+@media (max-width: 600px) {
+  * {
+    overflow-x: hidden;
+  }
+
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .login-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-self: center;
+  }
+
+  .login-image {
+    display: none;
+  }
+
+  .login-form {
+    display: flex;
+    flex-direction: row;
+    flex: 5;
+    background-color: var(--secondary-color);
+  }
+
+  /* .login-section {
     display: flex;
     flex-direction: row;
     height: 80vh;
@@ -198,7 +236,7 @@ body{
     margin: 10vh auto;
     background-color: var(--secondary-color);
     border-radius: 15px;
-  }
+  } */
 
   .login {
     flex: 5;
