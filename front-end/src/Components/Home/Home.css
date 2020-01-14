@@ -12,10 +12,10 @@ html, body {
 body {
   min-height: 100%;
   --primary-color: #EDF5FC;
-  /* --secondary-color: #247BA0; */
   --secondary-color: black;
   --hover-color:rgb(250, 139, 75);
-  --special-color: rgb(170, 168, 168);
+  /* --special-color: rgb(170, 168, 168); */
+  --special-color: rgb(14, 13, 13);
   --content-font: "Crimson Pro", serif;
   --nav-font: 'Lato', 'sans-serif';
 }
@@ -62,7 +62,7 @@ body {
 
 .containerOne {
   height: 120px;
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   display: flex;
   flex-direction: column;
 }
@@ -72,7 +72,7 @@ body {
   align-self: center;
   font-family: "Crimson Pro", serif;
   font-size: 16px;
-  color: var(--secondary-color);
+  color: var(--hover-color);
   letter-spacing: 1px;
   font-weight: 800;
   padding: 12px;
@@ -85,7 +85,7 @@ body {
   height: 60%;
   font-family: "Crimson Pro", serif;
   letter-spacing: 0.3px;
-  color: var(--secondary-color);
+  color: var(--primary-color);
   font-style: italic;
   justify-content: flex-start;
   align-items: flex-start;
@@ -110,9 +110,9 @@ body {
 .homeContentTwo {
   height: 80px;
   background-image: linear-gradient(
-    160deg,
-    var(--primary-color) 40%,
-    var(--secondary-color) 99%
+    -160deg,
+    var(--primary-color) 5%,
+    var(--secondary-color) 69%
   );
   display: flex;
 }
@@ -124,7 +124,7 @@ body {
   font-size: 10px;
   font-family: "Crimson Pro", serif;
   letter-spacing: 0.3px;
-  color: var(--secondary-color);
+  color: var(--hover-color);
   font-style: italic;
   margin-left: 5%;
 }
@@ -133,7 +133,7 @@ body {
 
 .containerThree {
   height: 120px;
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   display: flex;
   flex-direction: column;
 }
@@ -146,7 +146,7 @@ body {
   font-family: "Crimson Pro", serif;
   letter-spacing: 0.3px;
   font-size: 14px;
-  color: var(--secondary-color);
+  color: var(--hover-color);
   letter-spacing: 1px;
   font-weight: 800;
   padding: 12px;
@@ -161,7 +161,7 @@ body {
   height: 60%;
   font-family: "Crimson Pro", serif;
   letter-spacing: 0.3px;
-  color: var(--secondary-color);
+  color: var(--primary-color);
   font-style: italic;
   margin-left: 5%;
 }

@@ -15,11 +15,12 @@ input::-webkit-inner-spin-button {
 .creditCards {
   padding: 20px;
   margin: 5px;
-  background-color: var(--secondary-color);
-  height: 60vh;
-  width: 50vw;
   margin-top: 10vh;
   margin-bottom: 5vh;
+  margin-left: 15vh;
+  background-color: var(--secondary-color);
+  height:60vh;
+  width: 80vw;
   border-radius: 2%;
   border-bottom: 1px solid var(--hover-color);
 }

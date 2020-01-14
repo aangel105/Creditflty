@@ -6,10 +6,11 @@ const AboutUs = () => {
     <React.Fragment>
       <header className="about_header">
         <h1 className="header_title">About Us</h1>
+        <h6 className="header_slogan"> Wander - Explore - Discover </h6>
       </header>
       <div className="tittle">
-      <h1 >Who We Are</h1>
-      <hr />
+        <h1>Who We Are</h1>
+        <hr />
       </div>
       <main className="about_main">
         <div className="main_desc">
@@ -18,39 +19,29 @@ const AboutUs = () => {
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi
               quaerat atque corporis asperiores mollitia perspiciatis iusto et
               laboriosam blanditiis! Excepturi velit, reiciendis dolores autem
-              iste quas magni, veniam numquam quaerat ipsa quisquam. Alias eaque
-              dolor, repudiandae esse mollitia reiciendis non veritatis
-              reprehenderit asperiores sapiente? Libero est vel aliquam nemo,
-              error, mollitia enim qui tenetur reprehenderit nulla excepturi
-              sunt veniam quaerat aliquid. Non veniam ratione repudiandae
-              aliquid alias, voluptatibus dicta ut vero. 
+              iste quas magni, veniam numquam quaerat ipsa quisquam.{" "}
             </p>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
               alias repellat a. Itaque et consequatur amet eos! Unde
               accusantium, dolorum praesentium animi adipisci aut, nesciunt qui
               voluptatum natus totam distinctio dolor nihil maxime quod voluptas
-              obcaecati incidunt nulla placeat. 
+              obcaecati incidunt nulla placeat.
             </p>
           </div>
-          <div className="main_img">
-            <img
-            src="https://images.unsplash.com/photo-1530789253388-582c481c54b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
-            alt="about_us"
-          />
-          </div>
+          <div className="main_img"></div>
         </div>
       </main>
       <footer className="about_footer">
-        <hr />
         <h1>Travel Tips</h1>
+        <hr />
         <div className="footer_boxes">
           <div className="box1">
-            <h6>Spend</h6>
+            <h6>Hotel</h6>
             <ul className="spend_tips">
-              <li>Don't overspend</li>
-              <li>Pay your full balance every Month</li>
-              <li>Pay your friends bills</li>
+              <li>Uses booking portals</li>
+              <li>check for status match</li>
+              <li>apply for hotel credit cards</li>
             </ul>
           </div>
           <div className="box2">

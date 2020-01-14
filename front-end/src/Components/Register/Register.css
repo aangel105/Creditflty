@@ -6,13 +6,12 @@
 
 .register-container {
   position: absolute;
-  top: 8%;
-  left: 15%;
+  top: 0;
+  left: 0;
   display: flex;
   flex-direction: row;
-  width: 71vw;
-  height: 90vh;
-  border-radius: 5%;
+  width: 100vw;
+  height: 100vh;
 }
 
 .register-form-image {
@@ -28,8 +27,6 @@
     url("../../Images/register-image.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  border-top-left-radius: 5%;
-  border-bottom-left-radius: 5%;
 }
 
 .btn-submit {
@@ -93,8 +90,6 @@
 .register-form {
   flex: 5;
   height: 100%;
-  border-top-right-radius: 5%;
-  border-bottom-right-radius: 5%;
   background-color: var(--secondary-color);
   display: flex;
   flex-direction: column;
