@@ -140,17 +140,6 @@ class Rewards_Profile extends Component {
     } else {
       return (
         <React.Fragment>
-          <div className="container">
-            <div className="header">
-              <p className="header_paragraph">
-                <span className="arrow2"> Spend </span>{" "}
-                <span className="arrow1"> > </span>{" "}
-                <span className="earn"> Earn </span>{" "}
-                <span className="arrow1"> > </span>{" "}
-                <span className="arrow3"> Travel </span>{" "}
-              </p>{" "}
-            </div>{" "}
-          </div>{" "}
           <div className="wrapper">
             <div className="container_left">
               <div className="cards">
@@ -206,6 +195,7 @@ class Rewards_Profile extends Component {
                   name="travelExpenses"
                   type="number"
                   num="0"
+                  autoFocus
                   onChange={this.handleOnChange}
                   required
                 />

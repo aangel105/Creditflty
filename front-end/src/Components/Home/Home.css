@@ -12,7 +12,8 @@ html, body {
 body {
   min-height: 100%;
   --primary-color: #EDF5FC;
-  --secondary-color: #247BA0;
+  /* --secondary-color: #247BA0; */
+  --secondary-color: black;
   --hover-color:rgb(250, 139, 75);
   --special-color: rgb(170, 168, 168);
   --content-font: "Crimson Pro", serif;

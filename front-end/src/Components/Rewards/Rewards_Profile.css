@@ -9,6 +9,7 @@ input::-webkit-inner-spin-button {
   box-sizing: border-box;
 }
 
+
 /* creditcards after submitting form */
 
 .creditCards {
@@ -22,6 +23,7 @@ input::-webkit-inner-spin-button {
   border-radius: 2%;
   border-bottom: 1px solid var(--hover-color);
 }
+
 .creditCardsName {
   font-size: 13px;
   font-family: 'Crimson Pro', serif;  
@@ -75,67 +77,6 @@ input::-webkit-inner-spin-button {
   font-family: "Crimson Pro", serif;
 }
 
-.container {
-  background-image: url("./../../Images/travel.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 40vh;
-  min-width: 100%;
-  display: inline-block;
-  opacity: 0.8;
-}
-
-.header .header_paragraph {
-  padding: 30px;
-  margin: 20px;
-  text-align: center;
-  background-color: transparent;
-  position: relative;
-  font-size: 1rem;
-  font-family: "Crimson Pro", serif;
-  color: var(--primary-color);
-  text-transform: uppercase;
-  font-weight: 800;
-  letter-spacing: 0.5rem;
-  font-style: italic;
-}
-
-.earn {
-  color: var(--primary-color);
-  font-family: "Crimson Pro", serif;
-}
-
-.header_paragraph .arrow1 {
-  background: transparent;
-  font-size: 1.8rem;
-  position: relative;
-  animation-name: arrow;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-}
-
-@keyframes arrow {
-  0% {
-    color: var(--hover-color);
-    top: 0px;
-  }
-
-  50% {
-    color: var(--primary-color);
-    top: 7px;
-  }
-
-  75% {
-    color: var(--secondary-color);
-    top: 5px;
-  }
-
-  100% {
-    color: var(--hover-color);
-    top: 2px;
-  }
-}
-
 .wrapper {
   display: flex;
   flex-direction: row;
@@ -146,7 +87,7 @@ input::-webkit-inner-spin-button {
 /* design  right container */
 
 .container_right {
-  border-left: 1px solid var(--hover-color);
+  border-left: 0.2px solid var(--primary-color);
   flex: 5;
   display: flex;
   justify-content: center;
@@ -160,31 +101,30 @@ input::-webkit-inner-spin-button {
 }
  
 .container_right .form h5{
-  margin-top: 10px;
+  margin-top: 7vh;
   margin-bottom: 15px;
   font-size: 12px;
   font-family: "Crimson Pro", serif;
-  font-weight: 200;
-  color: var(--primary-color);
   font-weight: bold;
+  color: var(--primary-color);
   letter-spacing: 1.2px;
 }
 /* design the form labels  */
 .container_right .form label {
-  font-size: 10px;
+  font-size: 11px;
   text-align: center;
   font-family: "Crimson Pro", serif;
   color: var(--primary-color);
   font-weight: bold;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
   margin: auto, 0, 0;
 }
 
 /* design the form input  */
 .container_right .form input[type="number"] {
-  width: 22vw;
-  height: 5vh;
-  font-size: 10px;
+  width: 24vw;
+  height: 6vh;
+  font-size: 13px;
   font-weight: 300;
   border-radius: 15px;
   text-align: center;
@@ -199,50 +139,55 @@ input::-webkit-inner-spin-button {
   opacity: 0.9;
   color: var(--secondary-color);
   text-decoration: none;
-  border-bottom: 1.5px solid var(--hover-color);
+  border: 1px solid var(--hover-color);
 }
 
 /* design the submit button */
 .container_right .form input[type="submit"] {
-  width: 22vw;
-  height: 5vh;
-  font-size: 10px;
+  width: 24vw;
+  height: 6vh;
+  font-size: 12px;
+  font-weight: bold;
   text-align: center;
   font-family: "Crimson Pro", serif;
-  letter-spacing: 1.2px;
+  letter-spacing: 2px;
   margin-bottom: 20px;
   margin-top: 1.5rem;
   padding: 2px;
   border-radius: 50px;
-  color: var(--secondary-color);
-  background-color: var(--primary-color);
-  border: none;
-  box-shadow: 2px 0px 5px #444;
+  color: var(--primary-color);
+  background-color: var(--hover-color);
+  transition: 100ms;
+  transform: scale(1);
+  border: 1px solid transparent;
+  box-shadow: 0px 0px 4px 2px var(--special-color);
 }
 
 /* design the submit button on hover*/
-.container_right .form input[type="submit"]:hover {
+.container_right .form input[type="submit"]:hover,
+.container_right .form input[type="submit"]:focus {
+  background-color: var(--primary-color);
+  color: var(--hover-color);
+  border: 1px solid var(--hover-color);
   opacity: 0.9;
+  font-weight: bold;
   transition: ease-in;
   transition-duration: 1000ms;
-  border: 1px solid rgb(251, 225, 75);
-}
-
-/* design the submit button on focus */
-.container_right .form input[type="submit"]:focus {
   outline: none;
-  opacity: 0.9;
   text-decoration: none;
-  border-bottom: 1.5px solid var(--hover-color);
+  transform: scale(1.1);
+  transition: ease-out;
+  transition-duration: 500ms;
+  
 }
 
 /* design the form span */
 .container_right .form span {
+  font-size: 11px;
   font-family: "Crimson Pro", serif;
-  font-size: 10px;
-  color: var(--hover-color);
-  letter-spacing: 0.9px;
   font-weight: bold;
+  color: var(--primary-color);
+  letter-spacing: 1.2px;
 }
 
 .container_right .form #start {
@@ -253,6 +198,7 @@ input::-webkit-inner-spin-button {
 
 /* credit cards container */
 .container_left {
+  margin-top:7vh;
   flex: 5;
   justify-content: center;
   justify-items: center;
