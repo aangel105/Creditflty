@@ -235,14 +235,14 @@ input::-webkit-inner-spin-button {
 .cardFive,
 .cardSix {
   background-repeat: no-repeat;
-  background-color: rgb(139, 139, 139);
   background-size: cover;
-  min-height: 20vh;
+  min-height: 21vh;
   border-radius: 5px;
   min-width: 100%;
   display: inline-block;
   opacity: 0.9;
-  border: none;
+  border: .5px solid var(--hover-color);
+  box-shadow: 1px 0px 2px var(--hover-color);
 }
 
 /* images background */

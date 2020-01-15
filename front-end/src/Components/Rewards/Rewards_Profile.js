@@ -145,48 +145,48 @@ class Rewards_Profile extends Component {
               <div className="cards">
                 <img className="cardOne" alt="" />
                 <div className="cardText">
-                  <span className="name"> Name: </span>{" "}
+                  <span className="name"> Name: </span>
                   <span id="span1"> Chase Sapphire Reserve </span> <br />
-                  <span className="name"> Good: </span>{" "}
+                  <span className="name"> Good: </span>
                   <span id="span2"> Travel and Dinning </span> <br />
-                  <span className="name"> Credit Score: </span>{" "}
-                  <span id="span3"> Excellent </span>{" "}
-                </div>{" "}
-              </div>{" "}
+                  <span className="name"> Credit Score: </span>
+                  <span id="span3"> Excellent </span>
+                </div>
+              </div>
               <div className="cards">
                 <img className="cardTwo" alt="" />
                 <div className="cardText">
-                  <span className="name"> Name: </span>{" "}
+                  <span className="name"> Name: </span>
                   <span id="span1"> Chase Sapphire Preferred </span> <br />
-                  <span className="name"> Good: </span>{" "}
+                  <span className="name"> Good: </span>
                   <span id="span2"> Dining and Travel </span> <br />
-                  <span className="name"> Credit Score: </span>{" "}
-                  <span id="span3"> Good </span>{" "}
-                </div>{" "}
-              </div>{" "}
+                  <span className="name"> Credit Score: </span>
+                  <span id="span3"> Good </span>
+                </div>
+              </div>
               <div className="cards">
                 <img className="cardThree" alt="" />
                 <div className="cardText">
-                  <span className="name"> Name: </span>{" "}
+                  <span className="name"> Name: </span>
                   <span id="span1"> SouthWest Rapid Rewards </span> <br />
-                  <span className="name"> Good: </span>{" "}
+                  <span className="name"> Good: </span>
                   <span id="span2"> Travel and Companion Pass </span> <br />
-                  <span className="name"> Credit Score: </span>{" "}
-                  <span id="span3"> Excellent </span>{" "}
-                </div>{" "}
-              </div>{" "}
+                  <span className="name"> Credit Score: </span>
+                  <span id="span3"> Excellent </span>
+                </div>
+              </div>
               <div className="cards">
                 <img className="cardFive" alt="" />
                 <div className="cardText">
-                  <span className="name"> Name: </span>{" "}
+                  <span className="name"> Name: </span>
                   <span id="span1"> Citi Double Cash </span> <br />
-                  <span className="name"> Good: </span>{" "}
+                  <span className="name"> Good: </span>
                   <span id="span2"> Unlimited 2 % Cashback </span> <br />
-                  <span className="name"> Credit Score: </span>{" "}
-                  <span id="span3"> Good </span>{" "}
-                </div>{" "}
-              </div>{" "}
-            </div>{" "}
+                  <span className="name"> Credit Score: </span>
+                  <span id="span3"> Good </span>
+                </div>
+              </div>
+            </div>
             <div className="container_right">
               <form className="form">
                 <h5>- Which credit card is best for you ? </h5>
