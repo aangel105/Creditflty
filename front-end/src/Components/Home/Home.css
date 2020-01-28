@@ -13,7 +13,8 @@ body {
   min-height: 100%;
   --primary-color: #EDF5FC;
   --secondary-color: black;
-  --hover-color:rgb(250, 139, 75);
+  /* --hover-color:rgb(250, 139, 75); */
+  --hover-color:#fc6508;
   /* --special-color: rgb(170, 168, 168); */
   --special-color: rgb(14, 13, 13);
   --content-font: "Crimson Pro", serif;
@@ -48,7 +49,7 @@ body {
   color: var(--primary-color);
   padding: 10px;
   font-weight: bold;
-  font-size: 35px;
+  font-size: 27px;
   font-family: "Crimson Pro", serif;
   font-style: italic;
   letter-spacing: 1rem;
@@ -62,17 +63,18 @@ body {
 /* Container One */
 
 .containerOne {
-  height: 120px;
+  height: 140px;
   background-color: var(--secondary-color);
   display: flex;
   flex-direction: column;
 }
 
 .contentHeaderOne {
+  margin-top: 10px;
   justify-content: center;
   align-self: center;
   font-family: "Crimson Pro", serif;
-  font-size: 16px;
+  font-size: 14px;
   color: var(--hover-color);
   letter-spacing: 1px;
   font-weight: 800;
@@ -109,7 +111,7 @@ body {
 }
 
 .homeContentTwo {
-  height: 80px;
+  height: 100px;
   background-image: linear-gradient(
     -160deg,
     var(--primary-color) 5%,
@@ -133,19 +135,17 @@ body {
 /* Container Three */
 
 .containerThree {
-  height: 120px;
+  height: 140px;
   background-color: var(--secondary-color);
   display: flex;
   flex-direction: column;
 }
 
 .contentHeaderThree {
+  margin-top: 10px;
   justify-content: center;
   align-self: center;
-  text-align: center;
-  font-style: italic;
   font-family: "Crimson Pro", serif;
-  letter-spacing: 0.3px;
   font-size: 14px;
   color: var(--hover-color);
   letter-spacing: 1px;
@@ -192,7 +192,7 @@ body {
   /* The image used */
   background-image: url("./../../Images/travel1.jpeg");
   /* Set a specific height */
-  min-height: 90vh;
+  min-height: 80vh;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
@@ -203,7 +203,7 @@ body {
 
 /* smartphones */
 
-@media (max-width: 568px) {
+@media (max-width: 600px) {
 
   .imageOne {
     min-height: 30vh;
@@ -228,21 +228,22 @@ body {
   } 
 
   .containerOne {
-    height: 180px;
-    background-color: var(--primary-color);
+    height: 140px;
+    background-color: var(--secondary-color);
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
   }
-  
   .contentHeaderOne {
+    margin-top: 12px;
+    justify-content: center;
+    align-self: center;
     font-family: "Crimson Pro", serif;
     font-size: 16px;
-    color: var(--secondary-color);
+    color: var(--hover-color);
     letter-spacing: 1px;
     font-weight: 800;
+    padding: 12px;
     font-style: italic;
-    text-align: center;
-    margin-top: 1rem;
   }
 
   .contentParagraphOne {
@@ -251,18 +252,26 @@ body {
     height: 60%;
     font-family: "Crimson Pro", serif;
     letter-spacing: 0.3px;
-    color: var(--secondary-color);
+    color: var(--primary-color);
     font-style: italic;
     justify-content: flex-start;
     align-items: flex-start;
     margin-left: 5%;
-    padding: 1px;
-    margin-top: 0.5rem;
   }
 
 
   .imageTwo {
     min-height: 15vh;
+  }
+
+  .homeContentTwo {
+    height: 80px;
+    background-image: linear-gradient(
+      -160deg,
+      var(--primary-color) 5%,
+      var(--secondary-color) 69%
+    );
+    display: flex;
   }
 
   .contentParagraphTwo {
@@ -272,7 +281,7 @@ body {
     font-size: 12px;
     font-family: "Crimson Pro", serif;
     letter-spacing: 0.3px;
-    color: var(--secondary-color);
+    color: var(--hover-color);
     font-style: italic;
     margin-left: 5%;
   }
@@ -282,23 +291,25 @@ body {
     min-height: 15vh;
   }
 
-
   .containerThree {
-    height: 180px;
-    background-color: var(--primary-color);
+    height: 140px;
+    background-color: var(--secondary-color);
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
   }
 
+
   .contentHeaderThree {
+    margin-top: 12px;
+    justify-content: center;
+    align-self: center;
     font-family: "Crimson Pro", serif;
     font-size: 16px;
-    color: var(--secondary-color);
+    color: var(--hover-color);
     letter-spacing: 1px;
     font-weight: 800;
+    padding: 12px;
     font-style: italic;
-    text-align: center;
-    margin-top: 1rem;
   }
 
   .contentParagraphThree {
@@ -307,13 +318,11 @@ body {
     height: 60%;
     font-family: "Crimson Pro", serif;
     letter-spacing: 0.3px;
-    color: var(--secondary-color);
+    color: var(--primary-color);
     font-style: italic;
     justify-content: flex-start;
     align-items: flex-start;
     margin-left: 5%;
-    padding: 1px;
-    margin-top: 0.5rem;
   }
 
   .lastImage {

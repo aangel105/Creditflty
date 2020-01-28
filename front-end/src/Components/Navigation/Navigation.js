@@ -2,35 +2,36 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Navigation.css";
 
+
 const Navigation = () => {
   return (
     <React.Fragment>
       <div className="nav-container">
         <div className="logo-container">
           <Link className="logoName" to="/">
-            Creditfly
+            Adventures
           </Link>
         </div>
         <nav className="main-nav">
-          <div className="links-list">
-            <ul>
+          <div>
+            <ul className="nav-items">
               <li>
-                <Link className="nav-links" to="/about">
+                <Link className="nav-item" to="/about">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link className="nav-links" to="/rewards">
+                <Link className="nav-item" to="/rewards">
                   Rewards
                 </Link>
               </li>
               <li>
-                <Link className="nav-links" to="/register">
+                <Link className="nav-item" to="/register">
                   Register
                 </Link>
               </li>
               <li>
-                <Link className="nav-links" to="/login">
+                <Link className="nav-item" to="/login">
                   Login
                 </Link>
               </li>

@@ -1,13 +1,11 @@
 body {
+  background-color: black;
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-a {
-  color: #00B7FF;
-}
-
-body{
-  background-color: #444;
+  font: 14px "Crimson Pro", Helvetica, Arial, sans-serif;
   color:#fff;
 }
+
+h1{
+  color:rgb(250, 139, 75);
+}
+

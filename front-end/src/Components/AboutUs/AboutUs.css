@@ -6,7 +6,7 @@
 
 .about_header {
   width: 100%;
-  height: 80vh;
+  height: 90vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
     url("../../Images/travel3.jpeg");
   background-size: cover;
@@ -99,7 +99,7 @@
 
 .about_footer {
   width: 100%;
-  height: 70vh;
+  height: 75vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -117,9 +117,12 @@
   font-family: "Crimson Pro", serif;
   color: var(--primary-color);
   font-weight: bold;
+  margin-bottom: 10px;
+
 }
 hr {
   border: 0.3px dotted var(--hover-color);
+  margin-bottom: 30px;
 }
 .footer_boxes {
   display: flex;
@@ -142,7 +145,7 @@ hr {
   background-color: var(--secondary-color);
   font-family: "Crimson Pro", serif;
   font-size: 20px;
-  border-bottom: 1px solid var(--hover-color);
+  box-shadow: 0px 0px 5px var(--hover-color);
   border-radius: 3%;
 }
 
@@ -177,4 +180,53 @@ hr {
   margin: 6px;
   padding: 4px;
   color: var(--primary-color);
+}
+
+@media only screen and (max-width: 600px) {
+  .about_header {
+    height: 40vh;
+  }
+
+  .tittle hr {
+    border: 0.3px dotted var(--hover-color);
+    margin-top: 30px;
+  }
+
+  .about_main {
+    height: 50vh;
+  }
+
+  .main_desc {
+    display: flex;
+    flex-direction:column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    letter-spacing: 0.5px;
+  }
+  .second_paragraph{
+    display: none;
+  }
+
+  .main_img{
+    width: 100%;
+  }
+
+  .about_footer h1 {
+    margin-bottom: -30px;
+  }
+
+  .about_footer hr {
+    margin-bottom: -10px;
+  }
+
+  .footer_boxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50%;
+    margin-top: -20px;
+  }
+
 }

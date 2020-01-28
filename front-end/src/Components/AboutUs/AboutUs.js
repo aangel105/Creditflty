@@ -21,7 +21,7 @@ const AboutUs = () => {
               laboriosam blanditiis! Excepturi velit, reiciendis dolores autem
               iste quas magni, veniam numquam quaerat ipsa quisquam.{" "}
             </p>
-            <p>
+            <p className="second_paragraph">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
               alias repellat a. Itaque et consequatur amet eos! Unde
               accusantium, dolorum praesentium animi adipisci aut, nesciunt qui
