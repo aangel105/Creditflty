@@ -4,6 +4,9 @@ import axios from "axios";
 import "./Login.css";
 
 
+import UserProfile from "../UserProfile/UserProfile";
+
+
 class Login extends Component {
   constructor(props) {
     super(props);
@@ -114,7 +117,8 @@ class Login extends Component {
     }
     return (
       <div>
-        <React.Fragment>
+        <UserProfile/>
+        {/* <React.Fragment>
           <div className="login-container">
             <div className="login-image">
               <div>
@@ -135,7 +139,7 @@ class Login extends Component {
               </form>
             </div>
           </div>
-        </React.Fragment>
+        </React.Fragment> */}
       </div>
     );
   }

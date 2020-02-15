@@ -32,33 +32,47 @@ const AboutUs = () => {
           <div className="main_img"></div>
         </div>
       </main>
-      <footer className="about_footer">
-        <h1>Travel Tips</h1>
+      <footer className="footer_container">
+        <div className="footer_header">
+          <h1>Travel Tips</h1>
+        </div>
         <hr />
-        <div className="footer_boxes">
-          <div className="box1">
-            <h6>Hotel</h6>
-            <ul className="spend_tips">
-              <li>Uses booking portals</li>
-              <li>check for status match</li>
-              <li>apply for hotel credit cards</li>
-            </ul>
+        <div className="boxes_items">
+          <div className="box_item">
+            <div className="box_header box1">
+              <h6>Hotel</h6>
+            </div>
+            <div>
+              <ul className="spend_tips">
+                <li>Uses booking portals</li>
+                <li>check for status match</li>
+                <li>apply for hotel credit cards</li>
+              </ul>
+            </div>
           </div>
-          <div className="box2">
-            <h6>Earn</h6>
-            <ul className="earn_tips">
-              <li>Sign up for rewards programs</li>
-              <li>Pay with the right card</li>
-              <li>Buy Points when possible</li>
-            </ul>
+          <div className="box_item">
+            <div className="box_header box2">
+              <h6>Earn</h6>
+            </div>
+            <div>
+              <ul className="earn_tips">
+                <li>Sign up for rewards programs</li>
+                <li>Pay with the right card</li>
+                <li>Buy Points when possible</li>
+              </ul>
+            </div>
           </div>
-          <div className="box3">
-            <h6>Travel</h6>
-            <ul className="travel_tips">
-              <li>Use Google flight to book flight</li>
-              <li>Be flexible with your travel date</li>
-              <li>Buy basic economic tickets</li>
-            </ul>
+          <div className="box_item">
+            <div className="box_header box3">
+              <h6>Travel</h6>
+            </div>
+            <div>
+              <ul className="travel_tips">
+                <li>Use Google flight to book flight</li>
+                <li>Be flexible with your travel date</li>
+                <li>Buy basic economic tickets</li>
+              </ul>
+            </div>
           </div>
         </div>
       </footer>
