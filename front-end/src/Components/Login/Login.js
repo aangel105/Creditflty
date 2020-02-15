@@ -117,8 +117,8 @@ class Login extends Component {
     }
     return (
       <div>
-        <UserProfile/>
-        {/* <React.Fragment>
+        {/* <UserProfile/> */}
+        <React.Fragment>
           <div className="login-container">
             <div className="login-image">
               <div>
@@ -139,7 +139,7 @@ class Login extends Component {
               </form>
             </div>
           </div>
-        </React.Fragment> */}
+        </React.Fragment>
       </div>
     );
   }
