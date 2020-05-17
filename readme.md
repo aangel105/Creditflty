@@ -1,5 +1,5 @@
 
- # Creditfly
+ # Adventures
 
  Creditfly is an application where users have the ability to check, improve and understand their credit scores. Creditfly provide the user the opportunity to utilize their daily expenses to get cheap vacations around the world by tracking users expenses and recommend specific credit cards based on their expenses categories 
 
@@ -63,6 +63,6 @@
  -show a table of credit cards their points and their categories ex: cashback
 
 ./expenses
- -shows the list of expenses acquired from users 
+ -shows the list of expenses from all users
 
  
