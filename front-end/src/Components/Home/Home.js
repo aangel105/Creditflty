@@ -1,4 +1,5 @@
 import React from "react";
+import Arrow from "../../Images/arrow.png";
 import "./Home.css";
 
 const Home = () => {
@@ -6,9 +7,12 @@ const Home = () => {
     <div>
       <header>
         <div className="imageOne">
-          <div className="imageOneLogo">
+          <div className="imageOneHeader">
             <span>Adventures</span>
           </div>
+          <div className="imageOneArrow"> 
+          <img src={Arrow} alt="" />
+        </div>
         </div>
       </header>
       <main>
