@@ -4,7 +4,7 @@ import axios from "axios";
 import "./Login.css";
 
 
-import UserProfile from "../UserProfile/UserProfile";
+// import UserProfile from "../UserProfile/UserProfile";
 
 
 class Login extends Component {
