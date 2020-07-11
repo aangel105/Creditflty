@@ -30,7 +30,7 @@ html,body{
 
 .creditCardsName {
   font-size: 13px;
-  font-family: 'Crimson Pro', serif;  
+  font-family: var(--font-family);  
   margin: 4px;
   padding:4px;
   color: var(--secondary-color);
@@ -44,7 +44,7 @@ html,body{
   font-size: 13px;
   margin: 4px;
   padding:4px;
-  font-family: 'Crimson Pro', serif; 
+  font-family: var(--font-family);
   color: var(--primary-color);
   background-color: var(--secondary-color);
   line-height: 1rem;
@@ -56,7 +56,7 @@ html,body{
   font-size: 13px;
   margin: 4px;
   padding:4px;
-  font-family: 'Crimson Pro', serif; 
+  font-family: var(--font-family); 
   color: var(--primary-color);
   background-color: var(--secondary-color);
   line-height: 1rem;
@@ -78,7 +78,7 @@ html,body{
   font-size: 10px;
   text-align: center;
   font-style: italic;
-  font-family: "Crimson Pro", serif;
+  font-family: var(--font-family);
 }
 
 .wrapper {
@@ -112,7 +112,7 @@ html,body{
   margin-top: 7vh;
   margin-bottom: 15px;
   font-size: 12px;
-  font-family: "Crimson Pro", serif;
+  font-family: var(--font-family);
   font-weight: bold;
   color: var(--primary-color);
   letter-spacing: 1.2px;
@@ -121,7 +121,7 @@ html,body{
 .container_right .form label {
   font-size: 11px;
   text-align: center;
-  font-family: "Crimson Pro", serif;
+  font-family: var(--font-family);
   color: var(--primary-color);
   font-weight: bold;
   letter-spacing: 1px;
@@ -136,7 +136,7 @@ html,body{
   font-weight: 300;
   border-radius: 15px;
   text-align: center;
-  font-family: "Crimson Pro", serif;
+  font-family: var(--font-family);
   color: var(--secondary-color);
   border: none;
 }
@@ -157,7 +157,7 @@ html,body{
   font-size: 12px;
   font-weight: bold;
   text-align: center;
-  font-family: "Crimson Pro", serif;
+  font-family: var(--font-family);
   letter-spacing: 2px;
   margin-bottom: 20px;
   margin-top: 1.5rem;
@@ -192,7 +192,7 @@ html,body{
 /* design the form span */
 .container_right .form span {
   font-size: 11px;
-  font-family: "Crimson Pro", serif;
+  font-family: var(--font-family);
   font-weight: bold;
   color: var(--primary-color);
   letter-spacing: 1.2px;
@@ -275,14 +275,14 @@ html,body{
   padding: 2px;
   color: var(--primary-color);
   margin: 1px;
-  font-family: "Crimson Pro", serif;
+  font-family: var(--font-family);
   font-weight: 200;
   letter-spacing: 0.3px;
 }
 
 .container_left .cards .name {
   font-size: 10px;
-  font-family: "Crimson Pro", serif;
+  font-family: var(--font-family);
   color: var(--hover-color);
   margin: 2px;
   line-height: 1.2rem;
@@ -304,7 +304,7 @@ html,body{
   .arrow3 {
     background-color: transparent;
     color: var(--primary-color);
-    font-family: "Crimson Pro", serif;
+    font-family: var(--font-family);
     font-weight: 800;
     font-size: 20px;
     letter-spacing: 1rem;
@@ -329,7 +329,7 @@ html,body{
 
   .creditCardsName {
     font-size: 13px;
-    font-family: 'Crimson Pro', serif;  
+    font-family: var(--font-family);  
     margin: 4px;
     padding:4px;
     margin-left: 8vw;
@@ -345,7 +345,7 @@ html,body{
     margin: 4px;
     padding:4px;
     margin-left: 0vw;
-    font-family: 'Crimson Pro', serif; 
+    font-family: var(--font-family); 
     color: var(--primary-color);
     background-color: var(--secondary-color);
     line-height: 1rem;
@@ -358,7 +358,7 @@ html,body{
     margin: 4px;
     padding:4px;
     margin-left: 8vw;
-    font-family: 'Crimson Pro', serif; 
+    font-family: var(--font-family); 
     color: var(--primary-color);
     background-color: var(--secondary-color);
     line-height: 1rem;
@@ -403,7 +403,7 @@ html,body{
     margin-top: 10px;
     margin-bottom: 15px;
     font-size: 13px;
-    font-family: "Crimson Pro", serif;
+    font-family: var(--font-family);
     font-weight: 200;
     color: var(--primary-color);
     font-weight: bold;
@@ -413,7 +413,7 @@ html,body{
     border-radius: 15px;
     width: 90%;
     height: 5vh;
-    font-family: "Crimson Pro", serif;
+    font-family: var(--font-family);
     font-size: 13px;
     font-weight: 300;
     text-align: center;
@@ -426,7 +426,7 @@ html,body{
     margin-top: 35px;
     width: 90%;
     height: 5vh;
-    font-family: "Crimson Pro", serif;
+    font-family: var(--font-family);
     font-size: 13px;
     font-weight: 300;
     text-align: center;
@@ -436,7 +436,7 @@ html,body{
   }
 
   .container_right .form span {
-    font-family: "Crimson Pro", serif;
+    font-family: var(--font-family);
     font-size: 13px;
     color: var(--hover-color);
     letter-spacing: 0.9px;

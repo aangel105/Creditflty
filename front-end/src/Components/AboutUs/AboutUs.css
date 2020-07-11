@@ -20,13 +20,13 @@
 
 .header_title {
   font-size: 4rem;
-  font-family: "Crimson Pro", serif;
+  font-family: var(--font-family);
   color: var(--secondary-color);
   letter-spacing: 0.2rem;
 }
 
 .header_slogan {
-  font-family: "Crimson Pro", serif;
+  font-family: var(--font-family);
   letter-spacing: 0.3rem;
   font-size: 12px;
   font-style: italic;
@@ -47,7 +47,7 @@
   padding: 10px;
   font-size: 1.5rem;
   letter-spacing: 2px;
-  font-family: "Crimson Pro", serif;
+  font-family: var(--font-family);
   color: var(--primary-color);
   font-weight: bold;
 }
@@ -72,7 +72,7 @@
   justify-content: space-around;
   margin: 7px;
   align-items: center;
-  font-family: "Crimson Pro", serif;
+  font-family: var(--font-family);
   text-indent: 20px;
   font-size: 12px;
   color: var(--primary-color);
@@ -110,7 +110,7 @@
 .footer_header h1 {
   font-size: 1.5rem;
   letter-spacing: 2px;
-  font-family: "Crimson Pro", serif;
+  font-family: var(--font-family);
   color: var(--primary-color);
   font-weight: bold;
   margin-bottom: 10px;
@@ -135,7 +135,7 @@ hr {
   width: 20%;
   height: 85%;
   background-color: var(--secondary-color);
-  font-family: "Crimson Pro", serif;
+  font-family: var(--font-family);
   font-size: 20px;
   box-shadow: 0px 0px 5px var(--hover-color);
   border-radius: 3%;
@@ -147,7 +147,7 @@ hr {
   justify-content: center;
   padding: 10px;
   font-size: 1rem;
-  font-family: "Crimson Pro", serif;
+  font-family: var(--font-family);
   font-weight: bolder;
   color: var(--hover-color);
   letter-spacing: 1px;
@@ -208,7 +208,7 @@ hr {
     width: 28%;
     height: 80%;
     background-color: var(--secondary-color);
-    font-family: "Crimson Pro", serif;
+    font-family: var(--font-family);
     font-size: 23px;
     box-shadow: 0px 0px 5px var(--hover-color);
     border-radius: 3%;

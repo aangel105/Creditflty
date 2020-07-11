@@ -16,8 +16,7 @@ body {
   --secondary-color: black;
   --hover-color: #fc6508;
   --special-color: rgb(14, 13, 13);
-  --content-font: "Crimson Pro", serif;
-  --nav-font: "Lato", "sans-serif";
+  --font-family:'Lato', sans-serif;
 }
 
 /* Header*/
@@ -33,27 +32,32 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
 }
 
 /* HeaderLogo */
 
 .imageOneHeader {
-  position: absolute;
-  top: 55%;
-  margin-left: 3%;
-  width: 100%;
+  align-self: center;
   text-align: center;
   background-color: transparent;
   color: var(--primary-color);
-  padding: 10px;
-  font-weight: bold;
-  font-size: 27px;
-  font-family: "Crimson Pro", serif;
+  background-color: var(--hover-color);
+  padding: 5px;
+  font-weight: bolder;
+  font-size: 25px;
+  font-family: var(--font-family);
   font-style: italic;
-  letter-spacing: 1rem;
+  letter-spacing: 15px;
   text-transform: uppercase;
-  border: 1px transparent solid;
-  border-radius: 0.6rem;
+  border-radius: 10px;
+  box-shadow: 
+  0px 0px 2px 2px var(--special-color),
+  0px 0px 6px 6px var(--special-color);
+  opacity: 0.4;
 }
 
 .imageOneArrow {
@@ -100,7 +104,7 @@ body {
   margin-top: 10px;
   justify-content: center;
   align-self: center;
-  font-family: "Crimson Pro", serif;
+  font-family: var(--font-family);
   font-size: 14px;
   color: var(--hover-color);
   letter-spacing: 1px;
@@ -111,10 +115,10 @@ body {
 
 .contentParagraphOne {
   font-size: 10px;
-  line-height: 1rem;
   height: 60%;
-  font-family: "Crimson Pro", serif;
+  font-family: var(--font-family);
   letter-spacing: 0.3px;
+  line-height: 1rem;
   color: var(--primary-color);
   font-style: italic;
   justify-content: flex-start;
@@ -152,8 +156,8 @@ body {
   align-self: center;
   position: relative;
   font-size: 10px;
-  font-family: "Crimson Pro", serif;
-  letter-spacing: 0.3px;
+  font-family: var(--font-family);
+  letter-spacing: 0.5px;
   color: var(--hover-color);
   font-style: italic;
   margin-left: 5%;
@@ -172,7 +176,7 @@ body {
   margin-top: 10px;
   justify-content: center;
   align-self: center;
-  font-family: "Crimson Pro", serif;
+  font-family: var(--font-family);
   font-size: 14px;
   color: var(--hover-color);
   letter-spacing: 1px;
@@ -186,9 +190,9 @@ body {
   align-self: flex-start;
   font-size: 10px;
   line-height: 1rem;
+  letter-spacing: 0.5px;
   height: 60%;
-  font-family: "Crimson Pro", serif;
-  letter-spacing: 0.3px;
+  font-family: var(--font-family);
   color: var(--primary-color);
   font-style: italic;
   margin-left: 5%;
@@ -246,7 +250,7 @@ body {
     padding: 10px;
     font-weight: bold;
     font-size: 30px;
-    font-family: "Crimson Pro", serif;
+    font-family: var(--font-family);
     letter-spacing: 1rem;
     text-transform: uppercase;
     border: 1px transparent solid;
@@ -263,7 +267,7 @@ body {
     margin-top: 12px;
     justify-content: center;
     align-self: center;
-    font-family: "Crimson Pro", serif;
+    font-family: var(--font-family);
     font-size: 16px;
     color: var(--hover-color);
     letter-spacing: 1px;
@@ -276,7 +280,7 @@ body {
     font-size: 12px;
     line-height: 1rem;
     height: 60%;
-    font-family: "Crimson Pro", serif;
+    font-family: var(--font-family);
     letter-spacing: 0.3px;
     color: var(--primary-color);
     font-style: italic;
@@ -304,7 +308,7 @@ body {
     align-self: center;
     position: relative;
     font-size: 12px;
-    font-family: "Crimson Pro", serif;
+    font-family: var(--font-family);
     letter-spacing: 0.3px;
     color: var(--hover-color);
     font-style: italic;
@@ -326,7 +330,7 @@ body {
     margin-top: 12px;
     justify-content: center;
     align-self: center;
-    font-family: "Crimson Pro", serif;
+    font-family: var(--font-family);
     font-size: 16px;
     color: var(--hover-color);
     letter-spacing: 1px;
@@ -339,7 +343,7 @@ body {
     font-size: 12px;
     line-height: 1rem;
     height: 60%;
-    font-family: "Crimson Pro", serif;
+    font-family: var(--font-family);
     letter-spacing: 0.3px;
     color: var(--primary-color);
     font-style: italic;
