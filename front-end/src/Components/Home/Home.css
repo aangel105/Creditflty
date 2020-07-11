@@ -219,7 +219,7 @@ body {
   /* The image used */
   background-image: url("./../../Images/travel1.jpeg");
   /* Set a specific height */
-  min-height: 80vh;
+  min-height: 100vh;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
