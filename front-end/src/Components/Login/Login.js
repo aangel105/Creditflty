@@ -3,9 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import "./Login.css";
 
-
-// import UserProfile from "../UserProfile/UserProfile";
-
+// import Logout from "../Logout/Logout";
 
 class Login extends Component {
   constructor(props) {
@@ -15,17 +13,17 @@ class Login extends Component {
       password: "",
       userData: [],
       isLoggedIn: false,
-      message: ""
+      message: "",
     };
   }
 
-  handleLogin = e => {
+  handleLogin = (e) => {
     this.setState({
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
-  SubmitLoginForm = e => {
+  SubmitLoginForm = (e) => {
     e.stopPropagation();
     e.preventDefault();
     const { email, password } = this.state;
@@ -34,34 +32,34 @@ class Login extends Component {
     } else {
       axios
         .get("/login")
-        .then(res => {
+        .then((res) => {
           console.log("User LoggedIn!!!");
           console.log("data : ", res.data);
 
           this.setState({
-            userData: res.data,
+            userData: res.data.data,
             isLoggedIn: true,
             email,
             password,
-            message: "User Logged In"
+            message: "User Logged In",
           });
           console.log(this.state);
         })
-        .catch(err => {
+        .catch((err) => {
           console.log(err);
         });
     }
   };
 
-  handleLogout = e => {
-    e.preventDefault();
+  handleLogout = (e) => {
     this.setState({
+      isLoggedIn: false,
       email: "",
       password: "",
       userData: [],
-      isLoggedIn: false,
-      message: ""
+      message: "User Logout",
     });
+    console.log(this.state.message);
   };
 
   render() {
@@ -86,6 +84,7 @@ class Login extends Component {
                   onChange={this.handleLogin}
                   autoComplete="off"
                   autoFocus
+                  pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
                   required
                 />
                 <label>Password</label>
@@ -99,7 +98,7 @@ class Login extends Component {
                 <button
                   type="submit"
                   className="btn-login"
-                  onClick={e => this.SubmitLoginForm(e)}
+                  onClick={this.SubmitLoginForm}
                 >
                   Login
                 </button>
@@ -117,7 +116,7 @@ class Login extends Component {
     }
     return (
       <div>
-        {/* <UserProfile/> */}
+        {/* <Logout/> */}
         <React.Fragment>
           <div className="login-container">
             <div className="login-image">
@@ -132,7 +131,7 @@ class Login extends Component {
                 <button
                   type="button"
                   className="btn-login"
-                  onClick={e => this.handleLogout(e)}
+                  onClick={this.handleLogout}
                 >
                   Log out
                 </button>

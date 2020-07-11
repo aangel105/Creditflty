@@ -140,7 +140,9 @@ class Register extends Component {
                 name="email"
                 onChange={this.handleFormInputFields}
                 autoComplete="off"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
                 required
+
               />
               <label>Password</label>
               <input

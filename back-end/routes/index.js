@@ -23,6 +23,6 @@ router.get("/login", db.userLogin);
 
 router.post("/addUser", db.userRegister);
 
-router.post("/addedExpenses", db.addExpenses);
+router.post("/addExpenses", db.addExpenses);
 
 module.exports = router;

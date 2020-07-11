@@ -2,42 +2,42 @@ const db = require("./connection");
 
 function getAllUsers(req, res, next) {
   db.any("SELECT * FROM users")
-    .then(data => {
+    .then((data) => {
       res.status(200).json({
         status: "Success",
         data: data,
-        message: "Retrieved All Users"
+        message: "Retrieved All Users",
       });
     })
-    .catch(err => {
+    .catch((err) => {
       return next(err);
     });
 }
 
 function getExpenditure(req, res, next) {
   db.any("SELECT * FROM expenditure")
-    .then(data => {
+    .then((data) => {
       res.status(200).json({
         status: "Success",
         data: data,
-        message: "Retrieved User Expenses"
+        message: "Retrieved User Expenses",
       });
     })
-    .catch(err => {
+    .catch((err) => {
       return next(err);
     });
 }
 
 function getAllCreditCards(req, res, next) {
   db.any("SELECT * FROM creditcards")
-    .then(data => {
+    .then((data) => {
       res.status(200).json({
         status: "Success",
         data: data,
-        message: "Retrieved All CreditCards"
+        message: "Retrieved All CreditCards",
       });
     })
-    .catch(err => {
+    .catch((err) => {
       return next(err);
     });
 }
@@ -46,17 +46,17 @@ function getCreditCardsByExpenditureId(req, res, next) {
   db.any(
     "SELECT creditcards.id, card_name, card_ratings, card_review_text, card_image_url FROM creditcards INNER JOIN expenditure ON creditcards.expenditure_id = expenditure.id WHERE expenditure.id = ${id}",
     {
-      id: req.params.id
+      id: req.params.id,
     }
   )
-    .then(data => {
+    .then((data) => {
       res.status(200).json({
         status: "Success",
         data: data,
-        message: "Retrieved Cards By Expenditure Id"
+        message: "Retrieved Cards By Expenditure Id",
       });
     })
-    .catch(err => {
+    .catch((err) => {
       return next(err);
     });
 }
@@ -65,17 +65,17 @@ function getUserExpensesByUserId(req, res, next) {
   db.any(
     "SELECT * FROM users JOIN expenditure ON users.id = expenditure.users_id WHERE users.id=${id}",
     {
-      id: req.params.id
+      id: req.params.id,
     }
   )
-    .then(data => {
+    .then((data) => {
       res.status(200).json({
         status: "Success",
         data: data,
-        message: "Retrieved users expenses by userId"
+        message: "Retrieved users expenses by userId",
       });
     })
-    .catch(err => {
+    .catch((err) => {
       return next(err);
     });
 }
@@ -90,19 +90,19 @@ function userRegister(req, res, next) {
       first_name: req.body.first_name,
       last_name: req.body.last_name,
       email: req.body.email,
-      password_digest: req.body.password_digest
+      password_digest: req.body.password_digest,
     }
   )
-    .then(data => {
+    .then((data) => {
       console.log("user added!!");
       res.status(200).json({
         Method: "POST",
         status: "Success",
         data: data,
-        message: "New User Registered"
+        message: "New User Registered",
       });
     })
-    .catch(err => {
+    .catch((err) => {
       return next(err);
     });
 }
@@ -111,43 +111,43 @@ function userLogin(req, res, next) {
   console.log("User Login!!");
 
   db.any("SELECT * FROM users")
-    .then(data => {
+    .then((data) => {
       res.status(200).json({
         status: "Success",
         data: data,
-        message: "Retrieved All Users"
+        message: "Retrieved All Users",
       });
     })
-    .catch(err => {
+    .catch((err) => {
       return next(err);
     });
 }
 
 function addExpenses(req, res, next) {
-  console.log('ROUTE WORKING!!!')
-  console.log("req:", req.body);
-  // db.none(
-  //   "INSERT INTO expenditure (travel_expenses, dinning_expenses, gas_expenses, grocery_expenses) VALUES(${0}, ${0}, ${0}, ${0})",
-  //   {
-  //     travel_expenses: req.body.travel_expenses,
-  //     dinning_expenses: req.body.dinning_expenses,
-  //     gas_expenses: req.body.dinning_expenses,
-  //     grocery_expenses: req.body.grocery_expenses
-  //   }
-  // )
-  //   .then(data => {
-  //     console.log("expense added!");
-  //     console.log(data);
-  //     res.status(200).json({
-  //       Method: "POST",
-  //       status: "Success",
-  //       data: data,
-  //       message: "New Expense added"
-  //     });
-  //   })
-  //   .catch(err => {
-  //     return next(err);
-  //   });
+  console.log("ROUTE WORKING!!!");
+  console.log("req:", req.body.travel_expenses);
+  db.none(
+    "UPDATE expenditure SET travel_expenses = ${travel_expenses}, dinning_expenses = ${dinning_expenses}, gas_expenses = ${gas_expenses}, grocery_expenses = ${grocery_expenses}",
+    {
+      travel_expenses: req.body.travel_expenses,
+      dinning_expenses: req.body.dinning_expenses,
+      gas_expenses: req.body.dinning_expenses,
+      grocery_expenses: req.body.grocery_expenses,
+    }
+  )
+    .then((data) => {
+      console.log("expense added!");
+      console.log(data);
+      res.status(200).json({
+        Method: "POST",
+        status: "Success",
+        data: data,
+        message: "New Expense added",
+      });
+    })
+    .catch((err) => {
+      return next(err);
+    });
 }
 
 module.exports = {
