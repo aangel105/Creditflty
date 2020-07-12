@@ -8,10 +8,10 @@ input::-webkit-inner-spin-button {
   margin: 0px;
   box-sizing: border-box;
 }
-html,body{ 
+html,
+body {
   height: 100vh;
 }
-
 
 /* creditcards after submitting form */
 
@@ -22,7 +22,7 @@ html,body{
   margin-bottom: 5vh;
   margin-left: 15vh;
   background-color: var(--secondary-color);
-  height:60vh;
+  height: 60vh;
   width: 80vw;
   border-radius: 2%;
   border-bottom: 1px solid var(--hover-color);
@@ -30,20 +30,20 @@ html,body{
 
 .creditCardsName {
   font-size: 13px;
-  font-family: var(--font-family);  
+  font-family: var(--font-family);
   margin: 4px;
-  padding:4px;
+  padding: 4px;
   color: var(--secondary-color);
-  background-color:var(--hover-color) ;
+  background-color: var(--hover-color);
   line-height: 1rem;
   letter-spacing: 0.7px;
   border-radius: 2%;
 }
 
-.cardsReviews{
+.cardsReviews {
   font-size: 13px;
   margin: 4px;
-  padding:4px;
+  padding: 4px;
   font-family: var(--font-family);
   color: var(--primary-color);
   background-color: var(--secondary-color);
@@ -52,22 +52,22 @@ html,body{
   border-radius: 2%;
 }
 
-.linkBackHome{
+.linkBackHome {
   font-size: 13px;
   margin: 4px;
-  padding:4px;
-  font-family: var(--font-family); 
+  padding: 4px;
+  font-family: var(--font-family);
   color: var(--primary-color);
   background-color: var(--secondary-color);
   line-height: 1rem;
   letter-spacing: 0.7px;
 }
 
-#link{
+#link {
   color: var(--hover-color);
 }
 
-#link:hover{
+#link:hover {
   color: var(--primary-color);
   text-decoration: none;
   cursor: pointer;
@@ -107,8 +107,8 @@ html,body{
   text-align: center;
   height: 85%;
 }
- 
-.container_right .form h5{
+
+.container_right .form h5 {
   margin-top: 7vh;
   margin-bottom: 15px;
   font-size: 12px;
@@ -172,8 +172,7 @@ html,body{
 }
 
 /* design the submit button on hover*/
-.container_right .form input[type="submit"]:hover,
-.container_right .form input[type="submit"]:focus {
+.container_right .form input[type="submit"]:hover {
   background-color: var(--primary-color);
   color: var(--hover-color);
   border: 1px solid var(--hover-color);
@@ -186,7 +185,6 @@ html,body{
   transform: scale(1.1);
   transition: ease-out;
   transition-duration: 500ms;
-  
 }
 
 /* design the form span */
@@ -206,7 +204,7 @@ html,body{
 
 /* credit cards container */
 .container_left {
-  margin-top:7vh;
+  margin-top: 7vh;
   flex: 5;
   justify-content: center;
   justify-items: center;
@@ -248,7 +246,7 @@ html,body{
   min-width: 100%;
   display: inline-block;
   opacity: 0.9;
-  border: .5px solid var(--hover-color);
+  border: 0.5px solid var(--hover-color);
   box-shadow: 1px 0px 2px var(--hover-color);
 }
 
@@ -271,7 +269,7 @@ html,body{
 
 /*  cards text*/
 .container_left .cards .cardText {
-  font-size: 10px;
+  font-size: 9px;
   padding: 2px;
   color: var(--primary-color);
   margin: 1px;
@@ -281,7 +279,7 @@ html,body{
 }
 
 .container_left .cards .name {
-  font-size: 10px;
+  font-size: 9px;
   font-family: var(--font-family);
   color: var(--hover-color);
   margin: 2px;
@@ -313,7 +311,7 @@ html,body{
     /* border: 2px red solid; */
   }
 
-/* creditcards after submitting form */  
+  /* creditcards after submitting form */
 
   .creditCards {
     padding: 20px;
@@ -329,47 +327,47 @@ html,body{
 
   .creditCardsName {
     font-size: 13px;
-    font-family: var(--font-family);  
+    font-family: var(--font-family);
     margin: 4px;
-    padding:4px;
+    padding: 4px;
     margin-left: 8vw;
     color: var(--secondary-color);
-    background-color:var(--hover-color) ;
+    background-color: var(--hover-color);
     line-height: 1rem;
     letter-spacing: 0.7px;
     border-radius: 2%;
   }
 
-  .cardsReviews{
+  .cardsReviews {
     font-size: 13px;
     margin: 4px;
-    padding:4px;
+    padding: 4px;
     margin-left: 0vw;
-    font-family: var(--font-family); 
+    font-family: var(--font-family);
     color: var(--primary-color);
     background-color: var(--secondary-color);
     line-height: 1rem;
     letter-spacing: 0.7px;
     border-radius: 2%;
   }
-  
-  .linkBackHome{
+
+  .linkBackHome {
     font-size: 13px;
     margin: 4px;
-    padding:4px;
+    padding: 4px;
     margin-left: 8vw;
-    font-family: var(--font-family); 
+    font-family: var(--font-family);
     color: var(--primary-color);
     background-color: var(--secondary-color);
     line-height: 1rem;
     letter-spacing: 0.7px;
   }
-  
-  #link{
+
+  #link {
     color: var(--hover-color);
   }
-  
-  #link:hover{
+
+  #link:hover {
     color: var(--primary-color);
     text-decoration: none;
     cursor: pointer;
@@ -398,8 +396,8 @@ html,body{
     height: 75vh;
   }
 
-  .container_right .form label, 
-  .container_right .form h5{
+  .container_right .form label,
+  .container_right .form h5 {
     margin-top: 10px;
     margin-bottom: 15px;
     font-size: 13px;

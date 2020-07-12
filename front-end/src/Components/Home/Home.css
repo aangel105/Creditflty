@@ -236,7 +236,8 @@ body {
 
 @media (max-width: 600px) {
   .imageOne {
-    min-height: 30vh;
+    min-height: 70vh;
+    overflow: hidden;
   }
 
   .imageOneLogo {
@@ -353,6 +354,6 @@ body {
   }
 
   .lastImage {
-    min-height: 35vh;
+    min-height: 60vh;
   }
 }

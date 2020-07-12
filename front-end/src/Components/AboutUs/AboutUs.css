@@ -80,7 +80,7 @@
   opacity: 0.6;
 }
 
-#p_one{
+#p_one {
   background-color: var(--hover-color);
   border-radius: 10px;
   padding: 10px;
@@ -110,15 +110,27 @@
   margin-top: 5vh;
   width: 100%;
   height: 70vh;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: repeat(6, minmax(20px, 1fr));
+  grid-template-areas:
+    "h h h h"
+    "d d d d"
+    "c c c c"
+    "c c c c"
+    "c c c c"
+    "c c c c";
+  /* background-color: violet; */
 }
 
 .footer_header {
-  flex: 2;
+  grid-area: h;
+  height: 80%;
+  display: grid;
+  align-self: flex-end;
   display: flex;
   justify-content: center;
   align-items: center;
+  /* background-color: yellow; */
 }
 
 .footer_header h1 {
@@ -131,50 +143,55 @@
 }
 
 hr {
+  grid-area: d;
+  align-self: flex-end;
   border: 0.3px dotted var(--hover-color);
   margin-bottom: 30px;
+  /* background-color: green; */
 }
 
-.boxes_items {
-  flex: 8;
+.boxes_container {
+  grid-area: c;
+  width: 100%;
+  height: 100%;
+  /* background-color: teal; */
   display: flex;
-  flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
 }
 
-.box_item {
+.box {
   display: flex;
   flex-direction: column;
-  width: 20%;
-  height: 85%;
-  background-color: var(--secondary-color);
+  justify-content: space-evenly;
+  align-items: center;
+  width: 23%;
+  height: 80%;
   font-family: var(--font-family);
-  font-size: 20px;
   box-shadow: 0px 0px 5px var(--hover-color);
   border-radius: 3%;
   letter-spacing: 0.5px;
 }
 
-.box_header h6 {
+.box h6 {
+  grid-area: h;
   display: flex;
   justify-content: center;
-  padding: 10px;
-  font-size: 1rem;
+  color: var(--hover-color);
   font-family: var(--font-family);
   font-weight: bolder;
-  color: var(--hover-color);
+  font-size: 1rem;
   letter-spacing: 1px;
 }
 
 .spend_tips li,
 .earn_tips li,
 .travel_tips li {
+  display: flex;
+  justify-content: flex-start;
   list-style: none;
-  font-size: 0.5em;
+  font-size: 0.7rem;
   font-weight: 200;
-  margin: 6px;
-  padding: 4px;
   color: var(--primary-color);
 }
 
@@ -183,13 +200,20 @@ hr {
     height: 40vh;
   }
 
+  .header_title {
+    font-size: 2em;
+  }
+  .tittle h1 {
+    font-size: 1.7em;
+  }
+
   .tittle hr {
     border: 0.3px dotted var(--hover-color);
     margin-top: 30px;
   }
 
   .about_main {
-    height: 50vh;
+    height: 100vh;
   }
 
   .main_desc {
@@ -197,11 +221,32 @@ hr {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 100%;
+    height: 100vh;
     letter-spacing: 0.5px;
   }
-  .second_paragraph {
-    display: none;
+  .main_text {
+    padding: 5px;
+  }
+
+  #p_one {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+    opacity: 0.9;
+    font-size: 12px;
+    box-shadow: 0px 0px 3px 3px var(--primary-color);
+  }
+
+  #p_two {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+    opacity: 1;
+    font-size: 12px;
+    opacity: 0.9;
+    box-shadow: 0px 0px 3px 3px var(--primary-color);
   }
 
   .main_img {
@@ -209,40 +254,69 @@ hr {
   }
 
   .footer_container {
-    margin-top: 5vh;
-    width: 100%;
-    height: 52vh;
-    display: flex;
-    flex-direction: column;
+    height: 60%;
+    display: grid;
+    grid-template-rows: repeat(8, 100px);
+    grid-template-areas:
+      "h h h h"
+      "d d d d"
+      "c c c c"
+      "c c c c"
+      "c c c c"
+      "c c c c"
+      "c c c c"
+      "c c c c";
+    /* background-color: seagreen; */
   }
 
-  .box_item {
+  .footer_header {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    grid-area: h;
+    margin-top: 10vh;
+  }
+
+  .footer_header h1 {
+    font-size: 1.7em;
+  }
+
+  hr {
+    grid-area: d;
+    margin-bottom: 5vh;
+  }
+
+  .boxes_container {
+    grid-area: c;
     display: flex;
     flex-direction: column;
-    width: 28%;
-    height: 80%;
+    justify-content: space-evenly;
+  }
+
+  .box {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 30%;
     background-color: var(--secondary-color);
     font-family: var(--font-family);
     font-size: 23px;
-    box-shadow: 0px 0px 5px var(--hover-color);
+    opacity: 0.7;
+    box-shadow: 0px 0px 3px 3px var(--primary-color);
     border-radius: 3%;
     letter-spacing: 0.5px;
   }
 
-  .box_header h6 {
-    padding: 8px;
-    margin-top: 8px;
+  .box h6 {
+    font-size: 1em;
+    font-weight: bold;
   }
-  
-.spend_tips li,
-.earn_tips li,
-.travel_tips li {
-  list-style: none;
-  font-size: 0.5em;
-  font-weight: 200;
-  margin: 6px;
-  padding: 4px;
-  color: var(--primary-color);
-}
 
+  .spend_tips li,
+  .earn_tips li,
+  .travel_tips li {
+    list-style: none;
+    font-size: 0.7em;
+    color: var(--primary-color);
+  }
 }

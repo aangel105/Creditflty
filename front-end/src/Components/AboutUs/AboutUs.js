@@ -36,11 +36,9 @@ const AboutUs = () => {
           <h1>Travel Tips</h1>
         </div>
         <hr />
-        <div className="boxes_items">
-          <div className="box_item">
-            <div className="box_header box1">
-              <h6>Hotel</h6>
-            </div>
+        <div className="boxes_container">
+          <div className="box" id="one">
+            <h6>Hotel</h6>
             <div>
               <ul className="spend_tips">
                 <li>Uses booking portals</li>
@@ -49,10 +47,8 @@ const AboutUs = () => {
               </ul>
             </div>
           </div>
-          <div className="box_item">
-            <div className="box_header box2">
-              <h6>Earn</h6>
-            </div>
+          <div className="box" id="two">
+            <h6>Earn</h6>
             <div>
               <ul className="earn_tips">
                 <li>Sign up for rewards programs</li>
@@ -61,10 +57,8 @@ const AboutUs = () => {
               </ul>
             </div>
           </div>
-          <div className="box_item">
-            <div className="box_header box3">
-              <h6>Travel</h6>
-            </div>
+          <div className="box" id="three">
+            <h6>Travel</h6>
             <div>
               <ul className="travel_tips">
                 <li>Use Google flight to book flight</li>
