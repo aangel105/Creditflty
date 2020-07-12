@@ -15,18 +15,17 @@ const AboutUs = () => {
       <main className="about_main">
         <div className="main_desc">
           <div className="main_text">
-            <p>
+            <p id="p_one">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi
               quaerat atque corporis asperiores mollitia perspiciatis iusto et
               laboriosam blanditiis! Excepturi velit, reiciendis dolores autem
               iste quas magni, veniam numquam quaerat ipsa quisquam.{" "}
             </p>
-            <p className="second_paragraph">
+            <p id="p_two">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
               alias repellat a. Itaque et consequatur amet eos! Unde
               accusantium, dolorum praesentium animi adipisci aut, nesciunt qui
-              voluptatum natus totam distinctio dolor nihil maxime quod voluptas
-              obcaecati incidunt nulla placeat.
+              voluptatum natus totam distinctio dolor.
             </p>
           </div>
           <div className="main_img"></div>
