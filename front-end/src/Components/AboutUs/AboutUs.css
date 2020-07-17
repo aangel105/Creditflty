@@ -84,12 +84,14 @@
   background-color: var(--hover-color);
   border-radius: 10px;
   padding: 10px;
+  box-shadow: 0px 0px 2px 2px var(--primary-color);
 }
 
 #p_two {
   background-color: var(--secondary-color);
   padding: 10px;
   border-radius: 10px;
+  box-shadow: 0px 0px 2px 2px var(--primary-color);
 }
 
 .main_img {

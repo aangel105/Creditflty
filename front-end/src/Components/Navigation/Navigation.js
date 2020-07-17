@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Navigation.css";
 
-
 const Navigation = () => {
   return (
     <React.Fragment>
@@ -38,10 +37,10 @@ const Navigation = () => {
             </ul>
           </div>
           <div className="burger">
-              <div className="line1"></div>
-              <div className="line2"></div>
-              <div className="line3"></div>
-            </div>
+            <div className="line1"></div>
+            <div className="line2"></div>
+            <div className="line3"></div>
+          </div>
         </nav>
       </div>
     </React.Fragment>
