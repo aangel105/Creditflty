@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import axios from "axios";
 import "./Login.css";
 
-// import Logout from "../Logout/Logout";
+// Components
+import Logout from "./Logout";
+import Form from "./Form";
 
 class Login extends Component {
   constructor(props) {
@@ -17,15 +18,16 @@ class Login extends Component {
     };
   }
 
-  handleLogin = (e) => {
+  handleLoginInputs = (e) => {
     this.setState({
       [e.target.name]: e.target.value,
     });
   };
 
-  SubmitLoginForm = (e) => {
+  submitLoginForm = (e) => {
     e.stopPropagation();
     e.preventDefault();
+    console.log(this);
     const { email, password } = this.state;
     if (email === "" || password === "") {
       alert("Please enter a valid email address and password");
@@ -51,96 +53,34 @@ class Login extends Component {
     }
   };
 
-  handleLogout = (e) => {
-    this.setState({
-      isLoggedIn: false,
-      email: "",
-      password: "",
-      userData: [],
-      message: "User Logout",
-    });
-    console.log(this.state.message);
+  handleLogout = () => {
+    console.log("isUserLoggedIn:", this.state.isLoggedIn);
+    this.setState(
+      {
+        isLoggedIn: false,
+        email: "",
+        password: "",
+        userData: [],
+        message: "User Logout",
+      },
+      () => {
+        console.log(this.state);
+      }
+    );
   };
 
   render() {
     const { isLoggedIn } = this.state;
     if (!isLoggedIn) {
       return (
-        <React.Fragment>
-          <div className="login-container">
-            <div className="login-image">
-              <div>
-                <span>Member Login</span>
-              </div>
-            </div>
-
-            <div className="login-form">
-              <form className="login">
-                <span className="login-header">Member Login</span>
-                <label>Email</label>
-                <input
-                  type="email"
-                  name="email"
-                  onChange={this.handleLogin}
-                  autoComplete="off"
-                  autoFocus
-                  pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
-                  required
-                />
-                <label>Password</label>
-                <input
-                  type="password"
-                  name="password"
-                  onChange={this.handleLogin}
-                  autoComplete="off"
-                  required
-                />
-                <button
-                  type="submit"
-                  className="btn-login"
-                  onClick={this.SubmitLoginForm}
-                >
-                  Login
-                </button>
-                <span className="login-link">
-                  Don 't have an account
-                  <Link id="login" to="/register">
-                    Register
-                  </Link>
-                </span>
-              </form>
-            </div>
-          </div>
-        </React.Fragment>
+        <Form
+          handleLoginInputs={this.handleLoginInputs}
+          submitLoginForm={this.submitLoginForm}
+        />
       );
     }
-    return (
-      <div>
-        {/* <Logout/> */}
-        <React.Fragment>
-          <div className="login-container">
-            <div className="login-image">
-              <div>
-                <span>Welcome, Back!</span>
-              </div>
-            </div>
-
-            <div className="login-form">
-              <form className="login">
-                <span className="login-header">Member is Logged In</span>
-                <button
-                  type="button"
-                  className="btn-login"
-                  onClick={this.handleLogout}
-                >
-                  Log out
-                </button>
-              </form>
-            </div>
-          </div>
-        </React.Fragment>
-      </div>
-    );
+    console.log("isUserLoggedIn", isLoggedIn);
+    return <Logout handleLogout={this.handleLogout} />;
   }
 }
 

@@ -20,7 +20,6 @@ class Rewards_Profile extends Component {
       isFormSubmitted: false,
       message: "",
     };
-    // this.submitForm = this.submitForm.bind(this);
   }
 
   handleOnChange = (e) => {
